@@ -1,0 +1,97 @@
+fileFormatVersion: 1
+guid: ea113ebdf573e43e5b15d20562bc1601
+ModelImporter:
+  importerVersion: 7
+  meshes:
+    scaleFactor: 1
+    useFileUnits: 1
+    meshCompression: 0
+    generateColliders: 0
+    swapUVs: 0
+  tangentSpace:
+    normalImportMode: 0
+    tangentImportMode: 1
+    smoothingAngle: 60
+    splitTangents: 1
+  materials:
+    generation: 1
+  animations:
+    generation: 3
+    bakeAnimations: 0
+    animationCompression: 1
+    animationWrapMode: 0
+    splitAnimations: 1
+  nodeInfo:
+    Cube_5:
+    - 100000
+    - 400000
+    - 3300000
+    - 2300000
+    mesh2:
+    - 100002
+    - 400002
+    - 3300002
+    - 2300002
+    Cube_3:
+    - 100004
+    - 400004
+    - 3300004
+    - 2300004
+    Cube_2:
+    - 100006
+    - 400006
+    - 3300006
+    - 2300006
+    Cube_4:
+    - 100008
+    - 400008
+    - 3300008
+    - 2300008
+    Cube_002_Mesh_3:
+    - 100010
+    - 400010
+    - 3300010
+    - 2300010
+    Cube_002_Mesh_2:
+    - 100012
+    - 400012
+    - 3300012
+    - 2300012
+    Cube_1:
+    - 100014
+    - 400014
+    - 3300014
+    - 2300014
+    Cube_002_Mesh:
+    - 100016
+    - 400016
+    - 3300016
+    - 2300016
+    Cube:
+    - 100018
+    - 400018
+    - 3300018
+    - 2300018
+    Cube_002_Mesh_1:
+    - 100020
+    - 400020
+    - 3300020
+    - 2300020
+    //RootNode:
+    - 100022
+    - 400022
+    - 11100000
+AssetImporter:
+  importerVersion: 1
+  fileIDToRecycleName:
+    4300000: Cube
+    4300002: Cube_002_Mesh
+    4300004: Cube_002_Mesh_1
+    4300006: Cube_002_Mesh_2
+    4300008: Cube_002_Mesh_3
+    4300010: Cube_1
+    4300012: Cube_2
+    4300014: Cube_3
+    4300016: Cube_4
+    4300018: Cube_5
+    4300020: mesh2

@@ -1,0 +1,61 @@
+fileFormatVersion: 1
+guid: 6adb999ad69234d0686feb795edaedef
+ModelImporter:
+  importerVersion: 7
+  meshes:
+    scaleFactor: 1
+    useFileUnits: 1
+    meshCompression: 0
+    generateColliders: 0
+    swapUVs: 0
+  tangentSpace:
+    normalImportMode: 0
+    tangentImportMode: 1
+    smoothingAngle: 60
+    splitTangents: 1
+  materials:
+    generation: 1
+  animations:
+    generation: 3
+    bakeAnimations: 0
+    animationCompression: 1
+    animationWrapMode: 0
+    splitAnimations: 1
+  nodeInfo:
+    cube13_copy16_default:
+    - 100000
+    - 400000
+    - 3300000
+    - 2300000
+    cube13_default:
+    - 100002
+    - 400002
+    - 3300002
+    - 2300002
+    //RootNode:
+    - 100004
+    - 400004
+    - 11100000
+    cube13_copy17_default:
+    - 100006
+    - 400006
+    - 3300004
+    - 2300004
+    cube13_copy14_default:
+    - 100008
+    - 400008
+    - 3300006
+    - 2300006
+    cube13_copy15_default:
+    - 100010
+    - 400010
+    - 3300008
+    - 2300008
+AssetImporter:
+  importerVersion: 1
+  fileIDToRecycleName:
+    4300000: cube13_copy14_default
+    4300002: cube13_copy15_default
+    4300004: cube13_copy16_default
+    4300006: cube13_copy17_default
+    4300008: cube13_default

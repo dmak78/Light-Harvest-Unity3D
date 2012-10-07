@@ -1,0 +1,69 @@
+fileFormatVersion: 1
+guid: 309db8db017484e308a6de0a8e64c11a
+ModelImporter:
+  importerVersion: 7
+  meshes:
+    scaleFactor: 1
+    useFileUnits: 1
+    meshCompression: 0
+    generateColliders: 0
+    swapUVs: 0
+  tangentSpace:
+    normalImportMode: 1
+    tangentImportMode: 1
+    smoothingAngle: 1
+    splitTangents: 0
+  materials:
+    generation: 1
+  animations:
+    generation: 3
+    bakeAnimations: 0
+    animationCompression: 1
+    animationWrapMode: 0
+    splitAnimations: 1
+  nodeInfo:
+    //RootNode:
+    - 100000
+    - 400000
+    - 11100000
+    Cube_001:
+    - 100002
+    - 400002
+    - 3300000
+    - 2300000
+    Sphere_001:
+    - 100004
+    - 400004
+    - 3300002
+    - 2300002
+    Sphere:
+    - 100006
+    - 400006
+    - 3300004
+    - 2300004
+    Cube:
+    - 100008
+    - 400008
+    - 3300006
+    - 2300006
+    Circle:
+    - 100010
+    - 400010
+    - 3300008
+    - 2300008
+    Lamp:
+    - 100012
+    - 400012
+    Camera:
+    - 100014
+    - 400014
+AssetImporter:
+  importerVersion: 1
+  fileIDToRecycleName:
+    4300000: Cube:001
+    4300002: Sphere:001
+    4300004: Sphere
+    4300006: Cube
+    4300008: Circle
+    4300010: Cube_001
+    4300012: Sphere_001

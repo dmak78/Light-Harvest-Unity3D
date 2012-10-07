@@ -1,0 +1,49 @@
+fileFormatVersion: 1
+guid: ad4dc2491b5134f18b0c78a42533d86f
+ModelImporter:
+  importerVersion: 7
+  meshes:
+    scaleFactor: 1
+    useFileUnits: 1
+    meshCompression: 0
+    generateColliders: 0
+    swapUVs: 0
+  tangentSpace:
+    normalImportMode: 0
+    tangentImportMode: 1
+    smoothingAngle: 60
+    splitTangents: 1
+  materials:
+    generation: 1
+  animations:
+    generation: 3
+    bakeAnimations: 0
+    animationCompression: 1
+    animationWrapMode: 0
+    splitAnimations: 1
+  nodeInfo:
+    octahedron1_copy2_default:
+    - 100000
+    - 400000
+    - 3300000
+    - 2300000
+    octahedron1_default:
+    - 100002
+    - 400002
+    - 3300002
+    - 2300002
+    //RootNode:
+    - 100004
+    - 400004
+    - 11100000
+    octahedron1_copy4_default:
+    - 100006
+    - 400006
+    - 3300004
+    - 2300004
+AssetImporter:
+  importerVersion: 1
+  fileIDToRecycleName:
+    4300000: octahedron1_copy2_default
+    4300002: octahedron1_copy4_default
+    4300004: octahedron1_default

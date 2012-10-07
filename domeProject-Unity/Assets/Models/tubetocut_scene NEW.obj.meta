@@ -1,0 +1,151 @@
+fileFormatVersion: 1
+guid: 5a93202736778438497e2f2299f82a43
+ModelImporter:
+  importerVersion: 7
+  meshes:
+    scaleFactor: 1
+    useFileUnits: 1
+    meshCompression: 0
+    generateColliders: 0
+    swapUVs: 0
+  tangentSpace:
+    normalImportMode: 0
+    tangentImportMode: 1
+    smoothingAngle: 60
+    splitTangents: 1
+  materials:
+    generation: 1
+  animations:
+    generation: 3
+    bakeAnimations: 0
+    animationCompression: 1
+    animationWrapMode: 0
+    splitAnimations: 1
+  nodeInfo:
+    sphere12_default_3:
+    - 100000
+    - 400000
+    - 3300000
+    - 2300000
+    mesh2:
+    - 100002
+    - 400002
+    - 3300002
+    - 2300002
+    sphere12_default:
+    - 100004
+    - 400004
+    - 3300004
+    - 2300004
+    Cube_3:
+    - 100006
+    - 400006
+    - 3300006
+    - 2300006
+    dodecahedron2_default_3:
+    - 100008
+    - 400008
+    - 3300008
+    - 2300008
+    Cube_2:
+    - 100010
+    - 400010
+    - 3300010
+    - 2300010
+    dodecahedron2_default_1:
+    - 100012
+    - 400012
+    - 3300012
+    - 2300012
+    Cube_002_Mesh_4:
+    - 100014
+    - 400014
+    - 3300014
+    - 2300014
+    sphere12_default_1:
+    - 100016
+    - 400016
+    - 3300016
+    - 2300016
+    sphere12_default_2:
+    - 100018
+    - 400018
+    - 3300018
+    - 2300018
+    sphere12_default_4:
+    - 100020
+    - 400020
+    - 3300020
+    - 2300020
+    Cube_1:
+    - 100022
+    - 400022
+    - 3300022
+    - 2300022
+    Cube_0_1:
+    - 100024
+    - 400024
+    - 3300024
+    - 2300024
+    Cube_002_Mesh_2:
+    - 100026
+    - 400026
+    - 3300026
+    - 2300026
+    Cube_002_Mesh_3:
+    - 100028
+    - 400028
+    - 3300028
+    - 2300028
+    Cube_002_Mesh:
+    - 100030
+    - 400030
+    - 3300030
+    - 2300030
+    Cube_002_Mesh_1:
+    - 100032
+    - 400032
+    - 3300032
+    - 2300032
+    cube13_default:
+    - 100034
+    - 400034
+    - 3300034
+    - 2300034
+    cube13_default_1:
+    - 100036
+    - 400036
+    - 3300036
+    - 2300036
+    //RootNode:
+    - 100038
+    - 400038
+    - 11100000
+    Boole_mesh21:
+    - 100040
+    - 400040
+    - 3300038
+    - 2300038
+AssetImporter:
+  importerVersion: 1
+  fileIDToRecycleName:
+    4300000: Boole_mesh21
+    4300002: cube13_default
+    4300004: cube13_default_1
+    4300006: Cube_002_Mesh
+    4300008: Cube_002_Mesh_1
+    4300010: Cube_002_Mesh_2
+    4300012: Cube_002_Mesh_3
+    4300014: Cube_002_Mesh_4
+    4300016: Cube_0_1
+    4300018: Cube_1
+    4300020: Cube_2
+    4300022: Cube_3
+    4300024: dodecahedron2_default_1
+    4300026: dodecahedron2_default_3
+    4300028: mesh2
+    4300030: sphere12_default
+    4300032: sphere12_default_1
+    4300034: sphere12_default_2
+    4300036: sphere12_default_3
+    4300038: sphere12_default_4

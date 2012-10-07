@@ -1,0 +1,38 @@
+fileFormatVersion: 1
+guid: 39c6e0eb768ee4c79b9cccd2cb4a8f2e
+ModelImporter:
+  importerVersion: 7
+  meshes:
+    scaleFactor: 1
+    useFileUnits: 1
+    meshCompression: 0
+    generateColliders: 1
+    swapUVs: 0
+  tangentSpace:
+    normalImportMode: 1
+    tangentImportMode: 1
+    smoothingAngle: 180
+    splitTangents: 1
+  materials:
+    generation: 1
+  animations:
+    generation: 3
+    bakeAnimations: 0
+    animationCompression: 1
+    animationWrapMode: 0
+    splitAnimations: 1
+  nodeInfo:
+    //RootNode:
+    - 100000
+    - 400000
+    - 11100000
+    GameObject:
+    - 100002
+    - 400002
+    - 3300000
+    - 2300000
+    - 6400000
+AssetImporter:
+  importerVersion: 1
+  fileIDToRecycleName:
+    4300000: GameObject

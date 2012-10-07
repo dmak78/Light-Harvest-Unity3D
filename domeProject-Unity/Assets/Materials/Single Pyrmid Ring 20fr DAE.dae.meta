@@ -1,0 +1,36 @@
+fileFormatVersion: 1
+guid: a3784e2f3292c469fb65c32a60266b24
+ModelImporter:
+  importerVersion: 7
+  meshes:
+    scaleFactor: 1
+    useFileUnits: 1
+    meshCompression: 0
+    generateColliders: 0
+    swapUVs: 0
+  tangentSpace:
+    normalImportMode: 1
+    tangentImportMode: 1
+    smoothingAngle: 60
+    splitTangents: 1
+  materials:
+    generation: 1
+  animations:
+    generation: 3
+    bakeAnimations: 0
+    animationCompression: 2
+    animationWrapMode: 2
+    splitAnimations: 1
+  nodeInfo:
+    //RootNode:
+    - 100000
+    - 400000
+    - 3300000
+    - 2300000
+    - 11100000
+AssetImporter:
+  importerVersion: 1
+  fileIDToRecycleName:
+    4300000: ID4
+    7400000: Take 001 //// Single Pyrmid Ring 20fr DAE
+    7400002: idle //// Single Pyrmid Ring 20fr DAE

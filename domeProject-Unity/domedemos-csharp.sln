@@ -1,0 +1,33 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+
+Project("{00F83A31-6B96-AE34-7E33-9DE650882232}") = "domedemos", "Assembly-CSharp-firstpass-vs.csproj", "{7D2621A4-0608-276B-6DB4-824200AA1C25}"
+EndProject
+Project("{00F83A31-6B96-AE34-7E33-9DE650882232}") = "domedemos", "Assembly-CSharp-Editor-firstpass-vs.csproj", "{359C2E4A-1276-6303-87FB-337BCED82E7F}"
+EndProject
+Project("{00F83A31-6B96-AE34-7E33-9DE650882232}") = "domedemos", "Assembly-CSharp-Editor-vs.csproj", "{93915D8D-0038-3BF9-320D-7CB57CE90BA9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7D2621A4-0608-276B-6DB4-824200AA1C25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D2621A4-0608-276B-6DB4-824200AA1C25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D2621A4-0608-276B-6DB4-824200AA1C25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D2621A4-0608-276B-6DB4-824200AA1C25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{359C2E4A-1276-6303-87FB-337BCED82E7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{359C2E4A-1276-6303-87FB-337BCED82E7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{359C2E4A-1276-6303-87FB-337BCED82E7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{359C2E4A-1276-6303-87FB-337BCED82E7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93915D8D-0038-3BF9-320D-7CB57CE90BA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93915D8D-0038-3BF9-320D-7CB57CE90BA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93915D8D-0038-3BF9-320D-7CB57CE90BA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93915D8D-0038-3BF9-320D-7CB57CE90BA9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	
+EndGlobal

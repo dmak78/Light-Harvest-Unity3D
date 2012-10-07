@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>9.0.21022</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<ProjectGuid>{A8BD94F5-FC63-157B-6CDF-CD0F5F7DCEE3}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<RootNamespace></RootNamespace>
+	<AssemblyName>Assembly-UnityScript-firstpass</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_3_4_2;UNITY_3_4;UNITY_EDITOR;ENABLE_PROFILER;UNITY_STANDALONE_OSX;ENABLE_GENERICS;ENABLE_DUCK_TYPING;ENABLE_TERRAIN;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CLOTH;ENABLE_WWW</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<DefineConstants>TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="System" />
+    <Reference Include="System.XML" />
+	<Reference Include="System.Core" />
+	<Reference Include="UnityEngine">
+	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.dll</HintPath>
+	</Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\Plugins\geometryhelper.js" />
+     <Compile Include="Assets\Standard Assets\Camera Scripts\MouseOrbit.js" />
+     <Compile Include="Assets\Standard Assets\Camera Scripts\SmoothFollow.js" />
+     <Compile Include="Assets\Standard Assets\Camera Scripts\SmoothLookAt.js" />
+     <Compile Include="Assets\Standard Assets\Scripts\DragRigidbody.js" />
+     <Compile Include="Assets\Standard Assets\Scripts\FPSWalker.js" />
+     <Compile Include="Assets\Standard Assets\Scripts\PlayerPrefsX.js" />
+     <Compile Include="Assets\Standard Assets\Scripts\TimedObjectDestructor.js" />
+     <None Include="Assets\Resources\SyphonShaders\Particle AddSmooth.shader" />
+     <None Include="Assets\Resources\Unlit-Alpha.shader" />
+     <None Include="Assets\Resources\SyphonShaders\AlphaTest-BumpSpec01.shader" />
+     <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
+     <None Include="Assets\Resources\SyphonShaders\Particle AddBehind.shader" />
+     <None Include="Assets\Resources\SyphonShaders\Particle VertexLit Blended.shader" />
+     <None Include="Assets\Resources\SyphonShaders\Alpha-BumpSpec01.shader" />
+     <None Include="Assets\Resources\SyphonShaders\Alpha-ParallaxSpec01.shader" />
+     <None Include="Assets\Standard Assets\Shaders\Normal-Diffuse.shader" />
+     <None Include="Assets\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\FX-SimpleWater4.shader" />
+     <None Include="Assets\Resources\SyphonShaders\Alpha-Diffuse01.shader" />
+     <None Include="Assets\Standard Assets\Skyboxes\ skybox info.txt" />
+     <None Include="Assets\Resources\SyphonShaders\AlphaTest-Glossy01.shader" />
+     <None Include="Assets\Resources\SyphonShaders\Particle MultiplyDouble.shader" />
+     <None Include="Assets\Resources\SyphonShaders\Particle AddMultiply.shader" />
+     <None Include="Assets\Resources\SyphonShaders\Particle Alpha BlendDepthtestOff.shader" />
+     <None Include="Assets\Resources\SyphonShaders\SyphonSkybox.shader" />
+     <None Include="Assets\Resources\SyphonShaders\Particle Alpha BlendFront.shader" />
+     <None Include="Assets\Resources\SyphonShaders\SyphonNormal-VertexLit.shader" />
+     <None Include="Assets\Resources\SyphonShaders\Alpha-Bumped01.shader" />
+     <None Include="Assets\Resources\SyphonShaders\AlphaTest-Diffuse01.shader" />
+     <None Include="Assets\Resources\SyphonShaders\Alpha-Parallax01.shader" />
+     <None Include="Assets\Resources\SyphonShaders\Alpha-Diffuse02.shader" />
+     <None Include="Assets\Standard Assets\Water (Pro Only)\Sources\Shaders\FX-Water.shader" />
+     <None Include="Assets\Resources\SyphonShaders\Alpha-VertexLit01.shader" />
+     <None Include="Assets\Resources\SyphonShaders\Particle Alpha BlendBumpUseless.shader" />
+     <None Include="Assets\Resources\SyphonShaders\Particle Add.shader" />
+     <None Include="Assets\Resources\SyphonShaders\Particle Premultiply Blend.shader" />
+     <None Include="Assets\Resources\SyphonShaders\Particle Blend.shader" />
+     <None Include="Assets\Resources\SyphonShaders\Particle Multiply.shader" />
+     <None Include="Assets\Resources\SyphonShaders\AlphaTest-Bumped01.shader" />
+     <None Include="Assets\Resources\SyphonShaders\Particle Alpha Blend.shader" />
+     <None Include="Assets\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\WaterInclude.cginc" />
+     <None Include="Assets\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\FX-Water4.shader" />
+     <None Include="Assets\Resources\SyphonShaders\Particle Alpha Shadow.shader" />
+     <None Include="Assets\Standard Assets\Gem Rendering\diamond shader.shader" />
+     <None Include="Assets\Resources\SyphonShaders\Alpha-Glossy01.shader" />
+     <None Include="Assets\Resources\SyphonShaders\AlphaTest-VertexLit.shader" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>
+	
