@@ -47,8 +47,8 @@
      <Compile Include="Assets\ExampleScripts\createFromCSharp.cs" />
      <Compile Include="Assets\Scripts\MouseCameraControl.cs" />
      <Compile Include="Assets\Scripts\ReverseNormals.cs" />
-     <Compile Include="Assets\Scripts\SyphonClientBridge.cs" />
-     <Compile Include="Assets\Scripts\SyphonServerBridge.cs" />
+     <Compile Include="Assets\Scripts\Used\SyphonClientBridge.cs" />
+     <Compile Include="Assets\Scripts\Used\SyphonServerBridge.cs" />
      <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />
      <None Include="Assets\Standard Assets\Glass Refraction (Pro Only)\Sources\Shaders\Glass-Stained-BumpDistort.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BlendOneOne.shader" />

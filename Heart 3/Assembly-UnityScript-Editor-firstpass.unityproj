@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>9.0.21022</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<ProjectGuid>{A783CF5D-67C5-E6FD-672C-247781F19CFF}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<RootNamespace></RootNamespace>
+	<AssemblyName>Assembly-UnityScript-Editor-firstpass</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_3_4_2;UNITY_3_4;UNITY_EDITOR;ENABLE_PROFILER;UNITY_STANDALONE_OSX;ENABLE_GENERICS;ENABLE_DUCK_TYPING;ENABLE_TERRAIN;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CLOTH;ENABLE_WWW</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<DefineConstants>TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="System" />
+    <Reference Include="System.XML" />
+	<Reference Include="System.Core" />
+	<Reference Include="UnityEngine">
+	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.dll</HintPath>
+	</Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\Standard Assets\Editor\Image Effects\AntialiasingAsPostEffectEditor.js" />
+     <Compile Include="Assets\Standard Assets\Editor\Image Effects\BloomAndLensFlaresEditor.js" />
+     <Compile Include="Assets\Standard Assets\Editor\Image Effects\ColorCorrectionCurvesEditor.js" />
+     <Compile Include="Assets\Standard Assets\Editor\Image Effects\DepthOfField34Editor.js" />
+     <Compile Include="Assets\Standard Assets\Editor\Image Effects\EdgeDetectEffectNormalsEditor.js" />
+     <Compile Include="Assets\Standard Assets\Editor\Image Effects\SunShaftsEditor.js" />
+     <Compile Include="Assets\Standard Assets\Editor\Image Effects\TiltShiftEditor.js" />
+     <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />
+     <None Include="Assets\Standard Assets\Glass Refraction (Pro Only)\Sources\Shaders\Glass-Stained-BumpDistort.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BlendOneOne.shader" />
+     <None Include="Assets\Shaders\blend.shader" />
+     <None Include="Assets\Standard Assets (Mobile)\Shaders\Particle Shaders\Mobile Multiply Culled.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\NoiseEffectShaderRGB.shader" />
+     <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\SeparableWeightedBlurDof34.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\Alpha-Parallax.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResourcesExtra\Mobile\Mobile-BumpSpec.shader" />
+     <None Include="Assets\Standard Assets (Mobile)\Shaders\Miscellaneous Shaders\Mobile Background.shader" />
+     <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Multiply.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\Particle VertexLit Blended.shader" />
+     <None Include="Assets\Standard Assets (Mobile)\Shaders\Vertex Colored Shaders\Mobile Transparent Vertex Color.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ShowAlphaChannel.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\GlowConeTap.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\Reflect-Glossy.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\Reflect-BumpSpec.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResourcesExtra\Nature\TreeCreator\TreeCreatorLeavesOptimized.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\Internal-PrePassCollectShadows.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\Particle Blend.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResourcesExtra\Nature\SoftOcclusion\SH_Vertex.cginc" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\Normal-Diffuse.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\Internal-CombineDepthNormals.shader" />
+     <None Include="Assets\Shaders\Example\VertexDisplacementShader.shader" />
+     <None Include="Assets\Resources\SyphonShaders\Particle AddSmooth.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\SunShaftsComposite.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ColorCorrectionCurves.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\Alpha-Bumped.shader" />
+     <None Include="Assets\Resources\SyphonShaders\AlphaTest-BumpSpec01.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\Decal.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\NFAA.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\Reflect-BumpNolight.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResourcesExtra\Mobile\Mobile-Lightmap-Unlit.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\Normal-Parallax.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\Particle Premultiply Blend.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResourcesExtra\Lightmap-BumpSpec.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResourcesExtra\Nature\TreeCreator\TreeCreatorBark.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\Illumin-Glossy.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\AlphaTest-Glossy.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\VignetteShader.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResourcesExtra\Nature\TreeCreator\TreeCreatorLeavesRendertex.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResourcesExtra\Nature\TreeCreator\TreeVertexLit.cginc" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\Illumin-Bumped.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResourcesExtra\Lightmap-VertexLit.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\MotionBlur.shader" />
+     <None Include="Assets\Standard Assets (Mobile)\Shaders\Miscellaneous Shaders\Mobile Detail.shader" />
+     <None Include="Assets\Shaders\ReflectiveVertexLitSimple.shader" />
+     <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\Internal-BlitCopy.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\Alpha-Glossy.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\GlowCompose.shader" />
+     <None Include="Assets\Resources\SyphonShaders\Particle AddBehind.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\Contrast Stretch\MinMaxReduction.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\SSAA.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\RadialBlur.shader" />
+     <None Include="Assets\Resources\SyphonShaders\Particle VertexLit Blended.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\Normal-Glossy.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResourcesExtra\Nature\TreeCreator\TreeCreatorBarkRendertex.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResourcesExtra\Mobile\Mobile-Diffuse.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\Particle MultiplyDouble.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\Internal-GUITextureBlit.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\Particle Alpha Blend.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\Normal-ParallaxSpec.shader" />
+     <None Include="Assets\Resources\SyphonShaders\Alpha-BumpSpec01.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ContrastComposite.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\Reflect-VertexLit.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\FXAAPreset3.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\FisheyeShader.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\Normal-Bumped.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\TerrainShaders\Details\WavingGrassBillboard.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\Alpha-ParallaxSpec.shader" />
+     <None Include="Assets\Resources\SyphonShaders\Alpha-ParallaxSpec01.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\Particle AddMultiply.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResourcesExtra\Unlit\Unlit-AlphaTest.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\Reflect-ParallaxSpec.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\Contrast Stretch\Apply.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\Alpha-VertexLit.shader" />
+     <None Include="Assets\Resources\SyphonShaders\Alpha-Diffuse01.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\frag_ao.cginc" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\Camera-DepthNormalTexture.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\AlphaTest-VertexLit.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\Illumin-BumpSpec.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\TerrainShaders\Trees\BillboardTree.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResourcesExtra\Mobile\Mobile-VertexLit.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResourcesExtra\Nature\SoftOcclusion\TreeSoftOcclusionLeaves.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\Normal-DiffuseFast.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\Particle AddSmooth.shader" />
+     <None Include="Assets\Resources\SyphonShaders\AlphaTest-Glossy01.shader" />
+     <None Include="Assets\Shaders\Example\TextureBlend.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\Normal-VertexLit.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\Illumin-Diffuse.shader" />
+     <None Include="Assets\Resources\SyphonShaders\Particle MultiplyDouble.shader" />
+     <None Include="Assets\Resources\SyphonShaders\Particle AddMultiply.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResourcesExtra\Mobile\Mobile-Particle-Multiply.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResourcesExtra\Nature\SoftOcclusion\TreeSoftOcclusionBarkRendertex.shader" />
+     <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-BasicOutline.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\DepthOfField34.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\TerrainShaders\Details\WavingGrass.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResourcesExtra\Mobile\Mobile-Particle-Alpha-VertexLit.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\TiltShift.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResourcesExtra\Nature\TreeCreator\TreeCreatorLeaves.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\AlphaTest-BumpSpec.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\Particle Multiply.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\Reflect-Bumped.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\SSAOShader.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ConvertDepth.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResourcesExtra\Lightmap-Diffuse.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ColorCorrectionCurvesSimple.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\NoiseEffectShaderYUV.shader" />
+     <None Include="Assets\Resources\SyphonShaders\Particle Alpha BlendDepthtestOff.shader" />
+     <None Include="Assets\Resources\SyphonShaders\SyphonSkybox.shader" />
+     <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Light.shader" />
+     <None Include="Assets\Resources\SyphonShaders\Particle Alpha BlendFront.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResourcesExtra\Mobile\Mobile-BumpSpec-1DirectionalLight.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\GlowEffectDownsample.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\CreaseApply.shader" />
+     <None Include="Assets\Standard Assets\Water (Basic)\Sources\Shaders\FX-Water Simple.shader" />
+     <None Include="Assets\Standard Assets (Mobile)\Shaders\Lightmap Shaders (Legacy)\Mobile Lightmap Reflective.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResourcesExtra\Nature\TreeCreator\TreeCreatorLeavesFast.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResourcesExtra\Lightmap-Glossy.shader" />
+     <None Include="Assets\Shaders\Particle Add (Overlay).shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ChromaticAberrationShader.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\Internal-Halo.shader" />
+     <None Include="Assets\Standard Assets (Mobile)\Shaders\Particle Shaders\Mobile Particles Additive Culled.shader" />
+     <None Include="Assets\Resources\SyphonShaders\SyphonNormal-VertexLit.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\AlphaTest-Bumped.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\TerrainShaders\Splats\FirstPass.shader" />
+     <None Include="Assets\Resources\SyphonShaders\Alpha-Bumped01.shader" />
+     <None Include="Assets\Resources\SyphonShaders\AlphaTest-Diffuse01.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\Reflect-Diffuse.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\GlobalFog.shader" />
+     <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-LightedOutline.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\Contrast Stretch\Luminance.shader" />
+     <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Lighted.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResourcesExtra\Mobile\Mobile-VertexLit-OnlyDirectionalLights.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ColorCorrectionSelective.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\Bokeh34.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\Camera-DepthTexture.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\SeparableBlurPlus.shader" />
+     <None Include="Assets\Resources\SyphonShaders\Alpha-Parallax01.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\MultiPassHollywoodFlares.shader" />
+     <None Include="Assets\Resources\SyphonShaders\Alpha-Diffuse02.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResourcesExtra\Unlit\Unlit-Normal.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\Alpha-BumpSpec.shader" />
+     <None Include="Assets\Resources\SyphonShaders\Alpha-VertexLit01.shader" />
+     <None Include="Assets\Resources\SyphonShaders\Particle Alpha BlendBumpUseless.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\DLAA.shader" />
+     <None Include="Assets\Resources\SyphonShaders\Particle Add.shader" />
+     <None Include="Assets\Resources\SyphonShaders\Particle Premultiply Blend.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\Internal-PrePassLighting.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\Reflect-Parallax.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\Flare.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\AlphaTest-SoftEdgeUnlit.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\Illumin-VertexLit.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\Normal-DiffuseDetail.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\Illumin-Parallax.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\SeparableBlur.shader" />
+     <None Include="Assets\Standard Assets (Mobile)\Shaders\Vertex Colored Shaders\Mobile Vertex Colored.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResourcesExtra\Mobile\Mobile-Particle-Alpha.shader" />
+     <None Include="Assets\Shaders\Glass.shader" />
+     <None Include="Assets\Resources\SyphonShaders\Particle Blend.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\Internal-GUITexture.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ColorCorrectionEffect.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\GrayscaleEffect.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\SepiaToneEffect.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\TwirlEffect.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\VortexEffect.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResourcesExtra\Nature\TreeCreator\TreeCreatorLeavesFastOptimized.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\Contrast Stretch\Adaptation.shader" />
+     <None Include="Assets\Standard Assets (Mobile)\Shaders\Lightmap Shaders (Legacy)\Mobile Lightmap Only.shader" />
+     <None Include="Assets\Standard Assets (Mobile)\Shaders\Lightmap Shaders (Legacy)\Mobile Lightmap AlphaTest.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResourcesExtra\Mobile\Mobile-Skybox.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResourcesExtra\Nature\TreeCreator\TreeCreatorBarkOptimized.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\Normal-BumpSpec.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResourcesExtra\Mobile\Mobile-Bumped.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\Skybox.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\Illumin-ParallaxSpec.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\TerrainShaders\Details\VertexLit.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\VignettingShader.shader" />
+     <None Include="Assets\Resources\SyphonShaders\Particle Multiply.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BrightPassFilter.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResourcesExtra\Nature\TreeCreator\Tree.cginc" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\FXAA2.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResourcesExtra\Mobile\Mobile-Particle-Add.shader" />
+     <None Include="Assets\Resources\SyphonShaders\AlphaTest-Bumped01.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\TerrainShaders\Splats\AddPass.shader" />
+     <None Include="Assets\Resources\SyphonShaders\Particle Alpha Blend.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\LensFlareCreate.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\Alpha-Diffuse.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResourcesExtra\Lightmap-Bumped.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\EdgeDetectNormals.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\Internal-Flare.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\PrepareSunShaftsBlur.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\AlphaTest-Diffuse.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\Particle Add.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\Blend.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\Shadow-ScreenBlurRotated.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResourcesExtra\Nature\SoftOcclusion\TreeSoftOcclusionLeavesRendertex.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResourcesExtra\Unlit\Unlit-Alpha.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\Shadow-ScreenBlur.shader" />
+     <None Include="Assets\Resources\SyphonShaders\Particle Alpha Shadow.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\skybox cubed.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\SimpleClear.shader" />
+     <None Include="Assets\Resources\Unlit-Alpha.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\Internal-GUITextureClipText.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\Internal-GUITextureClip.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\EdgeDetectX.shader" />
+     <None Include="Assets\Shaders\Example\FullLighting.shader" />
+     <None Include="Assets\Resources\SyphonShaders\Alpha-Glossy01.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\Reflect-BumpVertexLit.shader" />
+     <None Include="Assets\Resources\SyphonShaders\AlphaTest-VertexLit.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResources\Font.shader" />
+     <None Include="Assets\Shaders\Antistropic.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\FXAAPreset2.shader" />
+     <None Include="Assets\Shaders\BuiltIn\DefaultResourcesExtra\Nature\SoftOcclusion\TreeSoftOcclusionBark.shader" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{8A197C8D-7FF0-793B-BCED-3374E90358C3}</Project>
+      <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
+    <ProjectReference Include="Assembly-UnityScript-firstpass.unityproj">
+      <Project>{49174EC4-D36A-8027-0D89-9C4B5AEBE5A0}</Project>
+      <Name>Assembly-UnityScript-firstpass</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>
+	
