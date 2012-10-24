@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<title>MeshSubdivision - Unify Community Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.1" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/opensearch_desc.php" title="Unify Community Wiki (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.unity3d.com/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Unify Community Wiki Atom feed" href="/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.unity3d.com/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cskins.vector&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.unity3d.com/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: mediawiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://wiki.unity3d.com/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"MeshSubdivision","wgTitle":"MeshSubdivision","wgCurRevisionId":13301,"wgArticleId":3610,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgRelevantPageName":"MeshSubdivision","wgRestrictionEdit":[],"wgRestrictionMove":[]});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,
+"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"variant":"en","language":"en","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false});;},{},{});mw.loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: mediawiki:resourceloader:filter:minify-js:7:9983699ab6150ffa89a90653b2338ac8 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-javascript {line-height: normal;}
+.source-javascript li, .source-javascript pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for javascript
+ * CSS class: source-javascript, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.javascript.source-javascript .de1, .javascript.source-javascript .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.javascript.source-javascript  {font-family:monospace;}
+.javascript.source-javascript .imp {font-weight: bold; color: red;}
+.javascript.source-javascript li, .javascript.source-javascript .li1 {font-weight: normal; vertical-align:top;}
+.javascript.source-javascript .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.javascript.source-javascript .li2 {font-weight: bold; vertical-align:top;}
+.javascript.source-javascript .kw1 {color: #000066; font-weight: bold;}
+.javascript.source-javascript .kw2 {color: #003366; font-weight: bold;}
+.javascript.source-javascript .kw3 {color: #000066;}
+.javascript.source-javascript .co1 {color: #006600; font-style: italic;}
+.javascript.source-javascript .co2 {color: #009966; font-style: italic;}
+.javascript.source-javascript .coMULTI {color: #006600; font-style: italic;}
+.javascript.source-javascript .es0 {color: #000099; font-weight: bold;}
+.javascript.source-javascript .br0 {color: #009900;}
+.javascript.source-javascript .sy0 {color: #339933;}
+.javascript.source-javascript .st0 {color: #3366CC;}
+.javascript.source-javascript .nu0 {color: #CC0000;}
+.javascript.source-javascript .me1 {color: #660066;}
+.javascript.source-javascript .ln-xtra, .javascript.source-javascript li.ln-xtra, .javascript.source-javascript div.ln-xtra {background-color: #ffc;}
+.javascript.source-javascript span.xtra { display:block; }
+
+/*]]>*/
+</style><!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-MeshSubdivision skin-vector action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">MeshSubdivision</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">From Unify Community Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Jump to: <a href="#mw-head">navigation</a>,
+					<a href="#p-search">search</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Description"><span class="tocnumber">1</span> <span class="toctext">Description</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Author_and_idea:"><span class="tocnumber">1.1</span> <span class="toctext">Author and idea:</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#uv_and_normal_support:"><span class="tocnumber">1.2</span> <span class="toctext">uv and normal support:</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Problem"><span class="tocnumber">2</span> <span class="toctext">Problem</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Usage"><span class="tocnumber">3</span> <span class="toctext">Usage</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#subdivision.js"><span class="tocnumber">4</span> <span class="toctext">subdivision.js</span></a></li>
+</ul>
+</td></tr></table>
+<h2> <span class="mw-headline" id="Description">Description</span></h2>
+<h4> <span class="mw-headline" id="Author_and_idea:">Author and idea: </span></h4>
+<p>realm_1
+</p>
+<h4> <span class="mw-headline" id="uv_and_normal_support:">uv and normal support: </span></h4>
+<p>BigMisterB
+</p><p>This script subdivide a mesh by using edge and center subdivision.
+</p>
+<h2> <span class="mw-headline" id="Problem">Problem</span></h2>
+<p>If you want to deform a mesh, for eg. when a bullet hit it, and you have only two triangles per side (cube) then it won't work. Because you need more vertices. With this script you can easily add more.
+Also if you want to add some effect to your mesh and you have not enough vertices you can use this script.
+</p><p>Try it out by using a cube instead of a sphere in the procedural unity3d examples. (<a rel="nofollow" class="external free" href="http://unity3d.com/support/resources/example-projects/procedural-examples.html">http://unity3d.com/support/resources/example-projects/procedural-examples.html</a>)
+During the gameplay you subdivide the mesh and you will see that the effect will work better.
+</p>
+<h2> <span class="mw-headline" id="Usage">Usage</span></h2>
+<p>Attach this script to a GameObject with a mesh and a material.
+Press "1" for edge subdivision and "2" for center subdivision, to restore the mesh press "x".
+</p>
+<h2> <span class="mw-headline" id="subdivision.js">subdivision.js</span></h2>
+<div dir="ltr" class="mw-geshi mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="co1">//var material&#160;: Material;</span>
+<span class="kw2">var</span> buildmesh <span class="sy0">:</span> boolean <span class="sy0">=</span> <span class="kw2">false</span><span class="sy0">;</span>
+<span class="kw2">private</span> <span class="kw2">var</span> verts <span class="sy0">:</span> Vector3<span class="br0">&#91;</span><span class="br0">&#93;</span><span class="sy0">;</span>
+<span class="kw2">private</span> <span class="kw2">var</span> norms <span class="sy0">:</span> Vector3<span class="br0">&#91;</span><span class="br0">&#93;</span><span class="sy0">;</span>
+<span class="kw2">private</span> <span class="kw2">var</span> uvs <span class="sy0">:</span> Vector2<span class="br0">&#91;</span><span class="br0">&#93;</span><span class="sy0">;</span>
+<span class="kw2">private</span> <span class="kw2">var</span> trigs <span class="sy0">:</span> int<span class="br0">&#91;</span><span class="br0">&#93;</span><span class="sy0">;</span>
+<span class="kw2">private</span> <span class="kw2">var</span> mesh <span class="sy0">:</span> Mesh<span class="sy0">;</span>
+<span class="kw2">private</span> <span class="kw2">var</span> originalMesh <span class="sy0">:</span> Mesh<span class="sy0">;</span>
+<span class="co1">//var subdivision&#160;: boolean = false;</span>
+<span class="co1">//var useobjectsmaterial&#160;: boolean = false;</span>
+<span class="co1">//var forceaddmeshcollider&#160;: boolean = false;</span>
+<span class="co1">//var sides&#160;: boolean = false;</span>
+<span class="co1">//var middle&#160;: boolean = false;</span>
+&#160;
+<span class="kw2">function</span> Update <span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+	<span class="kw1">if</span><span class="br0">&#40;</span>Input.<span class="me1">GetKeyDown</span><span class="br0">&#40;</span><span class="st0">&quot;1&quot;</span><span class="br0">&#41;</span><span class="br0">&#41;</span>
+		subdivide<span class="br0">&#40;</span><span class="kw2">false</span><span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="kw1">if</span><span class="br0">&#40;</span>Input.<span class="me1">GetKeyDown</span><span class="br0">&#40;</span><span class="st0">&quot;2&quot;</span><span class="br0">&#41;</span><span class="br0">&#41;</span>
+		subdivide<span class="br0">&#40;</span><span class="kw2">true</span><span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="kw1">if</span><span class="br0">&#40;</span>Input.<span class="me1">GetKeyDown</span><span class="br0">&#40;</span><span class="st0">&quot;x&quot;</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="br0">&#123;</span>
+		CopyMesh<span class="br0">&#40;</span>originalMesh<span class="sy0">,</span> mesh<span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw2">function</span> Awake<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+&#160;
+	<span class="co1">///////////////////////////////////////////////////////////</span>
+	<span class="co1">//// initialize</span>
+	<span class="co1">///////////////////////////////////////////////////////////</span>
+	<span class="co1">//var buildmesh=false;</span>
+	<span class="kw1">if</span><span class="br0">&#40;</span>GetComponent<span class="br0">&#40;</span>MeshFilter<span class="br0">&#41;</span> <span class="sy0">==</span> <span class="kw2">null</span><span class="br0">&#41;</span><span class="br0">&#123;</span>
+		buildmesh<span class="sy0">=</span><span class="kw2">true</span><span class="sy0">;</span>
+		gameObject.<span class="me1">AddComponent</span><span class="br0">&#40;</span>MeshFilter<span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="kw1">if</span><span class="br0">&#40;</span>GetComponent<span class="br0">&#40;</span>MeshRenderer<span class="br0">&#41;</span> <span class="sy0">==</span> <span class="kw2">null</span><span class="br0">&#41;</span>
+		gameObject.<span class="me1">AddComponent</span><span class="br0">&#40;</span>MeshRenderer<span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="co1">//if(forceaddmeshcollider) {</span>
+	<span class="co1">//	if(GetComponent(MeshCollider) == null)</span>
+	<span class="co1">//		gameObject.AddComponent(MeshCollider);</span>
+	<span class="co1">//}</span>
+&#160;
+	updatemesh<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+	<span class="co1">//if(!useobjectsmaterial)</span>
+	<span class="co1">//	GetComponent(MeshRenderer).material = material;</span>
+&#160;
+	<span class="co1">///////////////////////////////////////////////////////////</span>
+	<span class="co1">//// build mesh</span>
+	<span class="co1">///////////////////////////////////////////////////////////</span>
+&#160;
+	<span class="kw1">if</span><span class="br0">&#40;</span>buildmesh<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+&#160;
+		<span class="co1">//// vertices</span>
+&#160;
+		verts <span class="sy0">=</span> <span class="br0">&#91;</span>Vector3<span class="br0">&#40;</span><span class="nu0">0</span><span class="sy0">,-</span><span class="nu0">1</span><span class="sy0">,</span><span class="nu0">0</span><span class="br0">&#41;</span><span class="sy0">,</span>Vector3<span class="br0">&#40;</span><span class="nu0">1</span><span class="sy0">,</span><span class="nu0">1</span><span class="sy0">,</span><span class="nu0">0</span><span class="br0">&#41;</span><span class="sy0">,</span>Vector3<span class="br0">&#40;</span><span class="sy0">-</span><span class="nu0">1</span><span class="sy0">,</span><span class="nu0">1</span><span class="sy0">,</span><span class="nu0">0</span><span class="br0">&#41;</span>
+		<span class="sy0">,</span>Vector3<span class="br0">&#40;</span><span class="nu0">0</span><span class="sy0">,</span><span class="nu0">1</span><span class="sy0">,-</span><span class="nu0">1</span><span class="br0">&#41;</span><span class="br0">&#93;</span><span class="sy0">;</span>
+&#160;
+		<span class="co1">//// uvs</span>
+&#160;
+		uvs <span class="sy0">=</span> <span class="br0">&#91;</span>Vector2<span class="br0">&#40;</span><span class="nu0">0</span><span class="sy0">,</span><span class="nu0">0</span><span class="br0">&#41;</span><span class="sy0">,</span>Vector2<span class="br0">&#40;</span><span class="nu0">0</span><span class="sy0">,</span><span class="nu0">1</span><span class="br0">&#41;</span><span class="sy0">,</span>Vector2<span class="br0">&#40;</span><span class="nu0">1</span><span class="sy0">,</span><span class="nu0">0</span><span class="br0">&#41;</span><span class="sy0">,</span>Vector2<span class="br0">&#40;</span><span class="nu0">0</span><span class="sy0">,</span><span class="nu0">0</span><span class="br0">&#41;</span><span class="br0">&#93;</span><span class="sy0">;</span>
+&#160;
+		<span class="co1">//// triangles</span>
+&#160;
+		trigs <span class="sy0">=</span> <span class="br0">&#91;</span><span class="nu0">0</span><span class="sy0">,</span><span class="nu0">1</span><span class="sy0">,</span><span class="nu0">2</span><span class="sy0">,</span><span class="nu0">1</span><span class="sy0">,</span><span class="nu0">3</span><span class="sy0">,</span><span class="nu0">2</span><span class="br0">&#93;</span><span class="sy0">;</span>
+&#160;
+		applymesh<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+		mesh.<span class="me1">RecalculateNormals</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+		Debug.<span class="me1">Log</span><span class="br0">&#40;</span>verts.<span class="me1">length</span><span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+&#160;
+	originalMesh<span class="sy0">=</span><span class="kw2">new</span> Mesh<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+	CopyMesh<span class="br0">&#40;</span>mesh<span class="sy0">,</span> originalMesh<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw2">function</span> subdivide<span class="br0">&#40;</span>center <span class="sy0">:</span> boolean<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+&#160;
+	verts <span class="sy0">=</span> mesh.<span class="me1">vertices</span><span class="sy0">;</span>
+	trigs <span class="sy0">=</span> mesh.<span class="me1">triangles</span><span class="sy0">;</span>
+	uvs <span class="sy0">=</span> mesh.<span class="me1">uv</span><span class="sy0">;</span>
+	norms <span class="sy0">=</span> mesh.<span class="me1">normals</span><span class="sy0">;</span>
+&#160;
+	Debug.<span class="me1">Log</span><span class="br0">&#40;</span><span class="st0">&quot;enter subdividing: &quot;</span><span class="sy0">+</span>verts.<span class="me1">length</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+	<span class="kw2">var</span> nv <span class="sy0">=</span> <span class="kw2">new</span> Array<span class="br0">&#40;</span>verts<span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="kw2">var</span> nt <span class="sy0">=</span> <span class="kw2">new</span> Array<span class="br0">&#40;</span>trigs<span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="kw2">var</span> nu <span class="sy0">=</span> <span class="kw2">new</span> Array<span class="br0">&#40;</span>uvs<span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="kw2">var</span> nn <span class="sy0">=</span> <span class="kw2">new</span> Array<span class="br0">&#40;</span>norms<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+	<span class="kw1">if</span><span class="br0">&#40;</span><span class="sy0">!</span>center<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+&#160;
+	<span class="kw1">for</span><span class="br0">&#40;</span><span class="kw2">var</span> i <span class="sy0">:</span> int <span class="sy0">=</span> <span class="nu0">2</span><span class="sy0">;</span>i<span class="sy0">&lt;</span>trigs.<span class="me1">length</span><span class="sy0">;</span>i<span class="sy0">+=</span><span class="nu0">3</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+&#160;
+			<span class="kw2">var</span> p0trigwho <span class="sy0">:</span> int <span class="sy0">=</span> trigs<span class="br0">&#91;</span>i<span class="sy0">-</span><span class="nu0">2</span><span class="br0">&#93;</span><span class="sy0">;</span>
+			<span class="kw2">var</span> p1trigwho <span class="sy0">:</span> int <span class="sy0">=</span> trigs<span class="br0">&#91;</span>i<span class="sy0">-</span><span class="nu0">1</span><span class="br0">&#93;</span><span class="sy0">;</span>
+			<span class="kw2">var</span> p2trigwho <span class="sy0">:</span> int <span class="sy0">=</span> trigs<span class="br0">&#91;</span>i<span class="br0">&#93;</span><span class="sy0">;</span>
+&#160;
+			<span class="kw2">var</span> p0trigwhere <span class="sy0">:</span> int <span class="sy0">=</span> i<span class="sy0">-</span><span class="nu0">2</span><span class="sy0">;</span>
+			<span class="kw2">var</span> p1trigwhere <span class="sy0">:</span> int <span class="sy0">=</span> i<span class="sy0">-</span><span class="nu0">1</span><span class="sy0">;</span>
+			<span class="kw2">var</span> p2trigwhere <span class="sy0">:</span> int <span class="sy0">=</span> i<span class="sy0">;</span>
+&#160;
+			<span class="kw2">var</span> p0 <span class="sy0">:</span> Vector3 <span class="sy0">=</span> verts<span class="br0">&#91;</span>p0trigwho<span class="br0">&#93;</span><span class="sy0">;</span>
+			<span class="kw2">var</span> p1 <span class="sy0">:</span> Vector3 <span class="sy0">=</span> verts<span class="br0">&#91;</span>p1trigwho<span class="br0">&#93;</span><span class="sy0">;</span>
+			<span class="kw2">var</span> p2 <span class="sy0">:</span> Vector3 <span class="sy0">=</span> verts<span class="br0">&#91;</span>p2trigwho<span class="br0">&#93;</span><span class="sy0">;</span>
+&#160;
+			<span class="kw2">var</span> pn0 <span class="sy0">:</span> Vector3 <span class="sy0">=</span> norms<span class="br0">&#91;</span>p0trigwho<span class="br0">&#93;</span><span class="sy0">;</span>
+			<span class="kw2">var</span> pn1 <span class="sy0">:</span> Vector3 <span class="sy0">=</span> norms<span class="br0">&#91;</span>p1trigwho<span class="br0">&#93;</span><span class="sy0">;</span>
+			<span class="kw2">var</span> pn2 <span class="sy0">:</span> Vector3 <span class="sy0">=</span> norms<span class="br0">&#91;</span>p2trigwho<span class="br0">&#93;</span><span class="sy0">;</span>
+&#160;
+			<span class="kw2">var</span> pu0 <span class="sy0">:</span> Vector2 <span class="sy0">=</span> uvs<span class="br0">&#91;</span>p0trigwho<span class="br0">&#93;</span><span class="sy0">;</span>
+			<span class="kw2">var</span> pu1 <span class="sy0">:</span> Vector2 <span class="sy0">=</span> uvs<span class="br0">&#91;</span>p1trigwho<span class="br0">&#93;</span><span class="sy0">;</span>
+			<span class="kw2">var</span> pu2 <span class="sy0">:</span> Vector2 <span class="sy0">=</span> uvs<span class="br0">&#91;</span>p2trigwho<span class="br0">&#93;</span><span class="sy0">;</span>
+&#160;
+			<span class="kw2">var</span> p0mod <span class="sy0">:</span> Vector3 <span class="sy0">=</span> <span class="br0">&#40;</span>p0<span class="sy0">+</span>p1<span class="br0">&#41;</span><span class="sy0">/</span><span class="nu0">2</span><span class="sy0">;</span>	
+			<span class="kw2">var</span> p1mod <span class="sy0">:</span> Vector3 <span class="sy0">=</span> <span class="br0">&#40;</span>p1<span class="sy0">+</span>p2<span class="br0">&#41;</span><span class="sy0">/</span><span class="nu0">2</span><span class="sy0">;</span>
+			<span class="kw2">var</span> p2mod <span class="sy0">:</span> Vector3 <span class="sy0">=</span> <span class="br0">&#40;</span>p0<span class="sy0">+</span>p2<span class="br0">&#41;</span><span class="sy0">/</span><span class="nu0">2</span><span class="sy0">;</span>
+&#160;
+			<span class="kw2">var</span> pn0mod <span class="sy0">:</span> Vector3 <span class="sy0">=</span> <span class="br0">&#40;</span><span class="br0">&#40;</span>pn0<span class="sy0">+</span>pn1<span class="br0">&#41;</span><span class="sy0">/</span><span class="nu0">2</span><span class="br0">&#41;</span>.<span class="me1">normalized</span><span class="sy0">;</span>	
+			<span class="kw2">var</span> pn1mod <span class="sy0">:</span> Vector3 <span class="sy0">=</span> <span class="br0">&#40;</span><span class="br0">&#40;</span>pn1<span class="sy0">+</span>pn2<span class="br0">&#41;</span><span class="sy0">/</span><span class="nu0">2</span><span class="br0">&#41;</span>.<span class="me1">normalized</span><span class="sy0">;</span>
+			<span class="kw2">var</span> pn2mod <span class="sy0">:</span> Vector3 <span class="sy0">=</span> <span class="br0">&#40;</span><span class="br0">&#40;</span>pn0<span class="sy0">+</span>pn2<span class="br0">&#41;</span><span class="sy0">/</span><span class="nu0">2</span><span class="br0">&#41;</span>.<span class="me1">normalized</span><span class="sy0">;</span>
+&#160;
+			<span class="kw2">var</span> pu0mod <span class="sy0">:</span> Vector2 <span class="sy0">=</span> <span class="br0">&#40;</span>pu0<span class="sy0">+</span>pu1<span class="br0">&#41;</span><span class="sy0">/</span><span class="nu0">2</span><span class="sy0">;</span>	
+			<span class="kw2">var</span> pu1mod <span class="sy0">:</span> Vector2 <span class="sy0">=</span> <span class="br0">&#40;</span>pu1<span class="sy0">+</span>pu2<span class="br0">&#41;</span><span class="sy0">/</span><span class="nu0">2</span><span class="sy0">;</span>
+			<span class="kw2">var</span> pu2mod <span class="sy0">:</span> Vector2 <span class="sy0">=</span> <span class="br0">&#40;</span>pu0<span class="sy0">+</span>pu2<span class="br0">&#41;</span><span class="sy0">/</span><span class="nu0">2</span><span class="sy0">;</span>
+&#160;
+			<span class="kw2">var</span> p0modtrigwho <span class="sy0">=</span> nv.<span class="me1">length</span><span class="sy0">;</span>
+			<span class="kw2">var</span> p1modtrigwho <span class="sy0">=</span> nv.<span class="me1">length</span><span class="sy0">+</span><span class="nu0">1</span><span class="sy0">;</span>
+			<span class="kw2">var</span> p2modtrigwho <span class="sy0">=</span> nv.<span class="me1">length</span><span class="sy0">+</span><span class="nu0">2</span><span class="sy0">;</span>
+&#160;
+			nv.<span class="me1">push</span><span class="br0">&#40;</span>p0mod<span class="br0">&#41;</span><span class="sy0">;</span>
+			nv.<span class="me1">push</span><span class="br0">&#40;</span>p1mod<span class="br0">&#41;</span><span class="sy0">;</span>
+			nv.<span class="me1">push</span><span class="br0">&#40;</span>p2mod<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+			nn.<span class="me1">push</span><span class="br0">&#40;</span>pn0mod<span class="br0">&#41;</span><span class="sy0">;</span>
+			nn.<span class="me1">push</span><span class="br0">&#40;</span>pn1mod<span class="br0">&#41;</span><span class="sy0">;</span>
+			nn.<span class="me1">push</span><span class="br0">&#40;</span>pn2mod<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+			nu.<span class="me1">push</span><span class="br0">&#40;</span>pu0mod<span class="br0">&#41;</span><span class="sy0">;</span>
+			nu.<span class="me1">push</span><span class="br0">&#40;</span>pu1mod<span class="br0">&#41;</span><span class="sy0">;</span>
+			nu.<span class="me1">push</span><span class="br0">&#40;</span>pu2mod<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+			nt<span class="br0">&#91;</span>p0trigwhere<span class="br0">&#93;</span> <span class="sy0">=</span> p0trigwho<span class="sy0">;</span>
+			nt<span class="br0">&#91;</span>p1trigwhere<span class="br0">&#93;</span> <span class="sy0">=</span> p0modtrigwho<span class="sy0">;</span>
+			nt<span class="br0">&#91;</span>p2trigwhere<span class="br0">&#93;</span> <span class="sy0">=</span> p2modtrigwho<span class="sy0">;</span>
+&#160;
+			nt.<span class="me1">push</span><span class="br0">&#40;</span>p0modtrigwho<span class="br0">&#41;</span><span class="sy0">;</span>
+			nt.<span class="me1">push</span><span class="br0">&#40;</span>p1modtrigwho<span class="br0">&#41;</span><span class="sy0">;</span>
+			nt.<span class="me1">push</span><span class="br0">&#40;</span>p2modtrigwho<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+			nt.<span class="me1">push</span><span class="br0">&#40;</span>p0modtrigwho<span class="br0">&#41;</span><span class="sy0">;</span>
+			nt.<span class="me1">push</span><span class="br0">&#40;</span>p1trigwho<span class="br0">&#41;</span><span class="sy0">;</span>
+			nt.<span class="me1">push</span><span class="br0">&#40;</span>p1modtrigwho<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+			nt.<span class="me1">push</span><span class="br0">&#40;</span>p2modtrigwho<span class="br0">&#41;</span><span class="sy0">;</span>
+			nt.<span class="me1">push</span><span class="br0">&#40;</span>p1modtrigwho<span class="br0">&#41;</span><span class="sy0">;</span>
+			nt.<span class="me1">push</span><span class="br0">&#40;</span>p2trigwho<span class="br0">&#41;</span><span class="sy0">;</span>
+		<span class="br0">&#125;</span>
+&#160;
+	<span class="br0">&#125;</span><span class="kw1">else</span><span class="br0">&#123;</span>
+&#160;
+		<span class="kw1">for</span><span class="br0">&#40;</span><span class="kw2">var</span> ii <span class="sy0">:</span> int <span class="sy0">=</span> <span class="nu0">2</span><span class="sy0">;</span>ii<span class="sy0">&lt;</span>trigs.<span class="me1">length</span><span class="sy0">;</span>ii<span class="sy0">+=</span><span class="nu0">3</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+&#160;
+			<span class="kw2">var</span> p0trigwhomi <span class="sy0">:</span> int <span class="sy0">=</span> trigs<span class="br0">&#91;</span>ii<span class="sy0">-</span><span class="nu0">2</span><span class="br0">&#93;</span><span class="sy0">;</span>
+			<span class="kw2">var</span> p1trigwhomi <span class="sy0">:</span> int <span class="sy0">=</span> trigs<span class="br0">&#91;</span>ii<span class="sy0">-</span><span class="nu0">1</span><span class="br0">&#93;</span><span class="sy0">;</span>
+			<span class="kw2">var</span> p2trigwhomi <span class="sy0">:</span> int <span class="sy0">=</span> trigs<span class="br0">&#91;</span>ii<span class="br0">&#93;</span><span class="sy0">;</span>
+&#160;
+			<span class="kw2">var</span> p0trigwheremi <span class="sy0">:</span> int <span class="sy0">=</span> ii<span class="sy0">-</span><span class="nu0">2</span><span class="sy0">;</span>
+			<span class="kw2">var</span> p1trigwheremi <span class="sy0">:</span> int <span class="sy0">=</span> ii<span class="sy0">-</span><span class="nu0">1</span><span class="sy0">;</span>
+			<span class="kw2">var</span> p2trigwheremi <span class="sy0">:</span> int <span class="sy0">=</span> ii<span class="sy0">;</span>
+&#160;
+			<span class="kw2">var</span> p0mi <span class="sy0">:</span> Vector3 <span class="sy0">=</span> verts<span class="br0">&#91;</span>p0trigwhomi<span class="br0">&#93;</span><span class="sy0">;</span>
+			<span class="kw2">var</span> p1mi <span class="sy0">:</span> Vector3 <span class="sy0">=</span> verts<span class="br0">&#91;</span>p1trigwhomi<span class="br0">&#93;</span><span class="sy0">;</span>
+			<span class="kw2">var</span> p2mi <span class="sy0">:</span> Vector3 <span class="sy0">=</span> verts<span class="br0">&#91;</span>p2trigwhomi<span class="br0">&#93;</span><span class="sy0">;</span>
+&#160;
+			<span class="kw2">var</span> p0mn <span class="sy0">:</span> Vector3 <span class="sy0">=</span> norms<span class="br0">&#91;</span>p0trigwhomi<span class="br0">&#93;</span><span class="sy0">;</span>
+			<span class="kw2">var</span> p1mn <span class="sy0">:</span> Vector3 <span class="sy0">=</span> norms<span class="br0">&#91;</span>p1trigwhomi<span class="br0">&#93;</span><span class="sy0">;</span>
+			<span class="kw2">var</span> p2mn <span class="sy0">:</span> Vector3 <span class="sy0">=</span> norms<span class="br0">&#91;</span>p2trigwhomi<span class="br0">&#93;</span><span class="sy0">;</span>
+&#160;
+			<span class="kw2">var</span> p0mu <span class="sy0">:</span> Vector2 <span class="sy0">=</span> uvs<span class="br0">&#91;</span>p0trigwhomi<span class="br0">&#93;</span><span class="sy0">;</span>
+			<span class="kw2">var</span> p1mu <span class="sy0">:</span> Vector2 <span class="sy0">=</span> uvs<span class="br0">&#91;</span>p1trigwhomi<span class="br0">&#93;</span><span class="sy0">;</span>
+			<span class="kw2">var</span> p2mu <span class="sy0">:</span> Vector2 <span class="sy0">=</span> uvs<span class="br0">&#91;</span>p2trigwhomi<span class="br0">&#93;</span><span class="sy0">;</span>
+&#160;
+			<span class="kw2">var</span> p0modmi <span class="sy0">:</span> Vector3 <span class="sy0">=</span> <span class="br0">&#40;</span>p0mi<span class="sy0">+</span>p1mi<span class="sy0">+</span>p2mi<span class="br0">&#41;</span><span class="sy0">/</span><span class="nu0">3</span><span class="sy0">;</span>
+			<span class="kw2">var</span> p0modmn <span class="sy0">:</span> Vector3 <span class="sy0">=</span> <span class="br0">&#40;</span><span class="br0">&#40;</span>p0mn<span class="sy0">+</span>p1mn<span class="sy0">+</span>p2mn<span class="br0">&#41;</span><span class="sy0">/</span><span class="nu0">3</span><span class="br0">&#41;</span>.<span class="me1">normalized</span><span class="sy0">;</span>
+			<span class="kw2">var</span> p0modmu <span class="sy0">:</span> Vector2 <span class="sy0">=</span> <span class="br0">&#40;</span>p0mu<span class="sy0">+</span>p1mu<span class="sy0">+</span>p2mu<span class="br0">&#41;</span><span class="sy0">/</span><span class="nu0">3</span><span class="sy0">;</span>	
+&#160;
+			<span class="kw2">var</span> p0modtrigwhomi <span class="sy0">=</span> nv.<span class="me1">length</span><span class="sy0">;</span>
+&#160;
+			nv.<span class="me1">push</span><span class="br0">&#40;</span>p0modmi<span class="br0">&#41;</span><span class="sy0">;</span>
+			nn.<span class="me1">push</span><span class="br0">&#40;</span>p0modmn<span class="br0">&#41;</span><span class="sy0">;</span>
+			nu.<span class="me1">push</span><span class="br0">&#40;</span>p0modmu<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+			nt<span class="br0">&#91;</span>p0trigwheremi<span class="br0">&#93;</span> <span class="sy0">=</span> p0trigwhomi<span class="sy0">;</span>
+			nt<span class="br0">&#91;</span>p1trigwheremi<span class="br0">&#93;</span> <span class="sy0">=</span> p1trigwhomi<span class="sy0">;</span>
+			nt<span class="br0">&#91;</span>p2trigwheremi<span class="br0">&#93;</span> <span class="sy0">=</span> p0modtrigwhomi<span class="sy0">;</span>
+&#160;
+			nt.<span class="me1">push</span><span class="br0">&#40;</span>p0modtrigwhomi<span class="br0">&#41;</span><span class="sy0">;</span>
+			nt.<span class="me1">push</span><span class="br0">&#40;</span>p1trigwhomi<span class="br0">&#41;</span><span class="sy0">;</span>
+			nt.<span class="me1">push</span><span class="br0">&#40;</span>p2trigwhomi<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+			nt.<span class="me1">push</span><span class="br0">&#40;</span>p0trigwhomi<span class="br0">&#41;</span><span class="sy0">;</span>
+			nt.<span class="me1">push</span><span class="br0">&#40;</span>p0modtrigwhomi<span class="br0">&#41;</span><span class="sy0">;</span>
+			nt.<span class="me1">push</span><span class="br0">&#40;</span>p2trigwhomi<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+		<span class="br0">&#125;</span>
+&#160;
+	<span class="br0">&#125;</span>
+&#160;
+	verts <span class="sy0">=</span> nv.<span class="me1">ToBuiltin</span><span class="br0">&#40;</span>Vector3<span class="br0">&#41;</span><span class="sy0">;</span>
+	norms <span class="sy0">=</span> nn.<span class="me1">ToBuiltin</span><span class="br0">&#40;</span>Vector3<span class="br0">&#41;</span><span class="sy0">;</span>
+	uvs <span class="sy0">=</span> nu.<span class="me1">ToBuiltin</span><span class="br0">&#40;</span>Vector2<span class="br0">&#41;</span><span class="sy0">;</span>
+	trigs <span class="sy0">=</span> nt.<span class="me1">ToBuiltin</span><span class="br0">&#40;</span>int<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+	<span class="co1">//applyuvs();</span>
+	applymesh<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="co1">//mesh.RecalculateNormals();</span>
+&#160;
+	Debug.<span class="me1">Log</span><span class="br0">&#40;</span><span class="st0">&quot;exit subdividing: &quot;</span><span class="sy0">+</span>verts.<span class="me1">length</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw2">function</span> applyuvs<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+	uvs <span class="sy0">=</span> <span class="kw2">new</span> Vector2<span class="br0">&#91;</span>verts.<span class="me1">length</span><span class="br0">&#93;</span><span class="sy0">;</span>
+	<span class="kw1">for</span><span class="br0">&#40;</span><span class="kw2">var</span> i <span class="sy0">:</span> int <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>i<span class="sy0">&lt;</span>verts.<span class="me1">length</span><span class="sy0">;</span>i<span class="sy0">++</span><span class="br0">&#41;</span>
+		uvs<span class="br0">&#91;</span>i<span class="br0">&#93;</span> <span class="sy0">=</span> Vector2<span class="br0">&#40;</span>verts<span class="br0">&#91;</span>i<span class="br0">&#93;</span>.<span class="me1">x</span><span class="sy0">,</span>verts<span class="br0">&#91;</span>i<span class="br0">&#93;</span>.<span class="me1">y</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw2">function</span> updatemesh<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+	<span class="co1">//mesh = new Mesh();</span>
+	mesh <span class="sy0">=</span> GetComponent<span class="br0">&#40;</span>MeshFilter<span class="br0">&#41;</span>.<span class="me1">mesh</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw2">function</span> applymesh<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+	<span class="kw3">print</span><span class="br0">&#40;</span>verts.<span class="me1">length</span><span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="kw1">if</span><span class="br0">&#40;</span>verts.<span class="me1">length</span> <span class="sy0">&gt;</span> <span class="nu0">65000</span><span class="br0">&#41;</span><span class="br0">&#123;</span>
+		Debug.<span class="me1">Log</span><span class="br0">&#40;</span><span class="st0">&quot;Exiting... Too many vertices&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+		<span class="kw1">return</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	mesh.<span class="me1">Clear</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+	mesh.<span class="me1">vertices</span> <span class="sy0">=</span> verts<span class="sy0">;</span>
+	mesh.<span class="me1">uv</span> <span class="sy0">=</span> uvs<span class="sy0">;</span>
+	<span class="kw1">if</span><span class="br0">&#40;</span>mesh.<span class="me1">uv2</span> <span class="sy0">!=</span> <span class="kw2">null</span><span class="br0">&#41;</span>
+		mesh.<span class="me1">uv2</span> <span class="sy0">=</span> uvs<span class="sy0">;</span>
+	mesh.<span class="me1">normals</span> <span class="sy0">=</span> norms<span class="sy0">;</span>
+	mesh.<span class="me1">triangles</span> <span class="sy0">=</span> trigs<span class="sy0">;</span>
+	mesh.<span class="me1">RecalculateBounds</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="kw1">if</span><span class="br0">&#40;</span>GetComponent<span class="br0">&#40;</span>MeshCollider<span class="br0">&#41;</span> <span class="sy0">!=</span> <span class="kw2">null</span><span class="br0">&#41;</span>
+		GetComponent<span class="br0">&#40;</span>MeshCollider<span class="br0">&#41;</span>.<span class="me1">sharedMesh</span> <span class="sy0">=</span> mesh<span class="sy0">;</span>
+	updatemesh<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw2">function</span> CopyMesh<span class="br0">&#40;</span>fromMesh <span class="sy0">:</span> Mesh<span class="sy0">,</span> toMesh <span class="sy0">:</span> Mesh<span class="br0">&#41;</span><span class="br0">&#123;</span>
+	toMesh.<span class="me1">Clear</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+	toMesh.<span class="me1">vertices</span><span class="sy0">=</span>fromMesh.<span class="me1">vertices</span><span class="sy0">;</span>
+	toMesh.<span class="me1">normals</span><span class="sy0">=</span>fromMesh.<span class="me1">normals</span><span class="sy0">;</span>
+	toMesh.<span class="me1">uv</span><span class="sy0">=</span>fromMesh.<span class="me1">uv</span><span class="sy0">;</span>
+	toMesh.<span class="me1">triangles</span><span class="sy0">=</span>fromMesh.<span class="me1">triangles</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre></div></div>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 25/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key mediawiki:pcache:idhash:3610-0!*!*!!en!*!* and timestamp 20121024153829 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Retrieved from "<a href="http://wiki.unity3d.com/index.php?title=MeshSubdivision&amp;oldid=13301">http://wiki.unity3d.com/index.php?title=MeshSubdivision&amp;oldid=13301</a>"				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks catlinks-allhidden'></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Personal tools</h5>
+	<ul>
+		<li id="pt-login"><a href="/index.php?title=Special:UserLogin&amp;returnto=MeshSubdivision" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in / create account</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namespaces</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="/index.php/MeshSubdivision"  title="View the content page [c]" accesskey="c">Page</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="/index.php?title=Talk:MeshSubdivision&amp;action=edit&amp;redlink=1"  title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Variants</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Views</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="/index.php/MeshSubdivision" >Read</a></span></li>
+					<li id="ca-viewsource"><span><a href="/index.php?title=MeshSubdivision&amp;action=edit"  title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="/index.php?title=MeshSubdivision&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Actions</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Search</label></h5>
+	<form action="/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="Search Unify Community Wiki [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if exists" id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Special:Search"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(/images/wiki.png);" href="/index.php/Main_Page"  title="Visit the main page"></a></div>
+				<!-- /logo -->
+				
+<!-- Navigation -->
+<div class="portal" id='p-Navigation'>
+	<h5>Navigation</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage"><a href="/index.php/Main_Page" title="Visit the main page [z]" accesskey="z">Main Page</a></li>
+			<li id="n-Extensions"><a href="/index.php/Extensions">Extensions</a></li>
+			<li id="n-Particle-Library"><a href="/index.php/Particle_Library">Particle Library</a></li>
+			<li id="n-Programming"><a href="/index.php/Programming">Programming</a></li>
+			<li id="n-Scripts"><a href="/index.php/Scripts">Scripts</a></li>
+			<li id="n-Shaders"><a href="/index.php/Shaders">Shaders</a></li>
+			<li id="n-Wizards"><a href="/index.php/Wizards">Wizards</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Navigation -->
+
+<!-- Extras -->
+<div class="portal" id='p-Extras'>
+	<h5>Extras</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Tips.2C-Tricks.2C-Tools"><a href="/index.php/Tips">Tips, Tricks, Tools</a></li>
+			<li id="n-Tutorials"><a href="/index.php/Tutorials">Tutorials</a></li>
+			<li id="n-Unity-Projects"><a href="/index.php/Unity_Projects">Unity Projects</a></li>
+			<li id="n-Contests"><a href="/index.php/Contests">Contests</a></li>
+			<li id="n-IRC-Chatroom"><a href="/index.php/IRC">IRC Chatroom</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Extras -->
+
+<!-- Quick Links -->
+<div class="portal" id='p-Quick_Links'>
+	<h5>Quick Links</h5>
+	<div class="body">
+		<ul>
+			<li id="n-portal"><a href="/index.php/Unify:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="/index.php/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-New-Pages"><a href="/index.php/Special:NewPages">New Pages</a></li>
+			<li id="n-help"><a href="/index.php/Help:Contents" title="The place to find out">Help</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Quick Links -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Toolbox</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="/index.php/Special:WhatLinksHere/MeshSubdivision" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="/index.php/Special:RecentChangesLinked/MeshSubdivision" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-specialpages"><a href="/index.php/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li><a href="/index.php?title=MeshSubdivision&amp;printable=yes" rel="alternate">Printable version</a></li>
+			<li id="t-permalink"><a href="/index.php?title=MeshSubdivision&amp;oldid=13301" title="Permanent link to this revision of the page">Permanent link</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 10 January 2012, at 22:48.</li>
+											<li id="footer-info-viewcount">This page has been accessed 2,060 times.</li>
+											<li id="footer-info-copyright">Content is available under <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution Share Alike</a>.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="/index.php/Unify:Privacy_policy" title="Unify:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/index.php/Unify:About" title="Unify:About">About Unify Community Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="/index.php/Unify:General_disclaimer" title="Unify:General disclaimer">Disclaimers</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/"><img src="/skins/common/images/cc-by-sa.png" alt="Creative Commons Attribution Share Alike" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="//www.mediawiki.org/"><img src="/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://wiki.unity3d.com/load.php?debug=false&amp;lang=en&amp;modules=skins.vector&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready"], null, true);
+}</script>
+<script src="http://wiki.unity3d.com/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served in 0.147 secs. -->
+	</body>
+</html>

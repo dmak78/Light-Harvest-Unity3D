@@ -12,17 +12,18 @@ public var osc_lineWidthHigh: float = 1;
 public var animateWidth : boolean;
 public var flipWidth : boolean;
 public var frequency : float;
+public var osc_frequency_low : float;
+public var osc_frequency_high : float;
 public var waveSpeed : float;
 public var hue1 : float;
 private var prevHue1 : float;
 public var hue2 : float;
 private var prevHue2 : float;
-
-
-
-
-
-public var resolution : int = 3;
+public var osc_address_hue1 : String;
+public var osc_address_hue2 : String;
+public var osc_address_flipWidth : String;
+public var osc_address_frequency : String;
+public var osc_address_animateWidth : String;
 
 
 function Awake() {
@@ -92,13 +93,10 @@ function Update() {
 	
 	
 	
-	if(!OSCMessageReceived){
-		lineWidth=original_lineWidth;
-	}
+//	if(!OSCMessageReceived){
+//		lineWidth=original_lineWidth;
+//	}
 	
-	resolution = Mathf.Clamp(resolution,3,(triangles.Length/3));
-//	oscValue = OSCReceiver.messages[oscControl];
-//	oscValue = Map(oscValue,0,1,-2,2, false);
 	targetMesh = gameObject.GetComponent(MeshFilter).mesh;
 		triangles = targetMesh.GetTriangles(0);
 	vertices = targetMesh.vertices;
@@ -136,17 +134,29 @@ function Update() {
 
 function OSCMessageReceived(message : OSC.NET.OSCMessage){
 	//Debug.Log("I got a message! " + message.Values[0]);
-	
-	//for(var m = 0; m < oscAddresses.Length; m++){
+
 		if(message.Address == osc_lineWidth){
 			lineWidth = Map(message.Values[0],0,1,osc_lineWidthLow,osc_lineWidthHigh,true);
-		}	
-
-
-		
-//	}
-
-
+		}
+		if(message.Address == osc_address_frequency){
+			frequency = Map(message.Values[0],0,1,osc_frequency_low,osc_frequency_high,true);
+		}
+		if(message.Address == osc_address_hue1){
+			hue1 = message.Values[0];
+		}
+		if(message.Address == osc_address_hue2){
+			hue2 = message.Values[0];
+		}
+		if(message.Address == osc_address_flipWidth){
+			if(message.Values[0] == 1.0){
+				flipWidth = !flipWidth;
+			}
+		}
+		if(message.Address == osc_address_animateWidth){
+			if(message.Values[0] == 1.0){
+				animateWidth = !animateWidth;
+			}
+		}
 }
 
 function Map(value : float, inputMin : float, inputMax : float, outputMin : float, outputMax : float , clamp : boolean) : float 

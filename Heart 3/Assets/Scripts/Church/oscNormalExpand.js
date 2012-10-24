@@ -15,6 +15,10 @@ public var oscOn : boolean;
 public var waveSpeed : float;
 public var frequency : float;
 public var animateAmount : boolean;
+public var osc_address_animate : String;
+public var osc_address_frequency : String;
+public var osc_frequency_low : float = 0;
+public var osc_frequency_high : float = 1;
 
 
 function Start (){
@@ -77,18 +81,20 @@ function OSCMessageReceived(message : OSC.NET.OSCMessage){
 		if(message.Address == oscAddress){
 			var tempExpand = Map(message.Values[0],0,1,oscLow_expandAmount,oscHigh_expandAmount,true);
 			expandAmount = Mathf.Lerp(expandAmount, tempExpand , .6);
-		}	
+		}
+		if(message.Address == osc_address_animate){
+			if(message.Values[0] == 1.0){
+				animateAmount = !animateAmount;
+			}
+		}
+		if(message.Address == osc_address_frequency){
+			frequency = Map(message.Values[0],0,1,osc_frequency_low,osc_frequency_high,true);
+		}		
 		if(message.Address == osc_oscOn){
 			if(message.Values[0] == 1.0){
 				oscOn = !oscOn;
-				
-//				if(!oscOn){
-//					mesh = gameObject.GetComponent(MeshFilter).mesh;
-//					mesh.vertices = originalVertices;
-//				}
 			}
-		}	
-		
+		}		
 }
 
 function Map(value : float, inputMin : float, inputMax : float, outputMin : float, outputMax : float , clamp : boolean) : float 

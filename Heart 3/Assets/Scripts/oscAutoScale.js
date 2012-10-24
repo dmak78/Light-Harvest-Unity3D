@@ -14,15 +14,16 @@ public var osc_address_bump : String;
 public var autoScaleOn : boolean;
 public var frequency : float;
 public var waveSpeed : float;
+public var osc_address_autoOn : String;
+public var osc_address_frequency : String;
+public var osc_frequency_low : float = 0;
+public var osc_frequency_high : float = 1;
 
 
 function Start(){
 	originalScale = transform.localScale;
 	scaleAmount = originalScale.x;
 	originalScaleAmount = scaleAmount;
-	
-	
-
 }
 function Update () {
 	
@@ -48,10 +49,17 @@ function Update () {
 function OSCMessageReceived(message : OSC.NET.OSCMessage){
 	//Debug.Log("I got a message! " + message.Values[0]);
 	
-	//for(var m = 0; m < oscAddresses.Length; m++){
 		if(message.Address == osc_scaleAmount){
 			scaleAmount = Map(message.Values[0],0,1,osc_scaleAmountLow,osc_scaleAmountHigh,true);
-		}	
+		}
+		if(message.Address == osc_address_frequency){
+			frequency = Map(message.Values[0],0,1,osc_frequency_low,osc_frequency_high,true);
+		}
+		if(message.Address == osc_address_autoOn){
+			if(message.Values[0] == 1.0){
+				autoScaleOn = !autoScaleOn;
+			}
+		}		
 		if(message.Address == osc_address_bump){
 			if(message.Values[0] == 1.0){
 				scaleAmount=1.0;
@@ -60,11 +68,6 @@ function OSCMessageReceived(message : OSC.NET.OSCMessage){
 				scaleAmount=0;
 			}
 		}
-
-		
-//	}
-
-
 }
 
 function Map(value : float, inputMin : float, inputMax : float, outputMin : float, outputMax : float , clamp : boolean) : float 

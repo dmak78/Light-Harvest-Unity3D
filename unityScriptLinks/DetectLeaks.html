@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<title>DetectLeaks - Unify Community Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.1" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/opensearch_desc.php" title="Unify Community Wiki (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.unity3d.com/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Unify Community Wiki Atom feed" href="/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.unity3d.com/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cskins.vector&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.unity3d.com/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: mediawiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://wiki.unity3d.com/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"DetectLeaks","wgTitle":"DetectLeaks","wgCurRevisionId":14485,"wgArticleId":1973,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Debugging Scripts","Heads Up Display Scripts","C Sharp","MonoBehaviour"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgRelevantPageName":"DetectLeaks","wgRestrictionEdit":[],"wgRestrictionMove":[]});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,
+"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"variant":"en","language":"en","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false});;},{},{});mw.loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: mediawiki:resourceloader:filter:minify-js:7:9983699ab6150ffa89a90653b2338ac8 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-csharp {line-height: normal;}
+.source-csharp li, .source-csharp pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for csharp
+ * CSS class: source-csharp, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.csharp.source-csharp .de1, .csharp.source-csharp .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.csharp.source-csharp  {font-family:monospace;}
+.csharp.source-csharp .imp {font-weight: bold; color: red;}
+.csharp.source-csharp li, .csharp.source-csharp .li1 {font-weight: normal; vertical-align:top;}
+.csharp.source-csharp .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.csharp.source-csharp .li2 {font-weight: bold; vertical-align:top;}
+.csharp.source-csharp .kw1 {color: #0600FF; font-weight: bold;}
+.csharp.source-csharp .kw2 {color: #FF8000; font-weight: bold;}
+.csharp.source-csharp .kw3 {color: #008000;}
+.csharp.source-csharp .kw4 {color: #6666cc; font-weight: bold;}
+.csharp.source-csharp .kw5 {color: #000000;}
+.csharp.source-csharp .co1 {color: #008080; font-style: italic;}
+.csharp.source-csharp .co2 {color: #008080;}
+.csharp.source-csharp .co3 {color: #008080;}
+.csharp.source-csharp .coMULTI {color: #008080; font-style: italic;}
+.csharp.source-csharp .es0 {color: #008080; font-weight: bold;}
+.csharp.source-csharp .es_h {color: #008080; font-weight: bold;}
+.csharp.source-csharp .br0 {color: #008000;}
+.csharp.source-csharp .sy0 {color: #008000;}
+.csharp.source-csharp .st0 {color: #666666;}
+.csharp.source-csharp .st_h {color: #666666;}
+.csharp.source-csharp .nu0 {color: #FF0000;}
+.csharp.source-csharp .me1 {color: #0000FF;}
+.csharp.source-csharp .me2 {color: #0000FF;}
+.csharp.source-csharp .ln-xtra, .csharp.source-csharp li.ln-xtra, .csharp.source-csharp div.ln-xtra {background-color: #ffc;}
+.csharp.source-csharp span.xtra { display:block; }
+
+/*]]>*/
+</style><!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-DetectLeaks skin-vector action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">DetectLeaks</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">From Unify Community Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Jump to: <a href="#mw-head">navigation</a>,
+					<a href="#p-search">search</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p>Author: Joachim Ante
+</p>
+<h2> <span class="mw-headline" id="Description"> Description </span></h2>
+<p>This script will displays the number of alloctated unity objects by type. This is useful for finding leaks.
+Knowing the type of object (mesh, texture, sound clip, game object) that is getting leaked is the first step.
+You could then print the names of all leaked assets of that type.
+</p><p><br />
+</p>
+<h2> <span class="mw-headline" id="C.23_-_DetectLeaks"> C# - DetectLeaks </span></h2>
+<p>The script _must_ be named DetectLeaks.cs
+</p>
+<div dir="ltr" class="mw-geshi mw-content-ltr"><div class="csharp source-csharp"><pre class="de1"><span class="kw1">using</span> <span class="co3">UnityEngine</span><span class="sy0">;</span>
+<span class="kw1">using</span> <span class="co3">System.Collections</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">public</span> <span class="kw4">class</span> DetectLeaks <span class="sy0">:</span> MonoBehaviour <span class="br0">&#123;</span>
+&#160;
+	<span class="kw4">void</span> OnGUI <span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		GUILayout<span class="sy0">.</span><span class="me1">Label</span><span class="br0">&#40;</span><span class="st0">&quot;All &quot;</span> <span class="sy0">+</span> FindObjectsOfTypeAll<span class="br0">&#40;</span><span class="kw3">typeof</span><span class="br0">&#40;</span>UnityEngine<span class="sy0">.</span><span class="kw4">Object</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">.</span><span class="me1">Length</span><span class="br0">&#41;</span><span class="sy0">;</span>
+		GUILayout<span class="sy0">.</span><span class="me1">Label</span><span class="br0">&#40;</span><span class="st0">&quot;Textures &quot;</span> <span class="sy0">+</span> FindObjectsOfTypeAll<span class="br0">&#40;</span><span class="kw3">typeof</span><span class="br0">&#40;</span>Texture<span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">.</span><span class="me1">Length</span><span class="br0">&#41;</span><span class="sy0">;</span>
+		GUILayout<span class="sy0">.</span><span class="me1">Label</span><span class="br0">&#40;</span><span class="st0">&quot;AudioClips &quot;</span> <span class="sy0">+</span> FindObjectsOfTypeAll<span class="br0">&#40;</span><span class="kw3">typeof</span><span class="br0">&#40;</span>AudioClip<span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">.</span><span class="me1">Length</span><span class="br0">&#41;</span><span class="sy0">;</span>
+		GUILayout<span class="sy0">.</span><span class="me1">Label</span><span class="br0">&#40;</span><span class="st0">&quot;Meshes &quot;</span> <span class="sy0">+</span> FindObjectsOfTypeAll<span class="br0">&#40;</span><span class="kw3">typeof</span><span class="br0">&#40;</span>Mesh<span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">.</span><span class="me1">Length</span><span class="br0">&#41;</span><span class="sy0">;</span>
+		GUILayout<span class="sy0">.</span><span class="me1">Label</span><span class="br0">&#40;</span><span class="st0">&quot;Materials &quot;</span> <span class="sy0">+</span> FindObjectsOfTypeAll<span class="br0">&#40;</span><span class="kw3">typeof</span><span class="br0">&#40;</span>Material<span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">.</span><span class="me1">Length</span><span class="br0">&#41;</span><span class="sy0">;</span>
+		GUILayout<span class="sy0">.</span><span class="me1">Label</span><span class="br0">&#40;</span><span class="st0">&quot;GameObjects &quot;</span> <span class="sy0">+</span> FindObjectsOfTypeAll<span class="br0">&#40;</span><span class="kw3">typeof</span><span class="br0">&#40;</span>GameObject<span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">.</span><span class="me1">Length</span><span class="br0">&#41;</span><span class="sy0">;</span>
+		GUILayout<span class="sy0">.</span><span class="me1">Label</span><span class="br0">&#40;</span><span class="st0">&quot;Components &quot;</span> <span class="sy0">+</span> FindObjectsOfTypeAll<span class="br0">&#40;</span><span class="kw3">typeof</span><span class="br0">&#40;</span>Component<span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">.</span><span class="me1">Length</span><span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre></div></div>
+<p>FindObjectsOfTypeAll is obsolete. New version from Berenger on 07/03/2012 (Unity 3.5)
+</p>
+<div dir="ltr" class="mw-geshi mw-content-ltr"><div class="csharp source-csharp"><pre class="de1"><span class="kw1">using</span> <span class="co3">UnityEngine</span><span class="sy0">;</span>
+<span class="kw1">using</span> <span class="co3">System.Collections</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">public</span> <span class="kw4">class</span> DetectLeaks <span class="sy0">:</span> MonoBehaviour 
+<span class="br0">&#123;</span>
+    <span class="kw4">void</span> OnGUI <span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+        GUILayout<span class="sy0">.</span><span class="me1">Label</span><span class="br0">&#40;</span><span class="st0">&quot;All &quot;</span> <span class="sy0">+</span> FindObjectsOfType<span class="br0">&#40;</span><span class="kw3">typeof</span><span class="br0">&#40;</span>UnityEngine<span class="sy0">.</span><span class="kw4">Object</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">.</span><span class="me1">Length</span><span class="br0">&#41;</span><span class="sy0">;</span>
+        GUILayout<span class="sy0">.</span><span class="me1">Label</span><span class="br0">&#40;</span><span class="st0">&quot;Textures &quot;</span> <span class="sy0">+</span> FindObjectsOfType<span class="br0">&#40;</span><span class="kw3">typeof</span><span class="br0">&#40;</span>Texture<span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">.</span><span class="me1">Length</span><span class="br0">&#41;</span><span class="sy0">;</span>
+        GUILayout<span class="sy0">.</span><span class="me1">Label</span><span class="br0">&#40;</span><span class="st0">&quot;AudioClips &quot;</span> <span class="sy0">+</span> FindObjectsOfType<span class="br0">&#40;</span><span class="kw3">typeof</span><span class="br0">&#40;</span>AudioClip<span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">.</span><span class="me1">Length</span><span class="br0">&#41;</span><span class="sy0">;</span>
+        GUILayout<span class="sy0">.</span><span class="me1">Label</span><span class="br0">&#40;</span><span class="st0">&quot;Meshes &quot;</span> <span class="sy0">+</span> FindObjectsOfType<span class="br0">&#40;</span><span class="kw3">typeof</span><span class="br0">&#40;</span>Mesh<span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">.</span><span class="me1">Length</span><span class="br0">&#41;</span><span class="sy0">;</span>
+        GUILayout<span class="sy0">.</span><span class="me1">Label</span><span class="br0">&#40;</span><span class="st0">&quot;Materials &quot;</span> <span class="sy0">+</span> FindObjectsOfType<span class="br0">&#40;</span><span class="kw3">typeof</span><span class="br0">&#40;</span>Material<span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">.</span><span class="me1">Length</span><span class="br0">&#41;</span><span class="sy0">;</span>
+        GUILayout<span class="sy0">.</span><span class="me1">Label</span><span class="br0">&#40;</span><span class="st0">&quot;GameObjects &quot;</span> <span class="sy0">+</span> FindObjectsOfType<span class="br0">&#40;</span><span class="kw3">typeof</span><span class="br0">&#40;</span>GameObject<span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">.</span><span class="me1">Length</span><span class="br0">&#41;</span><span class="sy0">;</span>
+        GUILayout<span class="sy0">.</span><span class="me1">Label</span><span class="br0">&#40;</span><span class="st0">&quot;Components &quot;</span> <span class="sy0">+</span> FindObjectsOfType<span class="br0">&#40;</span><span class="kw3">typeof</span><span class="br0">&#40;</span>Component<span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">.</span><span class="me1">Length</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre></div></div>
+<p>The upper one isnt working correctly... 
+Here is the actual Solution -&gt; <a rel="nofollow" class="external free" href="http://unity3d.com/support/documentation/ScriptReference/Resources.FindObjectsOfTypeAll">http://unity3d.com/support/documentation/ScriptReference/Resources.FindObjectsOfTypeAll</a>
+</p>
+<div dir="ltr" class="mw-geshi mw-content-ltr"><div class="csharp source-csharp"><pre class="de1"><span class="kw1">using</span> <span class="co3">UnityEngine</span><span class="sy0">;</span>
+<span class="kw1">using</span> <span class="co3">System.Collections</span><span class="sy0">;</span>
+<span class="kw1">using</span> <span class="co3">System.Collections.Generic</span><span class="sy0">;</span>
+&#160;
+<span class="kw1">public</span> <span class="kw4">class</span> DetectLeaks <span class="sy0">:</span> MonoBehaviour
+<span class="br0">&#123;</span>
+	<span class="kw4">void</span> OnGUI<span class="br0">&#40;</span><span class="br0">&#41;</span>
+	<span class="br0">&#123;</span>
+		<span class="kw4">Object</span><span class="br0">&#91;</span><span class="br0">&#93;</span> objects <span class="sy0">=</span> FindObjectsOfType<span class="br0">&#40;</span><span class="kw3">typeof</span> <span class="br0">&#40;</span>UnityEngine<span class="sy0">.</span><span class="kw4">Object</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+		Dictionary<span class="sy0">&lt;</span><span class="kw4">string</span>, <span class="kw4">int</span><span class="sy0">&gt;</span> dictionary <span class="sy0">=</span> <span class="kw3">new</span> Dictionary<span class="sy0">&lt;</span><span class="kw4">string</span>, <span class="kw4">int</span><span class="sy0">&gt;</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+		<span class="kw1">foreach</span><span class="br0">&#40;</span><span class="kw4">Object</span> obj <span class="kw1">in</span> objects<span class="br0">&#41;</span>
+		<span class="br0">&#123;</span>
+			<span class="kw4">string</span> key <span class="sy0">=</span> obj<span class="sy0">.</span><span class="me1">GetType</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">.</span><span class="me1">ToString</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+			<span class="kw1">if</span><span class="br0">&#40;</span>dictionary<span class="sy0">.</span><span class="me1">ContainsKey</span><span class="br0">&#40;</span>key<span class="br0">&#41;</span><span class="br0">&#41;</span>
+			<span class="br0">&#123;</span>
+				dictionary<span class="br0">&#91;</span>key<span class="br0">&#93;</span><span class="sy0">++;</span>
+			<span class="br0">&#125;</span> 
+			<span class="kw1">else</span>
+			<span class="br0">&#123;</span>
+				dictionary<span class="br0">&#91;</span>key<span class="br0">&#93;</span> <span class="sy0">=</span> <span class="nu0">1</span><span class="sy0">;</span>
+			<span class="br0">&#125;</span>
+		<span class="br0">&#125;</span>
+&#160;
+		List<span class="sy0">&lt;</span>KeyValuePair<span class="sy0">&lt;</span><span class="kw4">string</span>, <span class="kw4">int</span><span class="sy0">&gt;&gt;</span> myList <span class="sy0">=</span> <span class="kw3">new</span> List<span class="sy0">&lt;</span>KeyValuePair<span class="sy0">&lt;</span><span class="kw4">string</span>, <span class="kw4">int</span><span class="sy0">&gt;&gt;</span><span class="br0">&#40;</span>dictionary<span class="br0">&#41;</span><span class="sy0">;</span>
+		myList<span class="sy0">.</span><span class="me1">Sort</span><span class="br0">&#40;</span>
+			<span class="kw4">delegate</span><span class="br0">&#40;</span>KeyValuePair<span class="sy0">&lt;</span><span class="kw4">string</span>, <span class="kw4">int</span><span class="sy0">&gt;</span> firstPair,
+			KeyValuePair<span class="sy0">&lt;</span><span class="kw4">string</span>, <span class="kw4">int</span><span class="sy0">&gt;</span> nextPair<span class="br0">&#41;</span>
+				<span class="br0">&#123;</span>
+					<span class="kw1">return</span> nextPair<span class="sy0">.</span><span class="me1">Value</span><span class="sy0">.</span><span class="me1">CompareTo</span><span class="br0">&#40;</span><span class="br0">&#40;</span>firstPair<span class="sy0">.</span><span class="me1">Value</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+				<span class="br0">&#125;</span>
+		<span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+		<span class="kw1">foreach</span> <span class="br0">&#40;</span>KeyValuePair<span class="sy0">&lt;</span><span class="kw4">string</span>, <span class="kw4">int</span><span class="sy0">&gt;</span> entry <span class="kw1">in</span> myList<span class="br0">&#41;</span>
+		<span class="br0">&#123;</span>
+			GUILayout<span class="sy0">.</span><span class="me1">Label</span><span class="br0">&#40;</span>entry<span class="sy0">.</span><span class="me1">Key</span> <span class="sy0">+</span> <span class="st0">&quot;: &quot;</span> <span class="sy0">+</span> entry<span class="sy0">.</span><span class="me1">Value</span><span class="br0">&#41;</span><span class="sy0">;</span>
+		<span class="br0">&#125;</span>
+&#160;
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre></div></div>
+<p>Slightly modified version to show every type of object and ordered (descending) by count. -Juha
+</p>
+<!-- 
+NewPP limit report
+Preprocessor node count: 16/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key mediawiki:pcache:idhash:1973-0!*!*!!*!*!* and timestamp 20121024151739 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Retrieved from "<a href="http://wiki.unity3d.com/index.php?title=DetectLeaks&amp;oldid=14485">http://wiki.unity3d.com/index.php?title=DetectLeaks&amp;oldid=14485</a>"				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/index.php/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="/index.php?title=Category:Debugging_Scripts&amp;action=edit&amp;redlink=1" class="new" title="Category:Debugging Scripts (page does not exist)">Debugging Scripts</a></li><li><a href="/index.php?title=Category:Heads_Up_Display_Scripts&amp;action=edit&amp;redlink=1" class="new" title="Category:Heads Up Display Scripts (page does not exist)">Heads Up Display Scripts</a></li><li><a href="/index.php/Category:C_Sharp" title="Category:C Sharp">C Sharp</a></li><li><a href="/index.php/Category:MonoBehaviour" title="Category:MonoBehaviour">MonoBehaviour</a></li></ul></div></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Personal tools</h5>
+	<ul>
+		<li id="pt-login"><a href="/index.php?title=Special:UserLogin&amp;returnto=DetectLeaks" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in / create account</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namespaces</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="/index.php/DetectLeaks"  title="View the content page [c]" accesskey="c">Page</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="/index.php?title=Talk:DetectLeaks&amp;action=edit&amp;redlink=1"  title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Variants</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Views</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="/index.php/DetectLeaks" >Read</a></span></li>
+					<li id="ca-viewsource"><span><a href="/index.php?title=DetectLeaks&amp;action=edit"  title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="/index.php?title=DetectLeaks&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Actions</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Search</label></h5>
+	<form action="/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="Search Unify Community Wiki [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if exists" id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Special:Search"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(/images/wiki.png);" href="/index.php/Main_Page"  title="Visit the main page"></a></div>
+				<!-- /logo -->
+				
+<!-- Navigation -->
+<div class="portal" id='p-Navigation'>
+	<h5>Navigation</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage"><a href="/index.php/Main_Page" title="Visit the main page [z]" accesskey="z">Main Page</a></li>
+			<li id="n-Extensions"><a href="/index.php/Extensions">Extensions</a></li>
+			<li id="n-Particle-Library"><a href="/index.php/Particle_Library">Particle Library</a></li>
+			<li id="n-Programming"><a href="/index.php/Programming">Programming</a></li>
+			<li id="n-Scripts"><a href="/index.php/Scripts">Scripts</a></li>
+			<li id="n-Shaders"><a href="/index.php/Shaders">Shaders</a></li>
+			<li id="n-Wizards"><a href="/index.php/Wizards">Wizards</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Navigation -->
+
+<!-- Extras -->
+<div class="portal" id='p-Extras'>
+	<h5>Extras</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Tips.2C-Tricks.2C-Tools"><a href="/index.php/Tips">Tips, Tricks, Tools</a></li>
+			<li id="n-Tutorials"><a href="/index.php/Tutorials">Tutorials</a></li>
+			<li id="n-Unity-Projects"><a href="/index.php/Unity_Projects">Unity Projects</a></li>
+			<li id="n-Contests"><a href="/index.php/Contests">Contests</a></li>
+			<li id="n-IRC-Chatroom"><a href="/index.php/IRC">IRC Chatroom</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Extras -->
+
+<!-- Quick Links -->
+<div class="portal" id='p-Quick_Links'>
+	<h5>Quick Links</h5>
+	<div class="body">
+		<ul>
+			<li id="n-portal"><a href="/index.php/Unify:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="/index.php/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-New-Pages"><a href="/index.php/Special:NewPages">New Pages</a></li>
+			<li id="n-help"><a href="/index.php/Help:Contents" title="The place to find out">Help</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Quick Links -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Toolbox</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="/index.php/Special:WhatLinksHere/DetectLeaks" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="/index.php/Special:RecentChangesLinked/DetectLeaks" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-specialpages"><a href="/index.php/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li><a href="/index.php?title=DetectLeaks&amp;printable=yes" rel="alternate">Printable version</a></li>
+			<li id="t-permalink"><a href="/index.php?title=DetectLeaks&amp;oldid=14485" title="Permanent link to this revision of the page">Permanent link</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 7 June 2012, at 19:07.</li>
+											<li id="footer-info-viewcount">This page has been accessed 11,381 times.</li>
+											<li id="footer-info-copyright">Content is available under <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution Share Alike</a>.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="/index.php/Unify:Privacy_policy" title="Unify:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/index.php/Unify:About" title="Unify:About">About Unify Community Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="/index.php/Unify:General_disclaimer" title="Unify:General disclaimer">Disclaimers</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/"><img src="/skins/common/images/cc-by-sa.png" alt="Creative Commons Attribution Share Alike" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="//www.mediawiki.org/"><img src="/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://wiki.unity3d.com/load.php?debug=false&amp;lang=en&amp;modules=skins.vector&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready"], null, true);
+}</script>
+<script src="http://wiki.unity3d.com/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served in 0.136 secs. -->
+	</body>
+</html>

@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<title>ArrayPrefs2 - Unify Community Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.1" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/opensearch_desc.php" title="Unify Community Wiki (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.unity3d.com/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Unify Community Wiki Atom feed" href="/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.unity3d.com/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cskins.vector&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.unity3d.com/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: mediawiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://wiki.unity3d.com/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"ArrayPrefs2","wgTitle":"ArrayPrefs2","wgCurRevisionId":13444,"wgArticleId":3505,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Utility","JavaScript"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgRelevantPageName":"ArrayPrefs2","wgRestrictionEdit":[],"wgRestrictionMove":[]});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,
+"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"variant":"en","language":"en","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false});;},{},{});mw.loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: mediawiki:resourceloader:filter:minify-js:7:9983699ab6150ffa89a90653b2338ac8 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-javascript {line-height: normal;}
+.source-javascript li, .source-javascript pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for javascript
+ * CSS class: source-javascript, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.javascript.source-javascript .de1, .javascript.source-javascript .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.javascript.source-javascript  {font-family:monospace;}
+.javascript.source-javascript .imp {font-weight: bold; color: red;}
+.javascript.source-javascript li, .javascript.source-javascript .li1 {font-weight: normal; vertical-align:top;}
+.javascript.source-javascript .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.javascript.source-javascript .li2 {font-weight: bold; vertical-align:top;}
+.javascript.source-javascript .kw1 {color: #000066; font-weight: bold;}
+.javascript.source-javascript .kw2 {color: #003366; font-weight: bold;}
+.javascript.source-javascript .kw3 {color: #000066;}
+.javascript.source-javascript .co1 {color: #006600; font-style: italic;}
+.javascript.source-javascript .co2 {color: #009966; font-style: italic;}
+.javascript.source-javascript .coMULTI {color: #006600; font-style: italic;}
+.javascript.source-javascript .es0 {color: #000099; font-weight: bold;}
+.javascript.source-javascript .br0 {color: #009900;}
+.javascript.source-javascript .sy0 {color: #339933;}
+.javascript.source-javascript .st0 {color: #3366CC;}
+.javascript.source-javascript .nu0 {color: #CC0000;}
+.javascript.source-javascript .me1 {color: #660066;}
+.javascript.source-javascript .ln-xtra, .javascript.source-javascript li.ln-xtra, .javascript.source-javascript div.ln-xtra {background-color: #ffc;}
+.javascript.source-javascript span.xtra { display:block; }
+
+/*]]>*/
+</style><!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-ArrayPrefs2 skin-vector action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">ArrayPrefs2</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">From Unify Community Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Jump to: <a href="#mw-head">navigation</a>,
+					<a href="#p-search">search</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p>Author: <a href="/index.php/User:Eric5h5" title="User:Eric5h5">Eric Haines</a>
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Description"><span class="tocnumber">1</span> <span class="toctext">Description</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Usage"><span class="tocnumber">2</span> <span class="toctext">Usage</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Vector2.2C_Vector3.2C_Quaternion.2C_Color.2C_Bool"><span class="tocnumber">3</span> <span class="toctext">Vector2, Vector3, Quaternion, Color, Bool</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Arrays"><span class="tocnumber">4</span> <span class="toctext">Arrays</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#ShowArrayType"><span class="tocnumber">5</span> <span class="toctext">ShowArrayType</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Usage_Note"><span class="tocnumber">6</span> <span class="toctext">Usage Note</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#How_it_Works"><span class="tocnumber">7</span> <span class="toctext">How it Works</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#JavaScript_-_PlayerPrefsX.js"><span class="tocnumber">8</span> <span class="toctext">JavaScript - PlayerPrefsX.js</span></a></li>
+</ul>
+</td></tr></table>
+<h2> <span class="mw-headline" id="Description">Description</span></h2>
+<p>Provides a way to save and load arrays of various types from PlayerPrefs, plus Vector2, Vector3, Quaternion, and Color. Also integrates boolean saving from <a href="/index.php/BoolPrefs" title="BoolPrefs">BoolPrefs</a>, with a bit of spiffing up.  ArrayPrefs2 supersedes the original <a href="/index.php/ArrayPrefs" title="ArrayPrefs">ArrayPrefs</a> because it's generally faster, more robust, and usually takes less space when saving.  (Except string arrays, but they're still more robust anyway.)  Note that preferences saved with ArrayPrefs are not compatible with ArrayPrefs2.  Requires Unity 3.0.
+</p>
+<h2> <span class="mw-headline" id="Usage"> Usage </span></h2>
+<p>Have this script somewhere in your project.  Ideally it should be in the Standard Assets folder; this way it can be called from C# and Boo scripts.  Call it PlayerPrefsX, and then you can use the following functions:
+</p>
+<ul><li>PlayerPrefsX.SetBool
+</li><li>PlayerPrefsX.GetBool
+</li><li>PlayerPrefsX.SetVector2
+</li><li>PlayerPrefsX.GetVector2
+</li><li>PlayerPrefsX.SetVector3
+</li><li>PlayerPrefsX.GetVector3
+</li><li>PlayerPrefsX.SetQuaternion
+</li><li>PlayerPrefsX.GetQuaternion
+</li><li>PlayerPrefsX.SetColor
+</li><li>PlayerPrefsX.GetColor
+</li><li>PlayerPrefsX.SetIntArray
+</li><li>PlayerPrefsX.GetIntArray
+</li><li>PlayerPrefsX.SetFloatArray
+</li><li>PlayerPrefsX.GetFloatArray
+</li><li>PlayerPrefsX.SetBoolArray
+</li><li>PlayerPrefsX.GetBoolArray
+</li><li>PlayerPrefsX.SetStringArray
+</li><li>PlayerPrefsX.GetStringArray
+</li><li>PlayerPrefsX.SetVector2Array
+</li><li>PlayerPrefsX.GetVector2Array
+</li><li>PlayerPrefsX.SetVector3Array
+</li><li>PlayerPrefsX.GetVector3Array
+</li><li>PlayerPrefsX.SetQuaternionArray
+</li><li>PlayerPrefsX.GetQuaternionArray
+</li><li>PlayerPrefsX.SetColorArray
+</li><li>PlayerPrefsX.GetColorArray
+</li></ul>
+<h2> <span class="mw-headline" id="Vector2.2C_Vector3.2C_Quaternion.2C_Color.2C_Bool"> Vector2, Vector3, Quaternion, Color, Bool </span></h2>
+<p>GetVector2/SetVector2, plus Vector3, Quaternion, Color, and Bool, work pretty much like they would if they were part of PlayerPrefs.  Namely, setting a value with a key stores that value, which can be retrieved later.
+</p>
+<div dir="ltr" class="mw-geshi mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="kw2">var</span> coordinates <span class="sy0">=</span> Vector2<span class="br0">&#40;</span>.4<span class="sy0">,</span> .2<span class="br0">&#41;</span><span class="sy0">;</span>
+PlayerPrefsX.<span class="me1">SetVector2</span> <span class="br0">&#40;</span><span class="st0">&quot;Coords&quot;</span><span class="sy0">,</span> coordinates<span class="br0">&#41;</span><span class="sy0">;</span></pre></div></div>
+<p>The functions return true if they succeeded, or false if a PlayerPrefsException occurred (like trying to save more than 1MB of data when using the web player).  So you might want to check the return value.
+</p>
+<div dir="ltr" class="mw-geshi mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="co1">// Save the player's position and rotation</span>
+<span class="kw2">var</span> player <span class="sy0">:</span> GameObject<span class="sy0">;</span>
+<span class="kw1">if</span> <span class="br0">&#40;</span><span class="sy0">!</span>PlayerPrefsX.<span class="me1">SetVector3</span> <span class="br0">&#40;</span><span class="st0">&quot;PlayerPosition&quot;</span><span class="sy0">,</span> player.<span class="me1">transform</span>.<span class="me1">position</span><span class="br0">&#41;</span><span class="br0">&#41;</span>
+	<span class="kw3">print</span> <span class="br0">&#40;</span><span class="st0">&quot;Saving position failed&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">if</span> <span class="br0">&#40;</span><span class="sy0">!</span>PlayerPrefsX.<span class="me1">SetQuaternion</span> <span class="br0">&#40;</span><span class="st0">&quot;PlayerRotation&quot;</span><span class="sy0">,</span> player.<span class="me1">transform</span>.<span class="me1">rotation</span><span class="br0">&#41;</span><span class="br0">&#41;</span>
+	<span class="kw3">print</span> <span class="br0">&#40;</span><span class="st0">&quot;Saving rotation failed&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre></div></div>
+<p>When reading keys, they return the default values for the appropriate type if the key doesn't exist.
+</p>
+<div dir="ltr" class="mw-geshi mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="kw2">var</span> coordinates <span class="sy0">=</span> PlayerPrefsX.<span class="me1">GetVector2</span> <span class="br0">&#40;</span><span class="st0">&quot;Coords&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="co1">// coordinates = Vector2.zero if &quot;Coords&quot; doesn't exist</span></pre></div></div>
+<p>If you'd rather have a different default, you can specify that instead: 
+</p>
+<div dir="ltr" class="mw-geshi mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="co1">// Load the player's position and rotation</span>
+<span class="kw2">var</span> player <span class="sy0">:</span> GameObject<span class="sy0">;</span>
+player.<span class="me1">transform</span>.<span class="me1">position</span> <span class="sy0">=</span> PlayerPrefsX.<span class="me1">GetVector3</span> <span class="br0">&#40;</span><span class="st0">&quot;PlayerPosition&quot;</span><span class="sy0">,</span> Vector3<span class="br0">&#40;</span><span class="nu0">100</span><span class="sy0">,</span> <span class="nu0">50</span><span class="sy0">,</span> <span class="nu0">0</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+player.<span class="me1">transform</span>.<span class="me1">rotation</span> <span class="sy0">=</span> PlayerPrefsX.<span class="me1">GetQuaternion</span> <span class="br0">&#40;</span><span class="st0">&quot;PlayerRotation&quot;</span><span class="sy0">,</span> Quaternion.<span class="me1">Euler</span><span class="br0">&#40;</span><span class="nu0">90</span><span class="sy0">,</span> <span class="nu0">45</span><span class="sy0">,</span> <span class="nu0">0</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre></div></div>
+<h2> <span class="mw-headline" id="Arrays"> Arrays </span></h2>
+<p>You can also save arrays of int, float, boolean, String, Vector2, Vector3, Quaternion, and Color. Saving works the same as above when setting variables:
+</p>
+<div dir="ltr" class="mw-geshi mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="kw2">var</span> numberArray <span class="sy0">=</span> <span class="kw2">new</span> int<span class="br0">&#91;</span><span class="nu0">10</span><span class="br0">&#93;</span><span class="sy0">;</span>
+<span class="kw1">for</span> <span class="br0">&#40;</span>n <span class="kw1">in</span> numberArray<span class="br0">&#41;</span> n <span class="sy0">=</span> Random.<span class="me1">Range</span><span class="br0">&#40;</span><span class="sy0">-</span><span class="nu0">10</span><span class="sy0">,</span> <span class="nu0">11</span><span class="br0">&#41;</span><span class="sy0">;</span>
+PlayerPrefsX.<span class="me1">SetIntArray</span> <span class="br0">&#40;</span><span class="st0">&quot;Numbers&quot;</span><span class="sy0">,</span> numberArray<span class="br0">&#41;</span><span class="sy0">;</span></pre></div></div>
+<p>Again, you can check the return value to see if the save succeeded. Note that these functions work with built-in arrays rather than Lists, but you can convert Lists to built-in arrays easily enough:
+</p>
+<div dir="ltr" class="mw-geshi mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="kw2">var</span> aList <span class="sy0">=</span> <span class="kw2">new</span> List.<span class="sy0">&lt;</span>int<span class="sy0">&gt;</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">for</span> <span class="br0">&#40;</span>i <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> i <span class="sy0">&lt;</span> <span class="nu0">10</span><span class="sy0">;</span> i<span class="sy0">++</span><span class="br0">&#41;</span> aList.<span class="me1">Add</span><span class="br0">&#40;</span>i<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw2">var</span> anArray <span class="sy0">:</span> int<span class="br0">&#91;</span><span class="br0">&#93;</span> <span class="sy0">=</span> aList.<span class="me1">ToArray</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+PlayerPrefsX.<span class="me1">SetIntArray</span> <span class="br0">&#40;</span><span class="st0">&quot;Numbers&quot;</span><span class="sy0">,</span> anArray<span class="br0">&#41;</span><span class="sy0">;</span></pre></div></div>
+<p>Loading variables is also basically the same:
+</p>
+<div dir="ltr" class="mw-geshi mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="kw2">var</span> numberArray <span class="sy0">=</span> PlayerPrefsX.<span class="me1">GetIntArray</span> <span class="br0">&#40;</span><span class="st0">&quot;Numbers&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre></div></div>
+<p>There are a couple of differences. If the key doesn't exist, then an empty array of the appropriate type is returned. In the example above, if "Numbers" doesn't exist, then numberArray will be the same as if you did "var numberArray = new int[0];". You can specify a default value for the array if the key doesn't exist, but since it's an array, you also have to specify how many entries it should have as the third parameter:
+</p>
+<div dir="ltr" class="mw-geshi mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="kw2">var</span> numberArray <span class="sy0">=</span> PlayerPrefsX.<span class="me1">GetIntArray</span> <span class="br0">&#40;</span><span class="st0">&quot;Numbers&quot;</span><span class="sy0">,</span> <span class="sy0">-</span><span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">10</span><span class="br0">&#41;</span><span class="sy0">;</span></pre></div></div>
+<p>In this case, if "Numbers" doesn't exist, then numberArray will be an int array with 10 elements, and each element will contain -1.
+</p><p><b>Note</b>: when saving string arrays, each string can have a maximum of 255 characters. Also, the type of the array is saved along with the array, so trying to do "PlayerPrefsX.GetFloatArray ("Numbers")" won't work, assuming you used an int array when saving to "Numbers".
+</p>
+<h2> <span class="mw-headline" id="ShowArrayType"> ShowArrayType </span></h2>
+<p>In the event that you have a saved array and you're not sure what type it is, you can use ShowArrayType and it will tell you:
+</p>
+<div dir="ltr" class="mw-geshi mw-content-ltr"><div class="javascript source-javascript"><pre class="de1">PlayerPrefsX.<span class="me1">ShowArrayType</span> <span class="br0">&#40;</span><span class="st0">&quot;Numbers&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="co1">// prints '&quot;Numbers&quot; is a Int32 array', assuming &quot;Numbers&quot; was saved using SetIntArray</span></pre></div></div>
+<h2> <span class="mw-headline" id="Usage_Note"> Usage Note </span></h2>
+<p>Even though these functions make it easy to save arrays, PlayerPrefs is more suitable for small amounts of data, like locally-stored top 10 lists and that sort of thing.  PlayerPrefsX isn't intended to turn PlayerPrefs into a database system.  If you have large amounts of data, you should use standard disk IO functions instead.
+</p>
+<h2> <span class="mw-headline" id="How_it_Works"> How it Works </span></h2>
+<p>PlayerPrefsX is built on PlayerPrefs.SetString, which is really the only way in Unity to save a preferences entry as an array (specifically, an array of chars).  So, when saving arrays of floats and ints, each number is converted to 4 bytes and stored in a byte array. The total byte array is then converted to base64, and saved as a string.  When saving a boolean array, each boolean is converted to a single bit in a byte array, which again is converted to a base64 string and saved.  With string arrays, first an index array of bytes is built, where each byte contains the length of the respective string entry from the string array. This is converted to a base64 string, then all the entries in the string array are smooshed into a single string and appended to the index array.  Vector2, Vector3, Quaternion, and Color are built on PlayerPrefsX.SetFloatArray.
+</p><p>Even though System.BitConverter is not endian-aware, PlayerPrefsX is.  If you load a preferences file from a big-endian system into a little-endian system (or vice versa), it will still work.  While mostly theoretical, this is actually a real, if small, possibility, such as someone upgrading from an old PPC Mac to a newer Intel Mac.  Anyway, you don't have to worry about it, but that's what all the funky stuff in the code with endianDiff and byteBlock is all about.
+</p>
+<h2> <span class="mw-headline" id="JavaScript_-_PlayerPrefsX.js"> JavaScript - PlayerPrefsX.js </span></h2>
+<div dir="ltr" class="mw-geshi mw-content-ltr"><div class="javascript source-javascript"><pre class="de1"><span class="co1">// ArrayPrefs2 v 1.3</span>
+<span class="kw2">import</span> System.<span class="me1">Collections</span>.<span class="me1">Generic</span><span class="sy0">;</span>
+&#160;
+static <span class="kw2">private</span> <span class="kw2">var</span> endianDiff1 <span class="sy0">:</span> int<span class="sy0">;</span>
+static <span class="kw2">private</span> <span class="kw2">var</span> endianDiff2 <span class="sy0">:</span> int<span class="sy0">;</span>
+static <span class="kw2">private</span> <span class="kw2">var</span> idx <span class="sy0">:</span> int<span class="sy0">;</span>
+static <span class="kw2">private</span> <span class="kw2">var</span> byteBlock <span class="sy0">:</span> byte<span class="br0">&#91;</span><span class="br0">&#93;</span><span class="sy0">;</span>
+&#160;
+enum ArrayType <span class="br0">&#123;</span>Float<span class="sy0">,</span> Int32<span class="sy0">,</span> Bool<span class="sy0">,</span> String<span class="sy0">,</span> Vector2<span class="sy0">,</span> Vector3<span class="sy0">,</span> Quaternion<span class="sy0">,</span> Color<span class="br0">&#125;</span>
+&#160;
+static <span class="kw2">function</span> SetBool <span class="br0">&#40;</span><span class="kw3">name</span> <span class="sy0">:</span> String<span class="sy0">,</span> value <span class="sy0">:</span> boolean<span class="br0">&#41;</span> <span class="sy0">:</span> boolean <span class="br0">&#123;</span>
+	<span class="kw1">try</span> <span class="br0">&#123;</span>
+		PlayerPrefs.<span class="me1">SetInt</span><span class="br0">&#40;</span><span class="kw3">name</span><span class="sy0">,</span> value<span class="sy0">?</span> <span class="nu0">1</span> <span class="sy0">:</span> <span class="nu0">0</span><span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="kw1">catch</span> <span class="br0">&#40;</span>err<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		<span class="kw1">return</span> <span class="kw2">false</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="kw1">return</span> <span class="kw2">true</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+static <span class="kw2">function</span> GetBool <span class="br0">&#40;</span><span class="kw3">name</span> <span class="sy0">:</span> String<span class="br0">&#41;</span> <span class="sy0">:</span> boolean <span class="br0">&#123;</span>
+	<span class="kw1">return</span> PlayerPrefs.<span class="me1">GetInt</span><span class="br0">&#40;</span><span class="kw3">name</span><span class="br0">&#41;</span> <span class="sy0">==</span> <span class="nu0">1</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+static <span class="kw2">function</span> GetBool <span class="br0">&#40;</span><span class="kw3">name</span> <span class="sy0">:</span> String<span class="sy0">,</span> defaultValue <span class="sy0">:</span> boolean<span class="br0">&#41;</span> <span class="sy0">:</span> boolean <span class="br0">&#123;</span>
+	<span class="kw1">if</span> <span class="br0">&#40;</span>PlayerPrefs.<span class="me1">HasKey</span><span class="br0">&#40;</span><span class="kw3">name</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		<span class="kw1">return</span> GetBool<span class="br0">&#40;</span><span class="kw3">name</span><span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="kw1">return</span> defaultValue<span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+static <span class="kw2">function</span> SetVector2 <span class="br0">&#40;</span>key <span class="sy0">:</span> String<span class="sy0">,</span> vector <span class="sy0">:</span> Vector2<span class="br0">&#41;</span> <span class="sy0">:</span> boolean <span class="br0">&#123;</span>
+	<span class="kw1">return</span> SetFloatArray<span class="br0">&#40;</span>key<span class="sy0">,</span> <span class="br0">&#91;</span>vector.<span class="me1">x</span><span class="sy0">,</span> vector.<span class="me1">y</span><span class="br0">&#93;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+static <span class="kw2">function</span> GetVector2 <span class="br0">&#40;</span>key <span class="sy0">:</span> String<span class="br0">&#41;</span> <span class="sy0">:</span> Vector2 <span class="br0">&#123;</span>
+	<span class="kw2">var</span> floatArray <span class="sy0">=</span> GetFloatArray<span class="br0">&#40;</span>key<span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="kw1">if</span> <span class="br0">&#40;</span>floatArray.<span class="me1">Length</span> <span class="sy0">&lt;</span> <span class="nu0">2</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		<span class="kw1">return</span> Vector2.<span class="me1">zero</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="kw1">return</span> Vector2<span class="br0">&#40;</span>floatArray<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="sy0">,</span> floatArray<span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+static <span class="kw2">function</span> GetVector2 <span class="br0">&#40;</span>key <span class="sy0">:</span> String<span class="sy0">,</span> defaultValue <span class="sy0">:</span> Vector2<span class="br0">&#41;</span> <span class="sy0">:</span> Vector2 <span class="br0">&#123;</span>
+	<span class="kw1">if</span> <span class="br0">&#40;</span>PlayerPrefs.<span class="me1">HasKey</span><span class="br0">&#40;</span>key<span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		<span class="kw1">return</span> GetVector2<span class="br0">&#40;</span>key<span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="kw1">return</span> defaultValue<span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+static <span class="kw2">function</span> SetVector3 <span class="br0">&#40;</span>key <span class="sy0">:</span> String<span class="sy0">,</span> vector <span class="sy0">:</span> Vector3<span class="br0">&#41;</span> <span class="sy0">:</span> boolean <span class="br0">&#123;</span>
+	<span class="kw1">return</span> SetFloatArray<span class="br0">&#40;</span>key<span class="sy0">,</span> <span class="br0">&#91;</span>vector.<span class="me1">x</span><span class="sy0">,</span> vector.<span class="me1">y</span><span class="sy0">,</span> vector.<span class="me1">z</span><span class="br0">&#93;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+static <span class="kw2">function</span> GetVector3 <span class="br0">&#40;</span>key <span class="sy0">:</span> String<span class="br0">&#41;</span> <span class="sy0">:</span> Vector3 <span class="br0">&#123;</span>
+	<span class="kw2">var</span> floatArray <span class="sy0">=</span> GetFloatArray<span class="br0">&#40;</span>key<span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="kw1">if</span> <span class="br0">&#40;</span>floatArray.<span class="me1">Length</span> <span class="sy0">&lt;</span> <span class="nu0">3</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		<span class="kw1">return</span> Vector3.<span class="me1">zero</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="kw1">return</span> Vector3<span class="br0">&#40;</span>floatArray<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="sy0">,</span> floatArray<span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span><span class="sy0">,</span> floatArray<span class="br0">&#91;</span><span class="nu0">2</span><span class="br0">&#93;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+static <span class="kw2">function</span> GetVector3 <span class="br0">&#40;</span>key <span class="sy0">:</span> String<span class="sy0">,</span> defaultValue <span class="sy0">:</span> Vector3<span class="br0">&#41;</span> <span class="sy0">:</span> Vector3 <span class="br0">&#123;</span>
+	<span class="kw1">if</span> <span class="br0">&#40;</span>PlayerPrefs.<span class="me1">HasKey</span><span class="br0">&#40;</span>key<span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		<span class="kw1">return</span> GetVector3<span class="br0">&#40;</span>key<span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="kw1">return</span> defaultValue<span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+static <span class="kw2">function</span> SetQuaternion <span class="br0">&#40;</span>key <span class="sy0">:</span> String<span class="sy0">,</span> vector <span class="sy0">:</span> Quaternion<span class="br0">&#41;</span> <span class="sy0">:</span> boolean <span class="br0">&#123;</span>
+	<span class="kw1">return</span> SetFloatArray<span class="br0">&#40;</span>key<span class="sy0">,</span> <span class="br0">&#91;</span>vector.<span class="me1">x</span><span class="sy0">,</span> vector.<span class="me1">y</span><span class="sy0">,</span> vector.<span class="me1">z</span><span class="sy0">,</span> vector.<span class="me1">w</span><span class="br0">&#93;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+static <span class="kw2">function</span> GetQuaternion <span class="br0">&#40;</span>key <span class="sy0">:</span> String<span class="br0">&#41;</span> <span class="sy0">:</span> Quaternion <span class="br0">&#123;</span>
+	<span class="kw2">var</span> floatArray <span class="sy0">=</span> GetFloatArray<span class="br0">&#40;</span>key<span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="kw1">if</span> <span class="br0">&#40;</span>floatArray.<span class="me1">Length</span> <span class="sy0">&lt;</span> <span class="nu0">4</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		<span class="kw1">return</span> Quaternion.<span class="me1">identity</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="kw1">return</span> Quaternion<span class="br0">&#40;</span>floatArray<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="sy0">,</span> floatArray<span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span><span class="sy0">,</span> floatArray<span class="br0">&#91;</span><span class="nu0">2</span><span class="br0">&#93;</span><span class="sy0">,</span> floatArray<span class="br0">&#91;</span><span class="nu0">3</span><span class="br0">&#93;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+static <span class="kw2">function</span> GetQuaternion <span class="br0">&#40;</span>key <span class="sy0">:</span> String<span class="sy0">,</span> defaultValue <span class="sy0">:</span> Quaternion<span class="br0">&#41;</span> <span class="sy0">:</span> Quaternion <span class="br0">&#123;</span>
+	<span class="kw1">if</span> <span class="br0">&#40;</span>PlayerPrefs.<span class="me1">HasKey</span><span class="br0">&#40;</span>key<span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		<span class="kw1">return</span> GetQuaternion<span class="br0">&#40;</span>key<span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="kw1">return</span> defaultValue<span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+static <span class="kw2">function</span> SetColor <span class="br0">&#40;</span>key <span class="sy0">:</span> String<span class="sy0">,</span> color <span class="sy0">:</span> Color<span class="br0">&#41;</span> <span class="sy0">:</span> boolean <span class="br0">&#123;</span>
+	<span class="kw1">return</span> SetFloatArray<span class="br0">&#40;</span>key<span class="sy0">,</span> <span class="br0">&#91;</span>color.<span class="me1">r</span><span class="sy0">,</span> color.<span class="me1">g</span><span class="sy0">,</span> color.<span class="me1">b</span><span class="sy0">,</span> color.<span class="me1">a</span><span class="br0">&#93;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+static <span class="kw2">function</span> GetColor <span class="br0">&#40;</span>key <span class="sy0">:</span> String<span class="br0">&#41;</span> <span class="sy0">:</span> Color <span class="br0">&#123;</span>
+	<span class="kw2">var</span> floatArray <span class="sy0">=</span> GetFloatArray<span class="br0">&#40;</span>key<span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="kw1">if</span> <span class="br0">&#40;</span>floatArray.<span class="me1">Length</span> <span class="sy0">&lt;</span> <span class="nu0">4</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		<span class="kw1">return</span> Color<span class="br0">&#40;</span><span class="nu0">0.0</span><span class="sy0">,</span> <span class="nu0">0.0</span><span class="sy0">,</span> <span class="nu0">0.0</span><span class="sy0">,</span> <span class="nu0">0.0</span><span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="kw1">return</span> Color<span class="br0">&#40;</span>floatArray<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="sy0">,</span> floatArray<span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span><span class="sy0">,</span> floatArray<span class="br0">&#91;</span><span class="nu0">2</span><span class="br0">&#93;</span><span class="sy0">,</span> floatArray<span class="br0">&#91;</span><span class="nu0">3</span><span class="br0">&#93;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+static <span class="kw2">function</span> GetColor <span class="br0">&#40;</span>key <span class="sy0">:</span> String<span class="sy0">,</span> defaultValue <span class="sy0">:</span> Color<span class="br0">&#41;</span> <span class="sy0">:</span> Color <span class="br0">&#123;</span>
+	<span class="kw1">if</span> <span class="br0">&#40;</span>PlayerPrefs.<span class="me1">HasKey</span><span class="br0">&#40;</span>key<span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		<span class="kw1">return</span> GetColor<span class="br0">&#40;</span>key<span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="kw1">return</span> defaultValue<span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+static <span class="kw2">function</span> SetBoolArray <span class="br0">&#40;</span>key <span class="sy0">:</span> String<span class="sy0">,</span> boolArray <span class="sy0">:</span> boolean<span class="br0">&#91;</span><span class="br0">&#93;</span><span class="br0">&#41;</span> <span class="sy0">:</span> boolean <span class="br0">&#123;</span>
+	<span class="kw1">if</span> <span class="br0">&#40;</span>boolArray.<span class="me1">Length</span> <span class="sy0">==</span> <span class="nu0">0</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		Debug.<span class="me1">LogError</span> <span class="br0">&#40;</span><span class="st0">&quot;The bool array cannot have 0 entries when setting &quot;</span> <span class="sy0">+</span> key<span class="br0">&#41;</span><span class="sy0">;</span>
+		<span class="kw1">return</span> <span class="kw2">false</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="co1">// Make a byte array that's a multiple of 8 in length, plus 5 bytes to store the number of entries as an int32 (+ identifier)</span>
+	<span class="co1">// We have to store the number of entries, since the boolArray length might not be a multiple of 8, so there could be some padded zeroes</span>
+	<span class="kw2">var</span> bytes <span class="sy0">=</span> <span class="kw2">new</span> byte<span class="br0">&#91;</span><span class="br0">&#40;</span>boolArray.<span class="me1">Length</span> <span class="sy0">+</span> <span class="nu0">7</span><span class="br0">&#41;</span><span class="sy0">/</span><span class="nu0">8</span> <span class="sy0">+</span> <span class="nu0">5</span><span class="br0">&#93;</span><span class="sy0">;</span>
+	bytes<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span> <span class="sy0">=</span> System.<span class="me1">Convert</span>.<span class="me1">ToByte</span> <span class="br0">&#40;</span>ArrayType.<span class="me1">Bool</span><span class="br0">&#41;</span><span class="sy0">;</span>	<span class="co1">// Identifier</span>
+	<span class="kw2">var</span> bits <span class="sy0">=</span> <span class="kw2">new</span> BitArray<span class="br0">&#40;</span>boolArray<span class="br0">&#41;</span><span class="sy0">;</span>
+	bits.<span class="me1">CopyTo</span> <span class="br0">&#40;</span>bytes<span class="sy0">,</span> <span class="nu0">5</span><span class="br0">&#41;</span><span class="sy0">;</span>
+	Initialize<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+	ConvertInt32ToBytes <span class="br0">&#40;</span>boolArray.<span class="me1">Length</span><span class="sy0">,</span> bytes<span class="br0">&#41;</span><span class="sy0">;</span> <span class="co1">// The number of entries in the boolArray goes in the first 4 bytes</span>
+&#160;
+	<span class="kw1">return</span> SaveBytes <span class="br0">&#40;</span>key<span class="sy0">,</span> bytes<span class="br0">&#41;</span><span class="sy0">;</span>	
+<span class="br0">&#125;</span>
+&#160;
+static <span class="kw2">function</span> GetBoolArray <span class="br0">&#40;</span>key <span class="sy0">:</span> String<span class="br0">&#41;</span> <span class="sy0">:</span> boolean<span class="br0">&#91;</span><span class="br0">&#93;</span> <span class="br0">&#123;</span>
+	<span class="kw1">if</span> <span class="br0">&#40;</span>PlayerPrefs.<span class="me1">HasKey</span><span class="br0">&#40;</span>key<span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		<span class="kw2">var</span> bytes <span class="sy0">=</span> System.<span class="me1">Convert</span>.<span class="me1">FromBase64String</span> <span class="br0">&#40;</span>PlayerPrefs.<span class="me1">GetString</span><span class="br0">&#40;</span>key<span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+		<span class="kw1">if</span> <span class="br0">&#40;</span>bytes.<span class="me1">Length</span> <span class="sy0">&lt;</span> <span class="nu0">6</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+			Debug.<span class="me1">LogError</span> <span class="br0">&#40;</span><span class="st0">&quot;Corrupt preference file for &quot;</span> <span class="sy0">+</span> key<span class="br0">&#41;</span><span class="sy0">;</span>
+			<span class="kw1">return</span> <span class="kw2">new</span> boolean<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="sy0">;</span>
+		<span class="br0">&#125;</span>
+		<span class="kw1">if</span> <span class="br0">&#40;</span>bytes<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span> <span class="sy0">!=</span> ArrayType.<span class="me1">Bool</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+			Debug.<span class="me1">LogError</span> <span class="br0">&#40;</span>key <span class="sy0">+</span> <span class="st0">&quot; is not a boolean array&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+			<span class="kw1">return</span> <span class="kw2">new</span> boolean<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="sy0">;</span>
+		<span class="br0">&#125;</span>
+		Initialize<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+		<span class="co1">// Make a new bytes array that doesn't include the number of entries + identifier (first 5 bytes) and turn that into a BitArray</span>
+		<span class="kw2">var</span> bytes2 <span class="sy0">=</span> <span class="kw2">new</span> byte<span class="br0">&#91;</span>bytes.<span class="me1">Length</span><span class="sy0">-</span><span class="nu0">5</span><span class="br0">&#93;</span><span class="sy0">;</span>
+		System.<span class="me1">Array</span>.<span class="me1">Copy</span><span class="br0">&#40;</span>bytes<span class="sy0">,</span> <span class="nu0">5</span><span class="sy0">,</span> bytes2<span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> bytes2.<span class="me1">Length</span><span class="br0">&#41;</span><span class="sy0">;</span>
+		<span class="kw2">var</span> bits <span class="sy0">=</span> <span class="kw2">new</span> BitArray<span class="br0">&#40;</span>bytes2<span class="br0">&#41;</span><span class="sy0">;</span>
+		<span class="co1">// Get the number of entries from the first 4 bytes after the identifier and resize the BitArray to that length, then convert it to a boolean array</span>
+		bits.<span class="me1">Length</span> <span class="sy0">=</span> ConvertBytesToInt32 <span class="br0">&#40;</span>bytes<span class="br0">&#41;</span><span class="sy0">;</span>
+		<span class="kw2">var</span> boolArray <span class="sy0">=</span> <span class="kw2">new</span> boolean<span class="br0">&#91;</span>bits.<span class="me1">Count</span><span class="br0">&#93;</span><span class="sy0">;</span>
+		bits.<span class="me1">CopyTo</span> <span class="br0">&#40;</span>boolArray<span class="sy0">,</span> <span class="nu0">0</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+		<span class="kw1">return</span> boolArray<span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="kw1">return</span> <span class="kw2">new</span> boolean<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+static <span class="kw2">function</span> GetBoolArray <span class="br0">&#40;</span>key <span class="sy0">:</span> String<span class="sy0">,</span> defaultValue <span class="sy0">:</span> boolean<span class="sy0">,</span> defaultSize <span class="sy0">:</span> int<span class="br0">&#41;</span> <span class="sy0">:</span> boolean<span class="br0">&#91;</span><span class="br0">&#93;</span> <span class="br0">&#123;</span>
+	<span class="kw1">if</span> <span class="br0">&#40;</span>PlayerPrefs.<span class="me1">HasKey</span><span class="br0">&#40;</span>key<span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		<span class="kw1">return</span> GetBoolArray<span class="br0">&#40;</span>key<span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="kw2">var</span> boolArray <span class="sy0">=</span> <span class="kw2">new</span> boolean<span class="br0">&#91;</span>defaultSize<span class="br0">&#93;</span><span class="sy0">;</span>
+	<span class="kw1">for</span> <span class="br0">&#40;</span>b <span class="kw1">in</span> boolArray<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		b <span class="sy0">=</span> defaultValue<span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="kw1">return</span> boolArray<span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+static <span class="kw2">function</span> SetStringArray <span class="br0">&#40;</span>key <span class="sy0">:</span> String<span class="sy0">,</span> stringArray <span class="sy0">:</span> String<span class="br0">&#91;</span><span class="br0">&#93;</span><span class="br0">&#41;</span> <span class="sy0">:</span> boolean <span class="br0">&#123;</span>
+	<span class="kw1">if</span> <span class="br0">&#40;</span>stringArray.<span class="me1">Length</span> <span class="sy0">==</span> <span class="nu0">0</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		Debug.<span class="me1">LogError</span> <span class="br0">&#40;</span><span class="st0">&quot;The string array cannot have 0 entries when setting &quot;</span> <span class="sy0">+</span> key<span class="br0">&#41;</span><span class="sy0">;</span>
+		<span class="kw1">return</span> <span class="kw2">false</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="kw2">var</span> bytes <span class="sy0">=</span> <span class="kw2">new</span> byte<span class="br0">&#91;</span>stringArray.<span class="me1">Length</span> <span class="sy0">+</span> <span class="nu0">1</span><span class="br0">&#93;</span><span class="sy0">;</span>
+	bytes<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span> <span class="sy0">=</span> System.<span class="me1">Convert</span>.<span class="me1">ToByte</span> <span class="br0">&#40;</span>ArrayType.<span class="me1">String</span><span class="br0">&#41;</span><span class="sy0">;</span>	<span class="co1">// Identifier</span>
+	Initialize<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+	<span class="co1">// Store the length of each string that's in stringArray, so we can extract the correct strings in GetStringArray</span>
+	<span class="kw1">for</span> <span class="br0">&#40;</span><span class="kw2">var</span> i <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> i <span class="sy0">&lt;</span> stringArray.<span class="me1">Length</span><span class="sy0">;</span> i<span class="sy0">++</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		<span class="kw1">if</span> <span class="br0">&#40;</span>stringArray<span class="br0">&#91;</span>i<span class="br0">&#93;</span> <span class="sy0">==</span> <span class="kw2">null</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+			Debug.<span class="me1">LogError</span> <span class="br0">&#40;</span><span class="st0">&quot;Can't save null entries in the string array when setting &quot;</span> <span class="sy0">+</span> key<span class="br0">&#41;</span><span class="sy0">;</span>
+			<span class="kw1">return</span> <span class="kw2">false</span><span class="sy0">;</span>
+		<span class="br0">&#125;</span>
+		<span class="kw1">if</span> <span class="br0">&#40;</span>stringArray<span class="br0">&#91;</span>i<span class="br0">&#93;</span>.<span class="me1">Length</span> <span class="sy0">&gt;</span> <span class="nu0">255</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+			Debug.<span class="me1">LogError</span> <span class="br0">&#40;</span><span class="st0">&quot;Strings cannot be longer than 255 characters when setting &quot;</span> <span class="sy0">+</span> key<span class="br0">&#41;</span><span class="sy0">;</span>
+			<span class="kw1">return</span> <span class="kw2">false</span><span class="sy0">;</span>
+		<span class="br0">&#125;</span>
+		bytes<span class="br0">&#91;</span>idx<span class="sy0">++</span><span class="br0">&#93;</span> <span class="sy0">=</span> stringArray<span class="br0">&#91;</span>i<span class="br0">&#93;</span>.<span class="me1">Length</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+&#160;
+	<span class="kw1">try</span> <span class="br0">&#123;</span>
+		PlayerPrefs.<span class="me1">SetString</span> <span class="br0">&#40;</span>key<span class="sy0">,</span> System.<span class="me1">Convert</span>.<span class="me1">ToBase64String</span> <span class="br0">&#40;</span>bytes<span class="br0">&#41;</span> <span class="sy0">+</span> <span class="st0">&quot;|&quot;</span> <span class="sy0">+</span> String.<span class="me1">Join</span><span class="br0">&#40;</span><span class="st0">&quot;&quot;</span><span class="sy0">,</span> stringArray<span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="kw1">catch</span> <span class="br0">&#40;</span>err<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		<span class="kw1">return</span> <span class="kw2">false</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="kw1">return</span> <span class="kw2">true</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+static <span class="kw2">function</span> GetStringArray <span class="br0">&#40;</span>key <span class="sy0">:</span> String<span class="br0">&#41;</span> <span class="sy0">:</span> String<span class="br0">&#91;</span><span class="br0">&#93;</span> <span class="br0">&#123;</span>
+	<span class="kw1">if</span> <span class="br0">&#40;</span>PlayerPrefs.<span class="me1">HasKey</span><span class="br0">&#40;</span>key<span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		<span class="kw2">var</span> completeString <span class="sy0">=</span> PlayerPrefs.<span class="me1">GetString</span><span class="br0">&#40;</span>key<span class="br0">&#41;</span><span class="sy0">;</span>
+		<span class="kw2">var</span> separatorIndex <span class="sy0">=</span> completeString.<span class="me1">IndexOf</span><span class="br0">&#40;</span><span class="st0">&quot;|&quot;</span><span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+		<span class="kw1">if</span> <span class="br0">&#40;</span>separatorIndex <span class="sy0">&lt;</span> <span class="nu0">4</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+			Debug.<span class="me1">LogError</span> <span class="br0">&#40;</span><span class="st0">&quot;Corrupt preference file for &quot;</span> <span class="sy0">+</span> key<span class="br0">&#41;</span><span class="sy0">;</span>
+			<span class="kw1">return</span> <span class="kw2">new</span> String<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="sy0">;</span>
+		<span class="br0">&#125;</span>
+		<span class="kw2">var</span> bytes <span class="sy0">=</span> System.<span class="me1">Convert</span>.<span class="me1">FromBase64String</span> <span class="br0">&#40;</span>completeString.<span class="me1">Substring</span><span class="br0">&#40;</span><span class="nu0">0</span><span class="sy0">,</span> separatorIndex<span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+		<span class="kw1">if</span> <span class="br0">&#40;</span>bytes<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span> <span class="sy0">!=</span> ArrayType.<span class="me1">String</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+			Debug.<span class="me1">LogError</span> <span class="br0">&#40;</span>key <span class="sy0">+</span> <span class="st0">&quot; is not a string array&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+			<span class="kw1">return</span> <span class="kw2">new</span> String<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="sy0">;</span>
+		<span class="br0">&#125;</span>
+		Initialize<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+		<span class="kw2">var</span> numberOfEntries <span class="sy0">=</span> bytes.<span class="me1">Length</span><span class="sy0">-</span><span class="nu0">1</span><span class="sy0">;</span>
+		<span class="kw2">var</span> stringArray <span class="sy0">=</span> <span class="kw2">new</span> String<span class="br0">&#91;</span>numberOfEntries<span class="br0">&#93;</span><span class="sy0">;</span>
+		<span class="kw2">var</span> stringIndex <span class="sy0">=</span> separatorIndex <span class="sy0">+</span> <span class="nu0">1</span><span class="sy0">;</span>
+		<span class="kw1">for</span> <span class="br0">&#40;</span><span class="kw2">var</span> i <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> i <span class="sy0">&lt;</span> numberOfEntries<span class="sy0">;</span> i<span class="sy0">++</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+			<span class="kw2">var</span> stringLength <span class="sy0">:</span> int <span class="sy0">=</span> bytes<span class="br0">&#91;</span>idx<span class="sy0">++</span><span class="br0">&#93;</span><span class="sy0">;</span>
+			<span class="kw1">if</span> <span class="br0">&#40;</span>stringIndex <span class="sy0">+</span> stringLength <span class="sy0">&gt;</span> completeString.<span class="me1">Length</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+				Debug.<span class="me1">LogError</span> <span class="br0">&#40;</span><span class="st0">&quot;Corrupt preference file for &quot;</span> <span class="sy0">+</span> key<span class="br0">&#41;</span><span class="sy0">;</span>
+				<span class="kw1">return</span> <span class="kw2">new</span> String<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="sy0">;</span>
+			<span class="br0">&#125;</span>
+			stringArray<span class="br0">&#91;</span>i<span class="br0">&#93;</span> <span class="sy0">=</span> completeString.<span class="me1">Substring</span><span class="br0">&#40;</span>stringIndex<span class="sy0">,</span> stringLength<span class="br0">&#41;</span><span class="sy0">;</span>
+			stringIndex <span class="sy0">+=</span> stringLength<span class="sy0">;</span>
+		<span class="br0">&#125;</span>
+&#160;
+		<span class="kw1">return</span> stringArray<span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="kw1">return</span> <span class="kw2">new</span> String<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+static <span class="kw2">function</span> GetStringArray <span class="br0">&#40;</span>key <span class="sy0">:</span> String<span class="sy0">,</span> defaultValue <span class="sy0">:</span> String<span class="sy0">,</span> defaultSize <span class="sy0">:</span> int<span class="br0">&#41;</span> <span class="sy0">:</span> String<span class="br0">&#91;</span><span class="br0">&#93;</span> <span class="br0">&#123;</span>
+	<span class="kw1">if</span> <span class="br0">&#40;</span>PlayerPrefs.<span class="me1">HasKey</span><span class="br0">&#40;</span>key<span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		<span class="kw1">return</span> GetStringArray<span class="br0">&#40;</span>key<span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="kw2">var</span> stringArray <span class="sy0">=</span> <span class="kw2">new</span> String<span class="br0">&#91;</span>defaultSize<span class="br0">&#93;</span><span class="sy0">;</span>
+	<span class="kw1">for</span> <span class="br0">&#40;</span>s <span class="kw1">in</span> stringArray<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		s <span class="sy0">=</span> defaultValue<span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="kw1">return</span> stringArray<span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+static <span class="kw2">function</span> SetIntArray <span class="br0">&#40;</span>key <span class="sy0">:</span> String<span class="sy0">,</span> intArray <span class="sy0">:</span> int<span class="br0">&#91;</span><span class="br0">&#93;</span><span class="br0">&#41;</span> <span class="sy0">:</span> boolean <span class="br0">&#123;</span>
+	<span class="kw1">return</span> SetValue <span class="br0">&#40;</span>key<span class="sy0">,</span> intArray<span class="sy0">,</span> ArrayType.<span class="me1">Int32</span><span class="sy0">,</span> <span class="nu0">1</span><span class="sy0">,</span> ConvertFromInt<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+static <span class="kw2">function</span> SetFloatArray <span class="br0">&#40;</span>key <span class="sy0">:</span> String<span class="sy0">,</span> floatArray <span class="sy0">:</span> float<span class="br0">&#91;</span><span class="br0">&#93;</span><span class="br0">&#41;</span> <span class="sy0">:</span> boolean <span class="br0">&#123;</span>
+	<span class="kw1">return</span> SetValue <span class="br0">&#40;</span>key<span class="sy0">,</span> floatArray<span class="sy0">,</span> ArrayType.<span class="me1">Float</span><span class="sy0">,</span> <span class="nu0">1</span><span class="sy0">,</span> ConvertFromFloat<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+static <span class="kw2">function</span> SetVector2Array <span class="br0">&#40;</span>key <span class="sy0">:</span> String<span class="sy0">,</span> vector2Array <span class="sy0">:</span> Vector2<span class="br0">&#91;</span><span class="br0">&#93;</span><span class="br0">&#41;</span> <span class="sy0">:</span> boolean <span class="br0">&#123;</span>
+	<span class="kw1">return</span> SetValue <span class="br0">&#40;</span>key<span class="sy0">,</span> vector2Array<span class="sy0">,</span> ArrayType.<span class="me1">Vector2</span><span class="sy0">,</span> <span class="nu0">2</span><span class="sy0">,</span> ConvertFromVector2<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+static <span class="kw2">function</span> SetVector3Array <span class="br0">&#40;</span>key <span class="sy0">:</span> String<span class="sy0">,</span> vector3Array <span class="sy0">:</span> Vector3<span class="br0">&#91;</span><span class="br0">&#93;</span><span class="br0">&#41;</span> <span class="sy0">:</span> boolean <span class="br0">&#123;</span>
+	<span class="kw1">return</span> SetValue <span class="br0">&#40;</span>key<span class="sy0">,</span> vector3Array<span class="sy0">,</span> ArrayType.<span class="me1">Vector3</span><span class="sy0">,</span> <span class="nu0">3</span><span class="sy0">,</span> ConvertFromVector3<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+static <span class="kw2">function</span> SetQuaternionArray <span class="br0">&#40;</span>key <span class="sy0">:</span> String<span class="sy0">,</span> quaternionArray <span class="sy0">:</span> Quaternion<span class="br0">&#91;</span><span class="br0">&#93;</span><span class="br0">&#41;</span> <span class="sy0">:</span> boolean <span class="br0">&#123;</span>
+	<span class="kw1">return</span> SetValue <span class="br0">&#40;</span>key<span class="sy0">,</span> quaternionArray<span class="sy0">,</span> ArrayType.<span class="me1">Quaternion</span><span class="sy0">,</span> <span class="nu0">4</span><span class="sy0">,</span> ConvertFromQuaternion<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+static <span class="kw2">function</span> SetColorArray <span class="br0">&#40;</span>key <span class="sy0">:</span> String<span class="sy0">,</span> colorArray <span class="sy0">:</span> Color<span class="br0">&#91;</span><span class="br0">&#93;</span><span class="br0">&#41;</span> <span class="sy0">:</span> boolean <span class="br0">&#123;</span>
+	<span class="kw1">return</span> SetValue <span class="br0">&#40;</span>key<span class="sy0">,</span> colorArray<span class="sy0">,</span> ArrayType.<span class="me1">Color</span><span class="sy0">,</span> <span class="nu0">4</span><span class="sy0">,</span> ConvertFromColor<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw2">private</span> static <span class="kw2">function</span> SetValue <span class="br0">&#40;</span>key <span class="sy0">:</span> String<span class="sy0">,</span> array <span class="sy0">:</span> IList<span class="sy0">,</span> arrayType <span class="sy0">:</span> ArrayType<span class="sy0">,</span> vectorNumber <span class="sy0">:</span> int<span class="sy0">,</span> convert <span class="sy0">:</span> <span class="kw2">function</span><span class="br0">&#40;</span>IList<span class="sy0">,</span> byte<span class="br0">&#91;</span><span class="br0">&#93;</span><span class="sy0">,</span> int<span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="sy0">:</span> boolean <span class="br0">&#123;</span>
+	<span class="kw1">if</span> <span class="br0">&#40;</span>array.<span class="me1">Count</span> <span class="sy0">==</span> <span class="nu0">0</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		Debug.<span class="me1">LogError</span> <span class="br0">&#40;</span><span class="st0">&quot;The &quot;</span> <span class="sy0">+</span> arrayType.<span class="me1">ToString</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="sy0">+</span> <span class="st0">&quot; array cannot have 0 entries when setting &quot;</span> <span class="sy0">+</span> key<span class="br0">&#41;</span><span class="sy0">;</span>
+		<span class="kw1">return</span> <span class="kw2">false</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="kw2">var</span> bytes <span class="sy0">=</span> <span class="kw2">new</span> byte<span class="br0">&#91;</span><span class="br0">&#40;</span><span class="nu0">4</span><span class="sy0">*</span>array.<span class="me1">Count</span><span class="br0">&#41;</span><span class="sy0">*</span>vectorNumber <span class="sy0">+</span> <span class="nu0">1</span><span class="br0">&#93;</span><span class="sy0">;</span>
+	bytes<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span> <span class="sy0">=</span> System.<span class="me1">Convert</span>.<span class="me1">ToByte</span> <span class="br0">&#40;</span>arrayType<span class="br0">&#41;</span><span class="sy0">;</span>	<span class="co1">// Identifier</span>
+	Initialize<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+	<span class="kw1">for</span> <span class="br0">&#40;</span><span class="kw2">var</span> i <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> i <span class="sy0">&lt;</span> array.<span class="me1">Count</span><span class="sy0">;</span> i<span class="sy0">++</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		convert <span class="br0">&#40;</span>array<span class="sy0">,</span> bytes<span class="sy0">,</span> i<span class="br0">&#41;</span><span class="sy0">;</span>	
+	<span class="br0">&#125;</span>
+	<span class="kw1">return</span> SaveBytes <span class="br0">&#40;</span>key<span class="sy0">,</span> bytes<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw2">private</span> static <span class="kw2">function</span> ConvertFromInt <span class="br0">&#40;</span>array <span class="sy0">:</span> int<span class="br0">&#91;</span><span class="br0">&#93;</span><span class="sy0">,</span> bytes <span class="sy0">:</span> byte<span class="br0">&#91;</span><span class="br0">&#93;</span><span class="sy0">,</span> i <span class="sy0">:</span> int<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+	ConvertInt32ToBytes <span class="br0">&#40;</span>array<span class="br0">&#91;</span>i<span class="br0">&#93;</span><span class="sy0">,</span> bytes<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw2">private</span> static <span class="kw2">function</span> ConvertFromFloat <span class="br0">&#40;</span>array <span class="sy0">:</span> float<span class="br0">&#91;</span><span class="br0">&#93;</span><span class="sy0">,</span> bytes <span class="sy0">:</span> byte<span class="br0">&#91;</span><span class="br0">&#93;</span><span class="sy0">,</span> i <span class="sy0">:</span> int<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+	ConvertFloatToBytes <span class="br0">&#40;</span>array<span class="br0">&#91;</span>i<span class="br0">&#93;</span><span class="sy0">,</span> bytes<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw2">private</span> static <span class="kw2">function</span> ConvertFromVector2 <span class="br0">&#40;</span>array <span class="sy0">:</span> Vector2<span class="br0">&#91;</span><span class="br0">&#93;</span><span class="sy0">,</span> bytes <span class="sy0">:</span> byte<span class="br0">&#91;</span><span class="br0">&#93;</span><span class="sy0">,</span> i <span class="sy0">:</span> int<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+	ConvertFloatToBytes <span class="br0">&#40;</span>array<span class="br0">&#91;</span>i<span class="br0">&#93;</span>.<span class="me1">x</span><span class="sy0">,</span> bytes<span class="br0">&#41;</span><span class="sy0">;</span>
+	ConvertFloatToBytes <span class="br0">&#40;</span>array<span class="br0">&#91;</span>i<span class="br0">&#93;</span>.<span class="me1">y</span><span class="sy0">,</span> bytes<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw2">private</span> static <span class="kw2">function</span> ConvertFromVector3 <span class="br0">&#40;</span>array <span class="sy0">:</span> Vector3<span class="br0">&#91;</span><span class="br0">&#93;</span><span class="sy0">,</span> bytes <span class="sy0">:</span> byte<span class="br0">&#91;</span><span class="br0">&#93;</span><span class="sy0">,</span> i <span class="sy0">:</span> int<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+	ConvertFloatToBytes <span class="br0">&#40;</span>array<span class="br0">&#91;</span>i<span class="br0">&#93;</span>.<span class="me1">x</span><span class="sy0">,</span> bytes<span class="br0">&#41;</span><span class="sy0">;</span>
+	ConvertFloatToBytes <span class="br0">&#40;</span>array<span class="br0">&#91;</span>i<span class="br0">&#93;</span>.<span class="me1">y</span><span class="sy0">,</span> bytes<span class="br0">&#41;</span><span class="sy0">;</span>
+	ConvertFloatToBytes <span class="br0">&#40;</span>array<span class="br0">&#91;</span>i<span class="br0">&#93;</span>.<span class="me1">z</span><span class="sy0">,</span> bytes<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw2">private</span> static <span class="kw2">function</span> ConvertFromQuaternion <span class="br0">&#40;</span>array <span class="sy0">:</span> Quaternion<span class="br0">&#91;</span><span class="br0">&#93;</span><span class="sy0">,</span> bytes <span class="sy0">:</span> byte<span class="br0">&#91;</span><span class="br0">&#93;</span><span class="sy0">,</span> i <span class="sy0">:</span> int<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+	ConvertFloatToBytes <span class="br0">&#40;</span>array<span class="br0">&#91;</span>i<span class="br0">&#93;</span>.<span class="me1">x</span><span class="sy0">,</span> bytes<span class="br0">&#41;</span><span class="sy0">;</span>
+	ConvertFloatToBytes <span class="br0">&#40;</span>array<span class="br0">&#91;</span>i<span class="br0">&#93;</span>.<span class="me1">y</span><span class="sy0">,</span> bytes<span class="br0">&#41;</span><span class="sy0">;</span>
+	ConvertFloatToBytes <span class="br0">&#40;</span>array<span class="br0">&#91;</span>i<span class="br0">&#93;</span>.<span class="me1">z</span><span class="sy0">,</span> bytes<span class="br0">&#41;</span><span class="sy0">;</span>
+	ConvertFloatToBytes <span class="br0">&#40;</span>array<span class="br0">&#91;</span>i<span class="br0">&#93;</span>.<span class="me1">w</span><span class="sy0">,</span> bytes<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw2">private</span> static <span class="kw2">function</span> ConvertFromColor <span class="br0">&#40;</span>array <span class="sy0">:</span> Color<span class="br0">&#91;</span><span class="br0">&#93;</span><span class="sy0">,</span> bytes <span class="sy0">:</span> byte<span class="br0">&#91;</span><span class="br0">&#93;</span><span class="sy0">,</span> i <span class="sy0">:</span> int<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+	ConvertFloatToBytes <span class="br0">&#40;</span>array<span class="br0">&#91;</span>i<span class="br0">&#93;</span>.<span class="me1">r</span><span class="sy0">,</span> bytes<span class="br0">&#41;</span><span class="sy0">;</span>
+	ConvertFloatToBytes <span class="br0">&#40;</span>array<span class="br0">&#91;</span>i<span class="br0">&#93;</span>.<span class="me1">g</span><span class="sy0">,</span> bytes<span class="br0">&#41;</span><span class="sy0">;</span>
+	ConvertFloatToBytes <span class="br0">&#40;</span>array<span class="br0">&#91;</span>i<span class="br0">&#93;</span>.<span class="me1">b</span><span class="sy0">,</span> bytes<span class="br0">&#41;</span><span class="sy0">;</span>
+	ConvertFloatToBytes <span class="br0">&#40;</span>array<span class="br0">&#91;</span>i<span class="br0">&#93;</span>.<span class="me1">a</span><span class="sy0">,</span> bytes<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+static <span class="kw2">function</span> GetIntArray <span class="br0">&#40;</span>key <span class="sy0">:</span> String<span class="br0">&#41;</span> <span class="sy0">:</span> int<span class="br0">&#91;</span><span class="br0">&#93;</span> <span class="br0">&#123;</span>
+	<span class="kw2">var</span> intList <span class="sy0">=</span> <span class="kw2">new</span> List.<span class="sy0">&lt;</span>int<span class="sy0">&gt;</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+	GetValue <span class="br0">&#40;</span>key<span class="sy0">,</span> intList<span class="sy0">,</span> ArrayType.<span class="me1">Int32</span><span class="sy0">,</span> <span class="nu0">1</span><span class="sy0">,</span> ConvertToInt<span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="kw1">return</span> intList.<span class="me1">ToArray</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+static <span class="kw2">function</span> GetIntArray <span class="br0">&#40;</span>key <span class="sy0">:</span> String<span class="sy0">,</span> defaultValue <span class="sy0">:</span> int<span class="sy0">,</span> defaultSize <span class="sy0">:</span> int<span class="br0">&#41;</span> <span class="sy0">:</span> int<span class="br0">&#91;</span><span class="br0">&#93;</span> <span class="br0">&#123;</span>
+	<span class="kw1">if</span> <span class="br0">&#40;</span>PlayerPrefs.<span class="me1">HasKey</span><span class="br0">&#40;</span>key<span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		<span class="kw1">return</span> GetIntArray<span class="br0">&#40;</span>key<span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="kw2">var</span> intArray <span class="sy0">=</span> <span class="kw2">new</span> int<span class="br0">&#91;</span>defaultSize<span class="br0">&#93;</span><span class="sy0">;</span>
+	<span class="kw1">for</span> <span class="br0">&#40;</span>i <span class="kw1">in</span> intArray<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		i <span class="sy0">=</span> defaultValue<span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="kw1">return</span> intArray<span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+static <span class="kw2">function</span> GetFloatArray <span class="br0">&#40;</span>key <span class="sy0">:</span> String<span class="br0">&#41;</span> <span class="sy0">:</span> float<span class="br0">&#91;</span><span class="br0">&#93;</span> <span class="br0">&#123;</span>
+	<span class="kw2">var</span> floatList <span class="sy0">=</span> <span class="kw2">new</span> List.<span class="sy0">&lt;</span>float<span class="sy0">&gt;</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+	GetValue <span class="br0">&#40;</span>key<span class="sy0">,</span> floatList<span class="sy0">,</span> ArrayType.<span class="me1">Float</span><span class="sy0">,</span> <span class="nu0">1</span><span class="sy0">,</span> ConvertToFloat<span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="kw1">return</span> floatList.<span class="me1">ToArray</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+static <span class="kw2">function</span> GetFloatArray <span class="br0">&#40;</span>key <span class="sy0">:</span> String<span class="sy0">,</span> defaultValue <span class="sy0">:</span> float<span class="sy0">,</span> defaultSize <span class="sy0">:</span> int<span class="br0">&#41;</span> <span class="sy0">:</span> float<span class="br0">&#91;</span><span class="br0">&#93;</span> <span class="br0">&#123;</span>
+	<span class="kw1">if</span> <span class="br0">&#40;</span>PlayerPrefs.<span class="me1">HasKey</span><span class="br0">&#40;</span>key<span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		<span class="kw1">return</span> GetFloatArray<span class="br0">&#40;</span>key<span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="kw2">var</span> floatArray <span class="sy0">=</span> <span class="kw2">new</span> float<span class="br0">&#91;</span>defaultSize<span class="br0">&#93;</span><span class="sy0">;</span>
+	<span class="kw1">for</span> <span class="br0">&#40;</span>f <span class="kw1">in</span> floatArray<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		f <span class="sy0">=</span> defaultValue<span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="kw1">return</span> floatArray<span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+static <span class="kw2">function</span> GetVector2Array <span class="br0">&#40;</span>key <span class="sy0">:</span> String<span class="br0">&#41;</span> <span class="sy0">:</span> Vector2<span class="br0">&#91;</span><span class="br0">&#93;</span> <span class="br0">&#123;</span>
+	<span class="kw2">var</span> vector2List <span class="sy0">=</span> <span class="kw2">new</span> List.<span class="sy0">&lt;</span>Vector2<span class="sy0">&gt;</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+	GetValue <span class="br0">&#40;</span>key<span class="sy0">,</span> vector2List<span class="sy0">,</span> ArrayType.<span class="me1">Vector2</span><span class="sy0">,</span> <span class="nu0">2</span><span class="sy0">,</span> ConvertToVector2<span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="kw1">return</span> vector2List.<span class="me1">ToArray</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+static <span class="kw2">function</span> GetVector2Array <span class="br0">&#40;</span>key <span class="sy0">:</span> String<span class="sy0">,</span> defaultValue <span class="sy0">:</span> Vector2<span class="sy0">,</span> defaultSize <span class="sy0">:</span> int<span class="br0">&#41;</span> <span class="sy0">:</span> Vector2<span class="br0">&#91;</span><span class="br0">&#93;</span> <span class="br0">&#123;</span>
+	<span class="kw1">if</span> <span class="br0">&#40;</span>PlayerPrefs.<span class="me1">HasKey</span><span class="br0">&#40;</span>key<span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		<span class="kw1">return</span> GetVector2Array<span class="br0">&#40;</span>key<span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="kw2">var</span> vector2Array <span class="sy0">=</span> <span class="kw2">new</span> Vector2<span class="br0">&#91;</span>defaultSize<span class="br0">&#93;</span><span class="sy0">;</span>
+	<span class="kw1">for</span> <span class="br0">&#40;</span>v <span class="kw1">in</span> vector2Array<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		v <span class="sy0">=</span> defaultValue<span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="kw1">return</span> vector2Array<span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+static <span class="kw2">function</span> GetVector3Array <span class="br0">&#40;</span>key <span class="sy0">:</span> String<span class="br0">&#41;</span> <span class="sy0">:</span> Vector3<span class="br0">&#91;</span><span class="br0">&#93;</span> <span class="br0">&#123;</span>
+	<span class="kw2">var</span> vector3List <span class="sy0">=</span> <span class="kw2">new</span> List.<span class="sy0">&lt;</span>Vector3<span class="sy0">&gt;</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+	GetValue <span class="br0">&#40;</span>key<span class="sy0">,</span> vector3List<span class="sy0">,</span> ArrayType.<span class="me1">Vector3</span><span class="sy0">,</span> <span class="nu0">3</span><span class="sy0">,</span> ConvertToVector3<span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="kw1">return</span> vector3List.<span class="me1">ToArray</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+static <span class="kw2">function</span> GetVector3Array <span class="br0">&#40;</span>key <span class="sy0">:</span> String<span class="sy0">,</span> defaultValue <span class="sy0">:</span> Vector3<span class="sy0">,</span> defaultSize <span class="sy0">:</span> int<span class="br0">&#41;</span> <span class="sy0">:</span> Vector3<span class="br0">&#91;</span><span class="br0">&#93;</span> <span class="br0">&#123;</span>
+	<span class="kw1">if</span> <span class="br0">&#40;</span>PlayerPrefs.<span class="me1">HasKey</span><span class="br0">&#40;</span>key<span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		<span class="kw1">return</span> GetVector3Array<span class="br0">&#40;</span>key<span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="kw2">var</span> vector3Array <span class="sy0">=</span> <span class="kw2">new</span> Vector3<span class="br0">&#91;</span>defaultSize<span class="br0">&#93;</span><span class="sy0">;</span>
+	<span class="kw1">for</span> <span class="br0">&#40;</span>v <span class="kw1">in</span> vector3Array<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		v <span class="sy0">=</span> defaultValue<span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="kw1">return</span> vector3Array<span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+static <span class="kw2">function</span> GetQuaternionArray <span class="br0">&#40;</span>key <span class="sy0">:</span> String<span class="br0">&#41;</span> <span class="sy0">:</span> Quaternion<span class="br0">&#91;</span><span class="br0">&#93;</span> <span class="br0">&#123;</span>
+	<span class="kw2">var</span> quaternionList <span class="sy0">=</span> <span class="kw2">new</span> List.<span class="sy0">&lt;</span>Quaternion<span class="sy0">&gt;</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+	GetValue <span class="br0">&#40;</span>key<span class="sy0">,</span> quaternionList<span class="sy0">,</span> ArrayType.<span class="me1">Quaternion</span><span class="sy0">,</span> <span class="nu0">4</span><span class="sy0">,</span> ConvertToQuaternion<span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="kw1">return</span> quaternionList.<span class="me1">ToArray</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+static <span class="kw2">function</span> GetQuaternionArray <span class="br0">&#40;</span>key <span class="sy0">:</span> String<span class="sy0">,</span> defaultValue <span class="sy0">:</span> Quaternion<span class="sy0">,</span> defaultSize <span class="sy0">:</span> int<span class="br0">&#41;</span> <span class="sy0">:</span> Quaternion<span class="br0">&#91;</span><span class="br0">&#93;</span> <span class="br0">&#123;</span>
+	<span class="kw1">if</span> <span class="br0">&#40;</span>PlayerPrefs.<span class="me1">HasKey</span><span class="br0">&#40;</span>key<span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		<span class="kw1">return</span> GetQuaternionArray<span class="br0">&#40;</span>key<span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="kw2">var</span> quaternionArray <span class="sy0">=</span> <span class="kw2">new</span> Quaternion<span class="br0">&#91;</span>defaultSize<span class="br0">&#93;</span><span class="sy0">;</span>
+	<span class="kw1">for</span> <span class="br0">&#40;</span>v <span class="kw1">in</span> quaternionArray<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		v <span class="sy0">=</span> defaultValue<span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="kw1">return</span> quaternionArray<span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+static <span class="kw2">function</span> GetColorArray <span class="br0">&#40;</span>key <span class="sy0">:</span> String<span class="br0">&#41;</span> <span class="sy0">:</span> Color<span class="br0">&#91;</span><span class="br0">&#93;</span> <span class="br0">&#123;</span>
+	<span class="kw2">var</span> colorList <span class="sy0">=</span> <span class="kw2">new</span> List.<span class="sy0">&lt;</span>Color<span class="sy0">&gt;</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+	GetValue <span class="br0">&#40;</span>key<span class="sy0">,</span> colorList<span class="sy0">,</span> ArrayType.<span class="me1">Color</span><span class="sy0">,</span> <span class="nu0">4</span><span class="sy0">,</span> ConvertToColor<span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="kw1">return</span> colorList.<span class="me1">ToArray</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+static <span class="kw2">function</span> GetColorArray <span class="br0">&#40;</span>key <span class="sy0">:</span> String<span class="sy0">,</span> defaultValue <span class="sy0">:</span> Color<span class="sy0">,</span> defaultSize <span class="sy0">:</span> int<span class="br0">&#41;</span> <span class="sy0">:</span> Color<span class="br0">&#91;</span><span class="br0">&#93;</span> <span class="br0">&#123;</span>
+	<span class="kw1">if</span> <span class="br0">&#40;</span>PlayerPrefs.<span class="me1">HasKey</span><span class="br0">&#40;</span>key<span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		<span class="kw1">return</span> GetColorArray<span class="br0">&#40;</span>key<span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="kw2">var</span> colorArray <span class="sy0">=</span> <span class="kw2">new</span> Color<span class="br0">&#91;</span>defaultSize<span class="br0">&#93;</span><span class="sy0">;</span>
+	<span class="kw1">for</span> <span class="br0">&#40;</span>v <span class="kw1">in</span> colorArray<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		v <span class="sy0">=</span> defaultValue<span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="kw1">return</span> colorArray<span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw2">private</span> static <span class="kw2">function</span> GetValue <span class="br0">&#40;</span>key <span class="sy0">:</span> String<span class="sy0">,</span> list <span class="sy0">:</span> IList<span class="sy0">,</span> arrayType <span class="sy0">:</span> ArrayType<span class="sy0">,</span> vectorNumber <span class="sy0">:</span> int<span class="sy0">,</span> convert <span class="sy0">:</span> <span class="kw2">function</span><span class="br0">&#40;</span>IList<span class="sy0">,</span> byte<span class="br0">&#91;</span><span class="br0">&#93;</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+	<span class="kw1">if</span> <span class="br0">&#40;</span>PlayerPrefs.<span class="me1">HasKey</span><span class="br0">&#40;</span>key<span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		<span class="kw2">var</span> bytes <span class="sy0">=</span> System.<span class="me1">Convert</span>.<span class="me1">FromBase64String</span> <span class="br0">&#40;</span>PlayerPrefs.<span class="me1">GetString</span><span class="br0">&#40;</span>key<span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+		<span class="kw1">if</span> <span class="br0">&#40;</span><span class="br0">&#40;</span>bytes.<span class="me1">Length</span><span class="sy0">-</span><span class="nu0">1</span><span class="br0">&#41;</span> <span class="sy0">%</span> <span class="br0">&#40;</span>vectorNumber<span class="sy0">*</span><span class="nu0">4</span><span class="br0">&#41;</span> <span class="sy0">!=</span> <span class="nu0">0</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+			Debug.<span class="me1">LogError</span> <span class="br0">&#40;</span><span class="st0">&quot;Corrupt preference file for &quot;</span> <span class="sy0">+</span> key<span class="br0">&#41;</span><span class="sy0">;</span>
+			<span class="kw1">return</span><span class="sy0">;</span>
+		<span class="br0">&#125;</span>
+		<span class="kw1">if</span> <span class="br0">&#40;</span>bytes<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span> <span class="sy0">!=</span> arrayType<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+			Debug.<span class="me1">LogError</span> <span class="br0">&#40;</span>key <span class="sy0">+</span> <span class="st0">&quot; is not a &quot;</span> <span class="sy0">+</span> arrayType.<span class="me1">ToString</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="sy0">+</span> <span class="st0">&quot; array&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+			<span class="kw1">return</span><span class="sy0">;</span>
+		<span class="br0">&#125;</span>
+		Initialize<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&#160;
+		<span class="kw2">var</span> end <span class="sy0">=</span> <span class="br0">&#40;</span>bytes.<span class="me1">Length</span><span class="sy0">-</span><span class="nu0">1</span><span class="br0">&#41;</span> <span class="sy0">/</span> <span class="br0">&#40;</span>vectorNumber<span class="sy0">*</span><span class="nu0">4</span><span class="br0">&#41;</span><span class="sy0">;</span>
+		<span class="kw1">for</span> <span class="br0">&#40;</span><span class="kw2">var</span> i <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> i <span class="sy0">&lt;</span> end<span class="sy0">;</span> i<span class="sy0">++</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+			convert <span class="br0">&#40;</span>list<span class="sy0">,</span> bytes<span class="br0">&#41;</span><span class="sy0">;</span>
+		<span class="br0">&#125;</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw2">private</span> static <span class="kw2">function</span> ConvertToInt <span class="br0">&#40;</span>list <span class="sy0">:</span> List.<span class="sy0">&lt;</span>int<span class="sy0">&gt;,</span> bytes <span class="sy0">:</span> byte<span class="br0">&#91;</span><span class="br0">&#93;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+	list.<span class="me1">Add</span> <span class="br0">&#40;</span>ConvertBytesToInt32<span class="br0">&#40;</span>bytes<span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw2">private</span> static <span class="kw2">function</span> ConvertToFloat <span class="br0">&#40;</span>list <span class="sy0">:</span> List.<span class="sy0">&lt;</span>float<span class="sy0">&gt;,</span> bytes <span class="sy0">:</span> byte<span class="br0">&#91;</span><span class="br0">&#93;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+	list.<span class="me1">Add</span> <span class="br0">&#40;</span>ConvertBytesToFloat<span class="br0">&#40;</span>bytes<span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw2">private</span> static <span class="kw2">function</span> ConvertToVector2 <span class="br0">&#40;</span>list <span class="sy0">:</span> List.<span class="sy0">&lt;</span>Vector2<span class="sy0">&gt;,</span> bytes <span class="sy0">:</span> byte<span class="br0">&#91;</span><span class="br0">&#93;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+	list.<span class="me1">Add</span> <span class="br0">&#40;</span>Vector2<span class="br0">&#40;</span>ConvertBytesToFloat<span class="br0">&#40;</span>bytes<span class="br0">&#41;</span><span class="sy0">,</span> ConvertBytesToFloat<span class="br0">&#40;</span>bytes<span class="br0">&#41;</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw2">private</span> static <span class="kw2">function</span> ConvertToVector3 <span class="br0">&#40;</span>list <span class="sy0">:</span> List.<span class="sy0">&lt;</span>Vector3<span class="sy0">&gt;,</span> bytes <span class="sy0">:</span> byte<span class="br0">&#91;</span><span class="br0">&#93;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+	list.<span class="me1">Add</span> <span class="br0">&#40;</span>Vector3<span class="br0">&#40;</span>ConvertBytesToFloat<span class="br0">&#40;</span>bytes<span class="br0">&#41;</span><span class="sy0">,</span> ConvertBytesToFloat<span class="br0">&#40;</span>bytes<span class="br0">&#41;</span><span class="sy0">,</span> ConvertBytesToFloat<span class="br0">&#40;</span>bytes<span class="br0">&#41;</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw2">private</span> static <span class="kw2">function</span> ConvertToQuaternion <span class="br0">&#40;</span>list <span class="sy0">:</span> List.<span class="sy0">&lt;</span>Quaternion<span class="sy0">&gt;,</span> bytes <span class="sy0">:</span> byte<span class="br0">&#91;</span><span class="br0">&#93;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+	list.<span class="me1">Add</span> <span class="br0">&#40;</span>Quaternion<span class="br0">&#40;</span>ConvertBytesToFloat<span class="br0">&#40;</span>bytes<span class="br0">&#41;</span><span class="sy0">,</span> ConvertBytesToFloat<span class="br0">&#40;</span>bytes<span class="br0">&#41;</span><span class="sy0">,</span> ConvertBytesToFloat<span class="br0">&#40;</span>bytes<span class="br0">&#41;</span><span class="sy0">,</span> ConvertBytesToFloat<span class="br0">&#40;</span>bytes<span class="br0">&#41;</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw2">private</span> static <span class="kw2">function</span> ConvertToColor <span class="br0">&#40;</span>list <span class="sy0">:</span> List.<span class="sy0">&lt;</span>Color<span class="sy0">&gt;,</span> bytes <span class="sy0">:</span> byte<span class="br0">&#91;</span><span class="br0">&#93;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+	list.<span class="me1">Add</span> <span class="br0">&#40;</span>Color<span class="br0">&#40;</span>ConvertBytesToFloat<span class="br0">&#40;</span>bytes<span class="br0">&#41;</span><span class="sy0">,</span> ConvertBytesToFloat<span class="br0">&#40;</span>bytes<span class="br0">&#41;</span><span class="sy0">,</span> ConvertBytesToFloat<span class="br0">&#40;</span>bytes<span class="br0">&#41;</span><span class="sy0">,</span> ConvertBytesToFloat<span class="br0">&#40;</span>bytes<span class="br0">&#41;</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+static <span class="kw2">function</span> ShowArrayType <span class="br0">&#40;</span>key <span class="sy0">:</span> String<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+	<span class="kw2">var</span> bytes <span class="sy0">=</span> System.<span class="me1">Convert</span>.<span class="me1">FromBase64String</span> <span class="br0">&#40;</span>PlayerPrefs.<span class="me1">GetString</span><span class="br0">&#40;</span>key<span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="kw1">if</span> <span class="br0">&#40;</span>bytes.<span class="me1">Length</span> <span class="sy0">&gt;</span> <span class="nu0">0</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		<span class="kw2">var</span> arrayType <span class="sy0">:</span> ArrayType <span class="sy0">=</span> bytes<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="sy0">;</span>
+		Debug.<span class="me1">Log</span> <span class="br0">&#40;</span>key <span class="sy0">+</span> <span class="st0">&quot; is a &quot;</span> <span class="sy0">+</span> arrayType.<span class="me1">ToString</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="sy0">+</span> <span class="st0">&quot; array&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw2">private</span> static <span class="kw2">function</span> Initialize <span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+	<span class="kw1">if</span> <span class="br0">&#40;</span>System.<span class="me1">BitConverter</span>.<span class="me1">IsLittleEndian</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		endianDiff1 <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
+		endianDiff2 <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="kw1">else</span> <span class="br0">&#123;</span>
+		endianDiff1 <span class="sy0">=</span> <span class="nu0">3</span><span class="sy0">;</span>
+		endianDiff2 <span class="sy0">=</span> <span class="nu0">1</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="kw1">if</span> <span class="br0">&#40;</span>byteBlock <span class="sy0">==</span> <span class="kw2">null</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		byteBlock <span class="sy0">=</span> <span class="kw2">new</span> byte<span class="br0">&#91;</span><span class="nu0">4</span><span class="br0">&#93;</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	idx <span class="sy0">=</span> <span class="nu0">1</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw2">private</span> static <span class="kw2">function</span> SaveBytes <span class="br0">&#40;</span>key <span class="sy0">:</span> String<span class="sy0">,</span> bytes <span class="sy0">:</span> byte<span class="br0">&#91;</span><span class="br0">&#93;</span><span class="br0">&#41;</span> <span class="sy0">:</span> boolean <span class="br0">&#123;</span>
+	<span class="kw1">try</span> <span class="br0">&#123;</span>
+		PlayerPrefs.<span class="me1">SetString</span> <span class="br0">&#40;</span>key<span class="sy0">,</span> System.<span class="me1">Convert</span>.<span class="me1">ToBase64String</span> <span class="br0">&#40;</span>bytes<span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="kw1">catch</span> <span class="br0">&#40;</span>err<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		<span class="kw1">return</span> <span class="kw2">false</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="kw1">return</span> <span class="kw2">true</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw2">private</span> static <span class="kw2">function</span> ConvertFloatToBytes <span class="br0">&#40;</span>f <span class="sy0">:</span> float<span class="sy0">,</span> bytes <span class="sy0">:</span> byte<span class="br0">&#91;</span><span class="br0">&#93;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+	byteBlock <span class="sy0">=</span> System.<span class="me1">BitConverter</span>.<span class="me1">GetBytes</span> <span class="br0">&#40;</span>f<span class="br0">&#41;</span><span class="sy0">;</span>
+	ConvertTo4Bytes <span class="br0">&#40;</span>bytes<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw2">private</span> static <span class="kw2">function</span> ConvertBytesToFloat <span class="br0">&#40;</span>bytes <span class="sy0">:</span> byte<span class="br0">&#91;</span><span class="br0">&#93;</span><span class="br0">&#41;</span> <span class="sy0">:</span> float <span class="br0">&#123;</span>
+	ConvertFrom4Bytes <span class="br0">&#40;</span>bytes<span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="kw1">return</span> System.<span class="me1">BitConverter</span>.<span class="me1">ToSingle</span> <span class="br0">&#40;</span>byteBlock<span class="sy0">,</span> <span class="nu0">0</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw2">private</span> static <span class="kw2">function</span> ConvertInt32ToBytes <span class="br0">&#40;</span>i <span class="sy0">:</span> int<span class="sy0">,</span> bytes <span class="sy0">:</span> byte<span class="br0">&#91;</span><span class="br0">&#93;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+	byteBlock <span class="sy0">=</span> System.<span class="me1">BitConverter</span>.<span class="me1">GetBytes</span> <span class="br0">&#40;</span>i<span class="br0">&#41;</span><span class="sy0">;</span>
+	ConvertTo4Bytes <span class="br0">&#40;</span>bytes<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw2">private</span> static <span class="kw2">function</span> ConvertBytesToInt32 <span class="br0">&#40;</span>bytes <span class="sy0">:</span> byte<span class="br0">&#91;</span><span class="br0">&#93;</span><span class="br0">&#41;</span> <span class="sy0">:</span> int <span class="br0">&#123;</span>
+	ConvertFrom4Bytes <span class="br0">&#40;</span>bytes<span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="kw1">return</span> System.<span class="me1">BitConverter</span>.<span class="me1">ToInt32</span> <span class="br0">&#40;</span>byteBlock<span class="sy0">,</span> <span class="nu0">0</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw2">private</span> static <span class="kw2">function</span> ConvertTo4Bytes <span class="br0">&#40;</span>bytes <span class="sy0">:</span> byte<span class="br0">&#91;</span><span class="br0">&#93;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+	bytes<span class="br0">&#91;</span>idx  <span class="br0">&#93;</span> <span class="sy0">=</span> byteBlock<span class="br0">&#91;</span>    endianDiff1<span class="br0">&#93;</span><span class="sy0">;</span>
+	bytes<span class="br0">&#91;</span>idx<span class="sy0">+</span><span class="nu0">1</span><span class="br0">&#93;</span> <span class="sy0">=</span> byteBlock<span class="br0">&#91;</span><span class="nu0">1</span> <span class="sy0">+</span> endianDiff2<span class="br0">&#93;</span><span class="sy0">;</span>
+	bytes<span class="br0">&#91;</span>idx<span class="sy0">+</span><span class="nu0">2</span><span class="br0">&#93;</span> <span class="sy0">=</span> byteBlock<span class="br0">&#91;</span><span class="nu0">2</span> <span class="sy0">-</span> endianDiff2<span class="br0">&#93;</span><span class="sy0">;</span>
+	bytes<span class="br0">&#91;</span>idx<span class="sy0">+</span><span class="nu0">3</span><span class="br0">&#93;</span> <span class="sy0">=</span> byteBlock<span class="br0">&#91;</span><span class="nu0">3</span> <span class="sy0">-</span> endianDiff1<span class="br0">&#93;</span><span class="sy0">;</span>
+	idx <span class="sy0">+=</span> <span class="nu0">4</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&#160;
+<span class="kw2">private</span> static <span class="kw2">function</span> ConvertFrom4Bytes <span class="br0">&#40;</span>bytes <span class="sy0">:</span> byte<span class="br0">&#91;</span><span class="br0">&#93;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+	byteBlock<span class="br0">&#91;</span>    endianDiff1<span class="br0">&#93;</span> <span class="sy0">=</span> bytes<span class="br0">&#91;</span>idx  <span class="br0">&#93;</span><span class="sy0">;</span>
+	byteBlock<span class="br0">&#91;</span><span class="nu0">1</span> <span class="sy0">+</span> endianDiff2<span class="br0">&#93;</span> <span class="sy0">=</span> bytes<span class="br0">&#91;</span>idx<span class="sy0">+</span><span class="nu0">1</span><span class="br0">&#93;</span><span class="sy0">;</span>
+	byteBlock<span class="br0">&#91;</span><span class="nu0">2</span> <span class="sy0">-</span> endianDiff2<span class="br0">&#93;</span> <span class="sy0">=</span> bytes<span class="br0">&#91;</span>idx<span class="sy0">+</span><span class="nu0">2</span><span class="br0">&#93;</span><span class="sy0">;</span>
+	byteBlock<span class="br0">&#91;</span><span class="nu0">3</span> <span class="sy0">-</span> endianDiff1<span class="br0">&#93;</span> <span class="sy0">=</span> bytes<span class="br0">&#91;</span>idx<span class="sy0">+</span><span class="nu0">3</span><span class="br0">&#93;</span><span class="sy0">;</span>
+	idx <span class="sy0">+=</span> <span class="nu0">4</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre></div></div>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 115/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key mediawiki:pcache:idhash:3505-0!*!0!!en!*!* and timestamp 20121023204155 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Retrieved from "<a href="http://wiki.unity3d.com/index.php?title=ArrayPrefs2&amp;oldid=13444">http://wiki.unity3d.com/index.php?title=ArrayPrefs2&amp;oldid=13444</a>"				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/index.php/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="/index.php?title=Category:Utility&amp;action=edit&amp;redlink=1" class="new" title="Category:Utility (page does not exist)">Utility</a></li><li><a href="/index.php/Category:JavaScript" title="Category:JavaScript">JavaScript</a></li></ul></div></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Personal tools</h5>
+	<ul>
+		<li id="pt-login"><a href="/index.php?title=Special:UserLogin&amp;returnto=ArrayPrefs2" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in / create account</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namespaces</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="/index.php/ArrayPrefs2"  title="View the content page [c]" accesskey="c">Page</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="/index.php?title=Talk:ArrayPrefs2&amp;action=edit&amp;redlink=1"  title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Variants</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Views</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="/index.php/ArrayPrefs2" >Read</a></span></li>
+					<li id="ca-viewsource"><span><a href="/index.php?title=ArrayPrefs2&amp;action=edit"  title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="/index.php?title=ArrayPrefs2&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Actions</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Search</label></h5>
+	<form action="/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="Search Unify Community Wiki [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if exists" id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Special:Search"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(/images/wiki.png);" href="/index.php/Main_Page"  title="Visit the main page"></a></div>
+				<!-- /logo -->
+				
+<!-- Navigation -->
+<div class="portal" id='p-Navigation'>
+	<h5>Navigation</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage"><a href="/index.php/Main_Page" title="Visit the main page [z]" accesskey="z">Main Page</a></li>
+			<li id="n-Extensions"><a href="/index.php/Extensions">Extensions</a></li>
+			<li id="n-Particle-Library"><a href="/index.php/Particle_Library">Particle Library</a></li>
+			<li id="n-Programming"><a href="/index.php/Programming">Programming</a></li>
+			<li id="n-Scripts"><a href="/index.php/Scripts">Scripts</a></li>
+			<li id="n-Shaders"><a href="/index.php/Shaders">Shaders</a></li>
+			<li id="n-Wizards"><a href="/index.php/Wizards">Wizards</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Navigation -->
+
+<!-- Extras -->
+<div class="portal" id='p-Extras'>
+	<h5>Extras</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Tips.2C-Tricks.2C-Tools"><a href="/index.php/Tips">Tips, Tricks, Tools</a></li>
+			<li id="n-Tutorials"><a href="/index.php/Tutorials">Tutorials</a></li>
+			<li id="n-Unity-Projects"><a href="/index.php/Unity_Projects">Unity Projects</a></li>
+			<li id="n-Contests"><a href="/index.php/Contests">Contests</a></li>
+			<li id="n-IRC-Chatroom"><a href="/index.php/IRC">IRC Chatroom</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Extras -->
+
+<!-- Quick Links -->
+<div class="portal" id='p-Quick_Links'>
+	<h5>Quick Links</h5>
+	<div class="body">
+		<ul>
+			<li id="n-portal"><a href="/index.php/Unify:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="/index.php/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-New-Pages"><a href="/index.php/Special:NewPages">New Pages</a></li>
+			<li id="n-help"><a href="/index.php/Help:Contents" title="The place to find out">Help</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Quick Links -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Toolbox</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="/index.php/Special:WhatLinksHere/ArrayPrefs2" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="/index.php/Special:RecentChangesLinked/ArrayPrefs2" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-specialpages"><a href="/index.php/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li><a href="/index.php?title=ArrayPrefs2&amp;printable=yes" rel="alternate">Printable version</a></li>
+			<li id="t-permalink"><a href="/index.php?title=ArrayPrefs2&amp;oldid=13444" title="Permanent link to this revision of the page">Permanent link</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 10 January 2012, at 22:52.</li>
+											<li id="footer-info-viewcount">This page has been accessed 8,768 times.</li>
+											<li id="footer-info-copyright">Content is available under <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution Share Alike</a>.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="/index.php/Unify:Privacy_policy" title="Unify:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/index.php/Unify:About" title="Unify:About">About Unify Community Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="/index.php/Unify:General_disclaimer" title="Unify:General disclaimer">Disclaimers</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/"><img src="/skins/common/images/cc-by-sa.png" alt="Creative Commons Attribution Share Alike" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="//www.mediawiki.org/"><img src="/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://wiki.unity3d.com/load.php?debug=false&amp;lang=en&amp;modules=skins.vector&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready"], null, true);
+}</script>
+<script src="http://wiki.unity3d.com/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served in 0.142 secs. -->
+	</body>
+</html>

@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<title>Shaders - Unify Community Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.1" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/opensearch_desc.php" title="Unify Community Wiki (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.unity3d.com/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Unify Community Wiki Atom feed" href="/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="stylesheet" href="http://wiki.unity3d.com/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cskins.vector&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://wiki.unity3d.com/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: mediawiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://wiki.unity3d.com/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Shaders","wgTitle":"Shaders","wgCurRevisionId":14828,"wgArticleId":1493,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgRelevantPageName":"Shaders","wgRestrictionEdit":[],"wgRestrictionMove":[]});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,
+"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"variant":"en","language":"en","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false});;},{},{});mw.loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: mediawiki:resourceloader:filter:minify-js:7:9983699ab6150ffa89a90653b2338ac8 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Shaders skin-vector action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">Shaders</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">From Unify Community Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Jump to: <a href="#mw-head">navigation</a>,
+					<a href="#p-search">search</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Guidelines"><span class="tocnumber">1</span> <span class="toctext">Guidelines</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Official_Shaders"><span class="tocnumber">2</span> <span class="toctext">Official Shaders</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Unity_3.x_Shaders"><span class="tocnumber">3</span> <span class="toctext">Unity 3.x Shaders</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Unity_2.x_Shaders"><span class="tocnumber">4</span> <span class="toctext">Unity 2.x Shaders</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#Porting_Shaders"><span class="tocnumber">4.1</span> <span class="toctext">Porting Shaders</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Debugging"><span class="tocnumber">4.2</span> <span class="toctext">Debugging</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Fullscreen_Effects_.28Unity_Pro_only.29"><span class="tocnumber">4.3</span> <span class="toctext">Fullscreen Effects (Unity Pro only)</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#FX"><span class="tocnumber">4.4</span> <span class="toctext">FX</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#General"><span class="tocnumber">4.5</span> <span class="toctext">General</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Interface"><span class="tocnumber">4.6</span> <span class="toctext">Interface</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#iPhone"><span class="tocnumber">4.7</span> <span class="toctext">iPhone</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Terrain"><span class="tocnumber">4.8</span> <span class="toctext">Terrain</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Toon"><span class="tocnumber">4.9</span> <span class="toctext">Toon</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#Transparent"><span class="tocnumber">4.10</span> <span class="toctext">Transparent</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-15"><a href="#Unity_1.x_Shaders"><span class="tocnumber">5</span> <span class="toctext">Unity 1.x Shaders</span></a>
+<ul>
+<li class="toclevel-2 tocsection-16"><a href="#FX_2"><span class="tocnumber">5.1</span> <span class="toctext">FX</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#General_2"><span class="tocnumber">5.2</span> <span class="toctext">General</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#Interface_2"><span class="tocnumber">5.3</span> <span class="toctext">Interface</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#Lightmap"><span class="tocnumber">5.4</span> <span class="toctext">Lightmap</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="#Terrain_2"><span class="tocnumber">5.5</span> <span class="toctext">Terrain</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="#Transparent_2"><span class="tocnumber">5.6</span> <span class="toctext">Transparent</span></a></li>
+</ul>
+</li>
+</ul>
+</td></tr></table>
+<h2> <span class="mw-headline" id="Guidelines"> Guidelines </span></h2>
+<p>This is a collection of shaders. See "<a href="/index.php/Getting_Started_with_Shaders" title="Getting Started with Shaders">Getting Started with Shaders</a>" for an introduction to shader programming and learning material about shaders in general.
+</p><p>Please include a sample image or two showing off your shader goodness. If unsure how to do this, you can view a good example on the <a href="/index.php/SkinShader2" title="SkinShader2">SkinShader2</a> page, as a reference.
+</p>
+<h2> <span class="mw-headline" id="Official_Shaders"> Official Shaders </span></h2>
+<ul><li><a rel="nofollow" class="external text" href="http://unity3d.com/support/resources/assets/built-in-shaders">Built In Shaders</a> - Here you can get the sourcecode for all the shaders that are built into Unity.
+</li></ul>
+<h2> <span class="mw-headline" id="Unity_3.x_Shaders"> Unity 3.x Shaders </span></h2>
+<ul><li><a href="/index.php/Cg_Tutorial_to_Unity" title="Cg Tutorial to Unity">Cg_Tutorial_to_Unity</a> - Porting of Cg tutorial source code 
+</li><li><a href="/index.php/Cg_Shader_Patterns" title="Cg Shader Patterns">Cg_Shader_Patterns</a> - Multiple Pixel Lights
+</li><li><a href="/index.php/Vertex/Fragment_Template" title="Vertex/Fragment Template">Vertex/Fragment Template</a> - A basic template for writing your own vertex/fragment combination shader
+</li><li><a href="/index.php/Earth/Planet" title="Earth/Planet">Earth/Planet</a> - A shader for the Earth (and other planets) with nighttime lights, elevation, subtle atmosphere, and other features.
+</li><li><a href="/index.php/MatCap" title="MatCap">MatCap</a> - A bumped shader without lighting, for use with materials from programs like ZBrush.
+</li><li><a href="/index.php/Fur_(Unity3)" title="Fur (Unity3)">Fur (Unity3)</a> - A remake for Unity 3 support of a fur shader by Jonathan Czeck found in unity 
+</li><li><a href="/index.php/Skin_Shader_3" title="Skin Shader 3">Skin Shader 3</a> - The classic skin shader redone for Unity 3 by forum user bournifle
+</li><li><a href="/index.php/Planet" title="Planet">Planet</a> - A shader which adds an atmosphere and shading for one pointlight source to a planet.
+</li><li><a href="/index.php/Dissolve_With_Texture" title="Dissolve With Texture">Dissolve With Texture</a> - A simple shader which dissolves objects, using an image as guidance.
+</li><li><a href="/index.php/TransparentShadowCaster" title="TransparentShadowCaster">TransparentShadowCaster</a> - Can handle transparency and takes it into account for casting shadows.
+</li><li><a href="/index.php/TransparentShadowReceiver" title="TransparentShadowReceiver">TransparentShadowReceiver</a> - Can handle transparency and takes it into account for receiving shadows from both Spot/Point lights and Directional lights.
+</li><li><a href="/index.php/TerrainFourLayerToon" title="TerrainFourLayerToon">TerrainFourLayerToon</a> - A terrain shader similar to <a href="/index.php/TerrainFourLayer" title="TerrainFourLayer">TerrainFourLayer</a>, but designed for games that use Unity's prepackaged Toon shaders for just about everything.
+</li><li><a href="/index.php/TeamFortress2Shader" title="TeamFortress2Shader">TeamFortress2Shader</a> - A toon ramped shader with vertical rim light, similar to the shading model found in Team Fortress 2.
+</li><li><a href="/index.php/Anisotropic_Highlight_Shader" title="Anisotropic Highlight Shader">Anisotropic Highlight Shader</a> - A shader that allows anistotropic highlights to be defined based on a directional texture. Good for brushed metal and hair.
+</li><li><a href="/index.php/Outlined_Diffuse_3" title="Outlined Diffuse 3">Outlined Diffuse 3</a> - Toon outline on a normal diffuse shader, compatible with Unity 3.
+</li><li><a href="/index.php/Silhouette-Outlined_Diffuse" title="Silhouette-Outlined Diffuse">Silhouette-Outlined Diffuse</a> - A variant of the <a href="/index.php/Outlined_Diffuse_3" title="Outlined Diffuse 3">Outlined Diffuse 3</a> showing outlines only at the exteriors of the object.
+</li><li><a href="/index.php/Lighted_Bumped_Outline" title="Lighted Bumped Outline">Lighted Bumped Outline</a> - A mix between built-in Toon Lighted Outline and Bumped Diffuse.
+</li><li><a href="/index.php/MirrorReflection3" title="MirrorReflection3">MirrorReflection3</a> - Makes a direct, mirror like reflection. Updated version of <a href="/index.php/MirrorReflection2" title="MirrorReflection2">MirrorReflection2</a>
+</li><li><a href="/index.php/Transparent_Cutout_Soft_Edge_Unlit_Texture_Blend" title="Transparent Cutout Soft Edge Unlit Texture Blend">Transparent Cutout Soft Edge Unlit Texture Blend</a> Transparent Soft Edge Cutout Shader with blending between two textures given a blend factor. Useful for transitions.
+</li><li><a href="/index.php/3SideProjDiffuseSurface" title="3SideProjDiffuseSurface">3SideProjDiffuseSurface</a>- Modification of <a href="/index.php/3SideProjDiffuse1.1" title="3SideProjDiffuse1.1">2.x vesion</a>.
+</li></ul>
+<h2> <span class="mw-headline" id="Unity_2.x_Shaders"> Unity 2.x Shaders </span></h2>
+<h3> <span class="mw-headline" id="Porting_Shaders">Porting Shaders</span></h3>
+<ul><li><a href="/index.php/ShaderPortingNotes" title="ShaderPortingNotes">ShaderPortingNotes</a> - Some guidelines for porting shaders between FX composer, RenderMonkey, Mental Mill, ShaderFX and Unity
+</li></ul>
+<h3> <span class="mw-headline" id="Debugging"> Debugging </span></h3>
+<ul><li><a href="/index.php/BarycentricWireframeUv1" title="BarycentricWireframeUv1">BarycentricWireframeUv1</a> - A wireframe shader for barycentric uvs.
+</li></ul>
+<ul><li><a href="/index.php/Delta" title="Delta">Delta</a> - Visualize loss of detail caused by texture compression.
+</li></ul>
+<ul><li><a href="/index.php/NormalSmoothing" title="NormalSmoothing">NormalSmoothing</a> - Visualize normal smoothing.
+</li></ul>
+<p><br />
+</p>
+<h3> <span class="mw-headline" id="Fullscreen_Effects_.28Unity_Pro_only.29"> Fullscreen Effects (Unity Pro only) </span></h3>
+<ul><li><a href="/index.php/ColorBlindness" title="ColorBlindness">ColorBlindness</a> - Coarse simulation of what your game might look like to someone who is red/green colorblind.
+</li><li><a href="/index.php/DreamBlurEffect" title="DreamBlurEffect">DreamBlurEffect</a> - Yet another bloom/glow style effect (Post Render Effect, requires Unity Pro)
+</li><li><a href="/index.php/RefractionEffect" title="RefractionEffect">RefractionEffect</a> - Fullscreen refraction effect. Can be used for raindrops, blood, underwater effects and others. Including color and color mask.
+</li></ul>
+<h3> <span class="mw-headline" id="FX"> FX </span></h3>
+<ul><li><a href="/index.php/Anisotropic_2.x" title="Anisotropic 2.x">Anisotropic 2.x</a> - Updated anisotropic lighting for version 2.x
+</li><li><a href="/index.php/DepthMask" title="DepthMask">DepthMask</a> - For cutting holes in objects without changing geometry.
+</li><li><a href="/index.php/DesaturatedDarks2" title="DesaturatedDarks2">DesaturatedDarks2</a> - Non-lit areas are desaturated; lights "saturate" the colors (updated for v2).
+</li><li><a href="/index.php/FXHyperbolicStatic" title="FXHyperbolicStatic">FXHyperbolicStatic</a> - Special effect for things like force fields.
+</li><li><a href="/index.php/FXHyperbolicStaticParticle" title="FXHyperbolicStaticParticle">FXHyperbolicStaticParticle</a> - Special effect for things like energy balls with particle systems.
+</li><li><a href="/index.php/FXTrigField" title="FXTrigField">FXTrigField</a> - Special effect for things like force fields.
+</li><li><a href="/index.php/MirrorReflection2" title="MirrorReflection2">MirrorReflection2</a> - A shader and script to make reflective mirrors.
+</li><li><a href="/index.php/Shield" title="Shield">Shield</a> - A shader and script to make Shields spheres around your units (works with other shapes too).
+</li><li><a href="/index.php/TextureMask" title="TextureMask">TextureMask</a> - A simple shader that will allow you to mask of parts of a texture.
+</li><li><a href="/index.php/Unlit" title="Unlit">Unlit</a> - A shader that doesn't use lighting, useful for dashboard and other 3D GUI components.
+</li><li><a href="/index.php/Binary" title="Binary">Binary</a> - Limits down textured models to 2 individual colors.
+</li><li><a href="/index.php/ProjectorAdditive" title="ProjectorAdditive">ProjectorAdditive</a> - A shader for the projector component that does an additive/screen effect as opposed to multiply.
+</li><li><a href="/index.php/XRay" title="XRay">XRay</a> - Additive X-Ray shader.
+</li><li><a href="/index.php/Planet" title="Planet">Planet</a> - A shader which adds an atmosphere and per pixel lighting to your planets.
+</li><li><a href="/index.php/Fur" title="Fur">Fur</a> - A basic fur shader with some minor(?) sorting problems.
+</li></ul>
+<h3> <span class="mw-headline" id="General"> General </span></h3>
+<ul><li><a href="/index.php/BakedVertexColorBumpSpec2" title="BakedVertexColorBumpSpec2">BakedVertexColorBumpSpec2</a> - Lightmap in vertex colors, bumped specular.
+</li><li><a href="/index.php/BumpSpecRim" title="BumpSpecRim">BumpSpecRim</a> - Bumpmapped specular with fake rim light affected by bump map.
+</li><li><a href="/index.php/BumpColorSpec" title="BumpColorSpec">BumpColorSpec</a> - Bumpmapped specular with colored specular map.
+</li><li><a href="/index.php/ReflectiveVertexlitSimple" title="ReflectiveVertexlitSimple">ReflectiveVertexlitSimple</a> - Simplified Reflective VertexLit shader, with a slider to control amount instead of alpha channel.
+</li><li><a href="/index.php/SkinShader2" title="SkinShader2">SkinShader2</a> - Shadow-supporting wrapped-diffuse+ specular + bumped + rim + fresnel shader. Good for skin shading!
+</li><li><a href="/index.php/3SideProjDiffuse" title="3SideProjDiffuse">3SideProjDiffuse</a> - Per pixel shaded autotexturing. No need for an UV-Map!
+</li><li><a href="/index.php/3SideProjDiffuse1.1" title="3SideProjDiffuse1.1">3SideProjDiffuse1.1</a> - Added the option of selecting different textures for X, Y and Z coordinates.
+</li><li><a href="/index.php/ReliefDiffuse" title="ReliefDiffuse">ReliefDiffuse</a> - Bumpmapped reliefmapping shader.
+</li><li><a href="/index.php/ReliefSpecular" title="ReliefSpecular">ReliefSpecular</a> - Bumpmapped reliefmapping shader with specularity.
+</li></ul>
+<h3> <span class="mw-headline" id="Interface"> Interface </span></h3>
+<ul><li><a href="/index.php/3DText" title="3DText">3DText</a> - Use this instead of the default shader when creating 3D Text, so the text doesn't always appear on top of objects.
+</li><li><a href="/index.php/TexturedFont" title="TexturedFont">TexturedFont</a> - Use this shader in place of the built in Text Shader for multicolored fonts instead of solid colored ones.
+</li></ul>
+<h3> <span class="mw-headline" id="iPhone"> iPhone </span></h3>
+<p>These shaders are targeted at the original iPhone and iPod touch.
+</p>
+<ul><li><a href="/index.php/Blend_2_Textures" title="Blend 2 Textures">Blend 2 Textures</a> - Blends two textures based on a slider, with an option to use light from <a href="/index.php/Simply_Lit" title="Simply Lit">Simply Lit</a>
+</li><li><a href="/index.php/Blend_2_Textures_by_Lightmap_Alpha" title="Blend 2 Textures by Lightmap Alpha">Blend 2 Textures by Lightmap Alpha</a> - A lightmapped shader that blends two tiling textures based on a splatmap.
+</li><li><a href="/index.php/Masked_Tint" title="Masked Tint">Masked Tint</a> - Selectively tint your models based on a mask; render multiple differently-colored objects with only one total draw call.
+</li><li><a href="/index.php/Simply_Lit" title="Simply Lit">Simply Lit</a> - Uses ambient and diffuse vertex lighting to affect a single texture.
+</li><li><a href="/index.php/Texture_Only" title="Texture Only">Texture Only</a> - Maps a 2D texture onto your model, in 3D!
+</li><li><a href="/index.php/VertexColorUnlit" title="VertexColorUnlit">VertexColorUnlit</a> - Two shaders for using with vertex-colored meshes; allows overbrightening
+</li><li><a href="/index.php/IPhoneGems" title="IPhoneGems">iPhoneGems</a> -Using the gem .unitypackage from the unity website will cause poor gem shading on the iphone, this is their code including an update to the sub-shader that makes nicer iphone gems.
+</li></ul>
+<h3> <span class="mw-headline" id="Terrain"> Terrain </span></h3>
+<ul><li><a href="/index.php/LayerShader" title="LayerShader">LayerShader</a> - A terrain shader that mixes two tileable textures.
+</li><li><a href="/index.php/TerrainTwoLayerBumped" title="TerrainTwoLayerBumped">TerrainTwoLayerBumped</a> - A terrain shader that mixes two tileable textures, plus a bumpmap.
+</li><li><a href="/index.php/TerrainFourLayerDiffuseFast" title="TerrainFourLayerDiffuseFast">TerrainFourLayerDiffuseFast</a> - A terrain shader that mixes four tileable textures, and also works like the Diffuse Fast shader.
+</li><li><a href="/index.php/TerrainFourLayer2Pass" title="TerrainFourLayer2Pass">TerrainFourLayer2Pass</a> - A terrain shader that mixes four tileable textures; should work on all modern cards and has fog.
+</li><li><a href="/index.php/FourSplatBlendWrapShader" title="FourSplatBlendWrapShader">FourSplatBlendWrapShader</a> - A terrain shader that mixes and wraps 4 diffuse splats from a 4x4 texture sheet.
+</li></ul>
+<h3> <span class="mw-headline" id="Toon"> Toon </span></h3>
+<ul><li><a href="/index.php/ToonShadowed" title="ToonShadowed">ToonShadowed</a> - Variant of the Toon-Basic shader that receives shadows.
+</li><li><a href="/index.php/OutlinedDiffuse" title="OutlinedDiffuse">OutlinedDiffuse</a> - Variant of the Toon-Basic shader that uses diffuse shading for surfaces
+</li></ul>
+<h3> <span class="mw-headline" id="Transparent"> Transparent </span></h3>
+<ul><li><a href="/index.php/AlphaClipsafe" title="AlphaClipsafe">AlphaClipsafe</a> - Like Particles/Alpha Blended, but fades out before it intersects the camera's near clipping plane.
+</li><li><a href="/index.php/AlphaSelfIllum" title="AlphaSelfIllum">AlphaSelfIllum</a> - Textures object which is unaffected by light.
+</li><li><a href="/index.php/AlphaVertexLitZ" title="AlphaVertexLitZ">AlphaVertexLitZ</a> - Just like Transparent/VertexLit, but with proper depth buffering. Useful for objects that need to fade out.
+</li><li><a href="/index.php/UnlitAlphaWithFade" title="UnlitAlphaWithFade">UnlitAlphaWithFade</a> - Unlit shader similar to AlphaSelfIllum, but with the alpha of the colour taken into account to allow fading.
+</li><li><a href="/index.php/AlphaDiffuse2sided" title="AlphaDiffuse2sided">AlphaDiffuse2sided</a> - Transparent 2-sided rendering
+</li></ul>
+<h2> <span class="mw-headline" id="Unity_1.x_Shaders"> Unity 1.x Shaders </span></h2>
+<p>Most of these will just work with Unity 2.x, except mostly for complex pixel-lit shaders. If you verified that a shader from this list works with 2.x, add it to the list above as well!
+</p>
+<h3> <span class="mw-headline" id="FX_2"> FX </span></h3>
+<ul><li><a href="/index.php/Refraction" title="Refraction">Refraction</a> - A fake refraction shader.
+</li><li><a href="/index.php/DepthMask" title="DepthMask">DepthMask</a> - Masks areas with the depth buffer to cut holes in subsequent objects.
+</li><li><a href="/index.php/DesaturatedDarks" title="DesaturatedDarks">DesaturatedDarks</a> - Non-lit areas are desaturated; lights "saturate" the colors.
+</li><li><a href="/index.php/MirrorReflection" title="MirrorReflection">MirrorReflection</a> - A shader and script to make reflective mirrors.
+</li><li><a href="/index.php/MirrorReflectionLightmapped" title="MirrorReflectionLightmapped">MirrorReflectionLightmapped</a> - A shader and script to make reflective mirrors with a lightmap.
+</li><li><a href="/index.php/ProjectorAdditive" title="ProjectorAdditive">ProjectorAdditive</a> - A shader for the projector component that does an additive/screen effect as opposed to multiply.
+</li><li><a href="/index.php/SkyboxBlended" title="SkyboxBlended">SkyboxBlended</a> - A skybox that blends between two sets of skybox textures.
+</li><li><a href="/index.php/Velvet" title="Velvet">Velvet</a> - Velvet / Rim light shader
+</li><li><a href="/index.php/XRay" title="XRay">XRay</a> - Additive X-Ray shader.
+</li></ul>
+<h3> <span class="mw-headline" id="General_2"> General </span></h3>
+<ul><li><a href="/index.php/Anisotropic" title="Anisotropic">Anisotropic</a> - A classical anisotropic lighting.
+</li><li><a href="/index.php/BumpSpecModulate" title="BumpSpecModulate">BumpSpecModulate</a> - Bump mapped shader that modulates between original texture color and "alpha color" based on alpha of main texture.
+</li><li><a href="/index.php/Decal2UVs" title="Decal2UVs">Decal2UVs</a> - Just like builtin Decal, just uses two UV sets.
+</li><li><a href="/index.php/SimpleAdditive" title="SimpleAdditive">SimpleAdditive</a> - Colors a object with a single additive color.
+</li><li><a href="/index.php/SkinShader" title="SkinShader">SkinShader</a> - A wrapped-diffuse plus specular plus rim righting shader. Good for skin shading!
+</li><li><a href="/index.php/TextureAdditive" title="TextureAdditive">TextureAdditive</a> - Colors a object with a additive texture.
+</li><li><a href="/index.php/VertexColor" title="VertexColor">VertexColor</a> - A vertex lit shader that takes per-vertex colors into account.
+</li><li><a href="/index.php/VertexColorParallaxBump" title="VertexColorParallaxBump">VertexColorParallaxBump</a> - Like the builtin Diffuse Parallax Bump, only takes vertex color into account as well.
+</li></ul>
+<h3> <span class="mw-headline" id="Interface_2"> Interface </span></h3>
+<ul><li><a href="/index.php/Reveal_Non-Uniform_Texture" title="Reveal Non-Uniform Texture">Reveal Non-Uniform Texture</a> - A shader for revealing a texture using another texture. Useful for non-rectilinear loading / progress bars. 
+</li></ul>
+<h3> <span class="mw-headline" id="Lightmap"> Lightmap </span></h3>
+<ul><li><a href="/index.php/BakedLightingDetailTexture" title="BakedLightingDetailTexture">BakedLightingDetailTexture</a> - A main+detail texture shader with precomputed per-vertex lighting.
+</li><li><a href="/index.php/BakedVertexColorLighting" title="BakedVertexColorLighting">BakedVertexColorLighting</a> - Like lightmapping only the lighting is precomputed in the vertex colors
+</li></ul>
+<h3> <span class="mw-headline" id="Terrain_2"> Terrain </span></h3>
+<ul><li><a href="/index.php/LayerShader" title="LayerShader">LayerShader</a> - A terrain shader that mixes two tileable textures.
+</li><li><a href="/index.php/TerrainFourLayer" title="TerrainFourLayer">TerrainFourLayer</a> - A terrain shader that mixes four tileable textures.
+</li><li><a href="/index.php/TerrainTwoLayerBumped" title="TerrainTwoLayerBumped">TerrainTwoLayerBumped</a> - A terrain shader that mixes two tileable textures, plus a bumpmap.
+</li><li><a href="/index.php/VegetationTwoPass" title="VegetationTwoPass">VegetationTwoPass</a> - Great vegetation shader, renders opaque and then renders semitransparent.
+</li><li><a href="/index.php/VegetationVertexLit" title="VegetationVertexLit">VegetationVertexLit</a> - Vertex-lit shader with no culling that is ideal for vegetation and other two sided polygon models.
+</li></ul>
+<h3> <span class="mw-headline" id="Transparent_2"> Transparent </span></h3>
+<ul><li><a href="/index.php/AlphaDiffuseZ" title="AlphaDiffuseZ">AlphaDiffuseZ</a> - Same as Unity Alpha Diffuse but with different Z buffering. Useful for interior (reversed normal) scenes that have alpha objects.
+</li><li><a href="/index.php/AlphaSelfIllum" title="AlphaSelfIllum">AlphaSelfIllum</a> - Textures object which is unaffected by light.
+</li><li><a href="/index.php/AlphaVertexColor" title="AlphaVertexColor">AlphaVertexColor</a> - A transparent vertex lit shader that takes per-vertex colors into account.
+</li><li><a href="/index.php/BlendedDecal" title="BlendedDecal">BlendedDecal</a> - Suitable for superimposing alpha-masked textured markings onto the same plane as another surface.
+</li><li><a href="/index.php/BlendedFlatColor" title="BlendedFlatColor">BlendedFlatColor</a> - Colors a transparent object, good for HUD objects.
+</li><li><a href="/index.php/UnlitAlpha" title="UnlitAlpha">UnlitAlpha</a> - A non-backface culled, unilluminated, alpha tested shader which is suitable for sprites.
+</li><li><a href="/index.php/WindowShader" title="WindowShader">WindowShader</a> - Suitable for windows (the glass things in houses, not the darn Seattle company.)
+</li><li><a href="/index.php/SeeObjectsBehindOthers" title="SeeObjectsBehindOthers">SeeObjectsBehindOthers</a> - Good for if you always want to be able to see an object(3D HUD instead of GUI, or seeing a player behind a wall.)
+</li></ul>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 82/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key mediawiki:pcache:idhash:1493-0!*!0!!en!*!* and timestamp 20121024035850 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Retrieved from "<a href="http://wiki.unity3d.com/index.php?title=Shaders&amp;oldid=14828">http://wiki.unity3d.com/index.php?title=Shaders&amp;oldid=14828</a>"				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks catlinks-allhidden'></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Personal tools</h5>
+	<ul>
+		<li id="pt-login"><a href="/index.php?title=Special:UserLogin&amp;returnto=Shaders" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in / create account</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namespaces</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="/index.php/Shaders"  title="View the content page [c]" accesskey="c">Page</a></span></li>
+					<li  id="ca-talk"><span><a href="/index.php/Talk:Shaders"  title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Variants</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Views</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="/index.php/Shaders" >Read</a></span></li>
+					<li id="ca-viewsource"><span><a href="/index.php?title=Shaders&amp;action=edit"  title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="/index.php?title=Shaders&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Actions</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Search</label></h5>
+	<form action="/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="Search Unify Community Wiki [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if exists" id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Special:Search"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(/images/wiki.png);" href="/index.php/Main_Page"  title="Visit the main page"></a></div>
+				<!-- /logo -->
+				
+<!-- Navigation -->
+<div class="portal" id='p-Navigation'>
+	<h5>Navigation</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage"><a href="/index.php/Main_Page" title="Visit the main page [z]" accesskey="z">Main Page</a></li>
+			<li id="n-Extensions"><a href="/index.php/Extensions">Extensions</a></li>
+			<li id="n-Particle-Library"><a href="/index.php/Particle_Library">Particle Library</a></li>
+			<li id="n-Programming"><a href="/index.php/Programming">Programming</a></li>
+			<li id="n-Scripts"><a href="/index.php/Scripts">Scripts</a></li>
+			<li id="n-Shaders"><a href="/index.php/Shaders">Shaders</a></li>
+			<li id="n-Wizards"><a href="/index.php/Wizards">Wizards</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Navigation -->
+
+<!-- Extras -->
+<div class="portal" id='p-Extras'>
+	<h5>Extras</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Tips.2C-Tricks.2C-Tools"><a href="/index.php/Tips">Tips, Tricks, Tools</a></li>
+			<li id="n-Tutorials"><a href="/index.php/Tutorials">Tutorials</a></li>
+			<li id="n-Unity-Projects"><a href="/index.php/Unity_Projects">Unity Projects</a></li>
+			<li id="n-Contests"><a href="/index.php/Contests">Contests</a></li>
+			<li id="n-IRC-Chatroom"><a href="/index.php/IRC">IRC Chatroom</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Extras -->
+
+<!-- Quick Links -->
+<div class="portal" id='p-Quick_Links'>
+	<h5>Quick Links</h5>
+	<div class="body">
+		<ul>
+			<li id="n-portal"><a href="/index.php/Unify:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="/index.php/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-New-Pages"><a href="/index.php/Special:NewPages">New Pages</a></li>
+			<li id="n-help"><a href="/index.php/Help:Contents" title="The place to find out">Help</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Quick Links -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Toolbox</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="/index.php/Special:WhatLinksHere/Shaders" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="/index.php/Special:RecentChangesLinked/Shaders" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-specialpages"><a href="/index.php/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li><a href="/index.php?title=Shaders&amp;printable=yes" rel="alternate">Printable version</a></li>
+			<li id="t-permalink"><a href="/index.php?title=Shaders&amp;oldid=14828" title="Permanent link to this revision of the page">Permanent link</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 16 October 2012, at 05:12.</li>
+											<li id="footer-info-viewcount">This page has been accessed 293,602 times.</li>
+											<li id="footer-info-copyright">Content is available under <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution Share Alike</a>.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="/index.php/Unify:Privacy_policy" title="Unify:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/index.php/Unify:About" title="Unify:About">About Unify Community Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="/index.php/Unify:General_disclaimer" title="Unify:General disclaimer">Disclaimers</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/"><img src="/skins/common/images/cc-by-sa.png" alt="Creative Commons Attribution Share Alike" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="//www.mediawiki.org/"><img src="/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://wiki.unity3d.com/load.php?debug=false&amp;lang=en&amp;modules=skins.vector&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready"], null, true);
+}</script>
+<script src="http://wiki.unity3d.com/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served in 0.126 secs. -->
+	</body>
+</html>

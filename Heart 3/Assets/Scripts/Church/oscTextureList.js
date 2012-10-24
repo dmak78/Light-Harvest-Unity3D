@@ -24,9 +24,9 @@ function Start(){
 
 function Update () { 
 
-	if(!OSCMessageReceived){
-		index = 0;	
-	}
+//	if(!OSCMessageReceived){
+//		index = 0;	
+//	}
 	
 	index = Mathf.Clamp(index, 0 , textures.Length-1);
 	

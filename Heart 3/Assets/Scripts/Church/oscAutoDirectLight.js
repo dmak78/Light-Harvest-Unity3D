@@ -45,9 +45,9 @@ function Awake () {
 
 function Update () {
 		
-	if(!OSCMessageReceived){
-		lightIntensity = originalIntensity;
-	}
+//	if(!OSCMessageReceived){
+//		lightIntensity = originalIntensity;
+//	}
 		
 	
 	if(rotate){

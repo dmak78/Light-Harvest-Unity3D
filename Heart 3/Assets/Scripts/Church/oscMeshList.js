@@ -17,9 +17,9 @@ function Start(){
 
 function Update () { 
 
-	if(!OSCMessageReceived){
-		index = 0;	
-	}
+//	if(!OSCMessageReceived){
+//		index = 0;	
+//	}
 	
 	index = Mathf.Clamp(index, 0 , meshes.Length-1);
 	
@@ -60,10 +60,15 @@ function OSCMessageReceived(message : OSC.NET.OSCMessage){
 		}	
 		
 		if(message.Address == osc_address_inc){
-			index++;
+			if(message.Values[0] == 1.0){
+				index++;
+			}
+			
 		}
 		if(message.Address == osc_address_dec){
-			index--;
+			if(message.Values[0] == 1.0){
+				index--;
+			}
 		}
 		
 		if(message.Address == osc_oscOn){
